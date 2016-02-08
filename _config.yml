@@ -17,6 +17,12 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+timezone: America/Recife
+
+gems:
+  - jekyll-gist
+  - jekyll-paginate
+
 deploy:
       host: github_pages
       branch: master
