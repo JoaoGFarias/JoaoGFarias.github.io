@@ -26,5 +26,10 @@ gems:
 deploy:
       host: github_pages
       branch: master
+
+pages_list:
+  Archive: '/archive'
+  Feed: '/feed.xml'
+
 # Build settings
 markdown: kramdown
