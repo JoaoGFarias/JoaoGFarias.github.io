@@ -14,7 +14,7 @@ description: >
   hardcore testing.
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: JFariasTesting
+twitter_username: JFThatsABug
 github_username:  JoaoGFarias
 
 timezone: America/Recife
