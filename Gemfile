@@ -5,3 +5,5 @@ gem 'jekyll-gist'
 gem 'jekyll-paginate'
 
 gem 'html-proofer'
+
+gem 'tzinfo-data'

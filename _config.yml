@@ -19,7 +19,7 @@ github_username:  JoaoGFarias
 
 timezone: America/Recife
 
-gems:
+plugins:
   - jekyll-gist
   - jekyll-paginate
 
