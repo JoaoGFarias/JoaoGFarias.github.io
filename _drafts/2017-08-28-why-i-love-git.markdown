@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Why do I love Git"
+title:  "Why do I love Git?"
 date:   2016-01-03 23:21:22 -0200
+author: João Farias
 categories: git versioning tools
 ---
 
