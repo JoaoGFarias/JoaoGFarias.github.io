@@ -23,7 +23,7 @@ The rationale for this distribution is that cost increases as you go up the pyra
 
 It means that unit-level tests are faster, cheaper and more precise in their response that integration and UI-level tests. Therefore, to cover more and more of our application without creating bottlenecks and long-running test suites, we should avoid writing lots of UI-level tests, and rely more on lower level tests.
 
-UI-level tests are still necessary - they touch  a broader range of code with each interaction and can uncover issues that lower level tests can not. However, they should be carefully designed - trying not to perform actions that lower level tests could.
+UI-level tests are still necessary - they touch a broader range of code with each interaction and can uncover issues that lower level tests can not. However, they should be carefully designed - trying not to perform actions that lower level tests could.
 
 ### Problems with the Testing Pyramid
 
@@ -69,7 +69,7 @@ These people use their individual perspectives (skilled ability of observation) 
 
 And since all tests in the TP is dependable on this observation phase, we are only validating **THESE ASSUMPTIONS**.
 
-The single task of creating a more or less coherent list of assumptions from all people involved in designing these test cases is cumbersome, near to humanly impossible. Desconsidering it, we are still missing a fundamental piece of the puzzle: **The Final User perspective**. After all, 
+The single task of creating a more or less coherent list of assumptions from all people involved in designing these test cases is cumbersome, near to humanly impossible. Desconsidering it, we are still missing a fundamental piece of the puzzle: **The Final User perspective**. After all,
 this perspective will dictate if the product is a success or not: **The Final User** will say if the product fits his needs and, therefore, reaches its goal.
 
 ## How to get the user perspective?
@@ -83,7 +83,7 @@ A manifold of techiniques have beign used with success in many domains:
 - Walkthroughs;
 - etc...
 
-These techniques enables the product builders to co-create the requirements with the users. 
+These techniques enables the product builders to co-create the requirements with the users.
 
 **THAT'S GREAT!**
 
@@ -108,7 +108,7 @@ Examples:
 - "When people do X, do they do Y?"
 - "Are requests awnsered in up to 5 seconds?"
 
-The answers given here may differ from the product builders and the users on design experiments. And it's **that** perspective that matters in the end. 
+The answers given here may differ from the product builders and the users on design experiments. And it's **that** perspective that matters in the end.
 
 And this perspective can change over time: The users may behave differently in given seasons; with the combination of previous and new features; or (endless reasons).
 
@@ -117,12 +117,12 @@ That's why is crucial to continiously monitoring these questions, to use as inpu
 - Alerts: Although answers to questions to drive improvements are great, we know that certain situations should not happen. This level also uses the Logging level data as input to anwser questions - however, these questions are not meant to validate assumptions, but to trigger actions to avoid cascate of problems.
 
 Examples:
+
 - "The server can store data of 100.000 users";
 - "Users without the role Admin cannot access the page of Administration";
 
-
 More on the each of these three levels in the future ;)
 
-
 #### Observation 1
+
 The words "test" and "testing" were used with its more common meaning. Although the discussion about "testing" x "checking" is relevant generally speaking, one can use either nomenclature here - given one does not mix both.

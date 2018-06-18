@@ -1,0 +1,145 @@
+---
+layout: post
+title:  "The Scribe's Oath for Testers"
+date:   2018-03-13 23:21:22 -0300
+author: João Farias
+categories: testing ethics software
+---
+
+# The Scribe's Oath
+
+Bob Martin (aka Uncle Bob) is one of giants of software development. Every single time I have the chance to (re-)read what he says I grab my notebook and a pencil, because it is almost certainty that I will get something to improve my life professional. And The Scribe's Oath (previously know as The Programmer's Oath) is one of my favorites lessons regarding professional ethics.
+
+The Oath is composed of nine statements about how software developers should face their craft, an ethical guide, inspired on Egyptian scribes' way of working, against a world which may transform programmers into machines of producing products - depressed and personally unsatisfied machines, by the way.
+
+Lo and behold! The Scribe's Oath:
+
+### **In order to defend and preserve the honor of the profession of computer programmers,**
+
+### **I promise that, to the best of my ability and judgement:**
+
+1.  I will not produce harmful code.
+    - I will not intentionally write code with bugs.
+    - This means: Do your best.
+2.  The code that I produce will always be my best work. I will not knowingly allow code that is defective either in behavior or structure to accumulate.
+3.  I will produce, with each release, a quick, sure, and repeatable proof that every element of the code works as it should.
+4.  I will make frequent, small, releases so that I do not impede the progress of others.
+5.  I will fearlessly and relentlessly improve my creations at every opportunity. I will never degrade them.
+6.  I will do all that I can to keep the productivity of myself, and others, as high as possible. I will do nothing that decreases that productivity.
+7.  I will continuously ensure that others can cover for me, and that I can cover for them.
+8.  I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty.
+9.  I will never stop learning and improving my craft.
+
+Although the Oath is written under a programmer's perspective, I think the nine promises are applicable to any professional, including testers. I will break each part and discuss how can we fulfil them (and how to detect and counter-attack risks to these ethical guides).
+
+## "Translating" to the Testing World
+
+- "I promise that, to the best of my ability and judgement"
+
+      Although this statement is not an Oath, we should think deeply about it. "to the best of my ability and judment" makes clear that you **will** fail at keeping the Oaths.
+
+      We are humans: we learn; try stuff; fail; learn again; and eventually reach a point of considarable success. If you are in field for sometime, it is probably clear that new people will make "silly" mistakes, go to the least efficient  way and stop at walls all the time. And probably it is clear that regardless of your experience, everyone will do these things as well.
+
+      This statment is a personal reminder that the Oaths are guidelines, points to continuosly aim, but circumstances (professional and personal) will cause deviations in your behaviour from these goals. It is fine, given you reflect and make efforts for re-adjusting.
+
+- "I will not produce harmful code."
+
+      This oath states the tester will not work on products and features aimed to damage the user or others.
+
+      Warfare ethics is a deep dicussion that I would prefer not debate now - but surely it is related this oath.
+
+      Some simpler situations would be misleading products, as "Improve your sexual performance by 5000% with this secret"; "This strategy will make you milionare in two weeks" ads; phishing emails or fake sites. Many people put themselves aside from the products, saying they just create software - its usage is reponsability of bussiness people and contractors. It is true that we often don't have control of the exact usage of our products, and that they are property of someone else; however, at the moment **you know** you are creating a product of this kind, the goal of your work is no longer improve the life of your users, but to exploit them - you become a **parasite** of some sort.
+
+      With 7 billion people on Earth, there will be lots of developers and testers who will create these products - and you can not stop them from doing it; but you can mitigate this situation with some attitudes:
+
+      1 - Do not collaborate to these products: With your work and with your user activities (ads are a specially hard to escape, but there are tools to automatically delete them);
+
+      2 - Do not network with people, developers; testers; and clients involved in these products. One's personal financial situation or lack of knowledge are **never** justifications to feed on others, specially on your users.
+
+      Eventually you may collaborate on products that warm people. Your duty is to ackownledge it, repair the damage as much as you can, and use your influence to make your network avoid these hiddenly harmful projects.
+
+- "The code that I produce will always be my best work. I will not knowingly allow code that is defective either in behavior or structure to accumulate."
+
+      This Oath touches the point that the results of our work will reflect our full potential. There are two parts which I would like to dive a bit:
+
+      * "be my best work" seems a difficult task to achieve - after all, there are somedays when physically we cannot think as well as we usually do, or we are facing a situation into which our knowledge is small, comparing to other situations.
+
+      Although this is true, as I've mentioned, these Oaths are guidelines, point to aim. So, in this case, the Oath would require of us a reflection of the reasons we are not producing the best work possible. Maybe you are having bad sleep frequently, some financial situation keeps your mind uneasy, you are having trouble with your coworkers... Many things can disturbe our work potential. The important thing is to find the real root cause of these disturbances. The [5-Whys Techinique](https://www.mindtools.com/pages/article/newTMC_5W.htm) can help you to dialogue with yourself.
+
+      * "defective either in behavior or structure" talks about [internal and external quality](wiki.c2.com/?InternalAndExternalQuality). The concept of external quality is already established in the testing community, so I will focus on internal quality.
+
+      Althought [Kent Beck](https://dl.acm.org/citation.cfm?id=318762) says that internal quality is interest of development, for it deals with how systems are designed, I would argue that testers should be interested in keeping a high internal quality for products.
+
+      Firstly, internal quality **WILL** affect with external quality: With well designed systems, changes and extensions are more easily implemented, with lower risks - and badly designed systems have the opposite effect. Thus, the internal quality will interfere on how fast and well we can reflect the feedback on the product, yield value more or less fast.
+
+      Secondly, one cannot throughly analyze the risks associated with an element (feature, module, variable, etc) when one have only part of the information about it - it is a typical [Allegory of the Cave Problem](https://www.youtube.com/watch?v=1RWOpQXTltA). So, in order to have strong capacity of testing a system, one need to understand how the elements which compose the target element is implemented.
+
+- "I will produce, with each release, a quick, sure, and repeatable proof that every element of the code works as it should."
+
+      For developers, this oath is a call for automated checks - code which exercise the system and checks if each behavior is as expected. This kind of software is a detaled executable documentation of the production code.
+
+      So, should we created documentation a detailed documentation of each step of our testing activities, right? Scripts which allow monkeys (or computers) to reproduce exactly what we did?
+
+      Well... if you know how to unambiguously write the all brain processes a human perform while analysing complex events, please, write a paper describing it **NOW**.
+
+      However, I guess that the above would have a high and unnecessary cost for most projects. A more productive approach would be to create ways to ensure others can know what you did - spread knowledge of your investigation and discovery.
+
+      Imagine an explorer traveling through the deep and uncharted part of the Amazon forest. He could write step-by-step guide to reach certain places, a detailed description of everthing he have seen, but it would make his exploration longer and, more importantly, most of the information he have gathered will probably be deprecated at the moment anyone uses it to something useful. However, if he creates a story of what he have seen and walk, describing his decision-making process, it would allow him to explore more, focus on what is more important, gathering and sharing the information which would allow others to know what is the situation there.
+
+      Exploratory testing does not have this adjective by chance - it is a self-looping process of asking questions, investigation, discovery, and note taking, with the goal of sharing to others what we have seen. Thus the focus should be on the receivers of the information. Business people may require general avaliations for production release; DBAs may need scientific meseasures of performance; developers may need database dumps and error tracing reports. Your duty is to provide each person the information he needs to make decisions.
+
+      OBS: As pair programming is a great way of making programmers have quick review and share information, [pair **testing**](https://www.agilealliance.org/resources/sessions/discover-the-power-of-pair-testing/) can help to share insights and the testing process.
+
+- "I will make frequent, small, releases so that I do not impede the progress of others."
+
+  - Nothing of "testing at the end" of the timebox (even in short sprints) - Be involved in all high-level meetings and discussions - even "technical" ones. So you will be aware of the direction the project is going, and its risks - Work closely to people, so that testing ideas and practices are exercised as soon as possible
+
+- "I will fearlessly and relentlessly improve my creations at every opportunity. I will never degrade them."
+
+      For programmers, this Oath represents the need to always introduce adding value changes - and since [risk is anti-value](https://www.whizlabs.com/blog/what-is-value-driven-delivery-in-the-agile-world/), when a programmer increase the level of risk in a product, he is decreasing the value it provides.
+
+      This risk-avoinding approach need to be take by testers as well, since we deal with quality and risk evaluation and mitigation. Our actions need to **always** yield information which can allow the risk of the project to decrease, not allowing risk-adding actions to be taken.
+
+      As examples, you can think in some situations:
+
+      - "The automated checks are taking too long, let's remove some of them".
+
+      This action is not a solution to the problem, but rather a risk exchange - we are assuming the risk of moving these checks to another moment (or never doing them) so we can make other thing (merging branches in a CI, e.g.);
+
+      - "we don't need exploratory testing here, the automated checks are enough"
+
+      This action assumes that the analysis to test something was suffiecietly done before the thing was produced, that all risk associated with it are validated by the checks. Saying this is plainly wrong would not be precise, but reality is very close to it.  
+
+      - "this ONE POLITICALLY POWERFUL user demanded this feature and or this change - although we know this is risky or it will cause problems to other users"
+
+      No comment is necessary here.
+
+- "I will do all that I can to keep the productivity of myself, and others, as high as possible. I will do nothing that decreases that productivity."
+
+      - Holistic vision of the project process and needs
+      - Effort in automating activities
+
+- "I will continuously ensure that others can cover for me, and that I can cover for them."
+
+      - Collective ownership
+      - Communication
+      - Teaching
+      - Vacations
+
+- "I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty."
+
+      - Fail at estimates is fine, but you will continuously work to make them more precise.
+      - You will consider risks and unknowns into your estimates.
+      - Range estimates - you will almost always estimate wrongly (underestimate or overestimate) if you state a precise date or effort for something.
+
+- "I will never stop learning and improving my craft."
+
+      - The landscape is always changing
+            - People work in new ways
+            - New kinds of products and software architectures
+      - Specialization is important, but you need to expand in order to contribute
+      -
+
+## YOU are your ONLY client and employer!
+
+### Links to Bob's work and others'
