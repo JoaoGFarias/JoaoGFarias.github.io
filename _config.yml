@@ -8,20 +8,40 @@
 # Site settings
 title: That's a Bug!
 email: jgfarias42@gmail.com
-description: >
+description:
+  Writing the software the right way through hardcore testing.
+long_description:
   My name is João Farias; if you read the lines on this blog, you will find out
-  how to write (and how not to, mainly) write the right software right through
+  how to write (and how not to, mainly) software the right way through
   hardcore testing.
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: JFThatsABug
-github_username:  JoaoGFarias
+
+url: "http://thatsabug.com/"
+footer_links:
+  email:
+    jgfarias42@gmail.com
+  linkedin:
+    username:  
+      joaogfarias
+  github:
+    username: 
+      JoaoGFarias
+  twitter:
+    username:
+      JFThatsABug
+    card: 
+      summary
+social:
+  links:
+    - https://github.com/JoaoGFarias
+    - https://twitter.com/JFThatsABug
+    - https://www.linkedin.com/in/joaogfarias/
 
 timezone: America/Recife
 
 plugins:
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-seo-tag
 
 deploy:
       host: github_pages
