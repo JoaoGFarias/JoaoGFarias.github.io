@@ -34,10 +34,10 @@ I have designed a mindmap which captures the information the aforementioned pape
 
 ![HTSM mindmap expanded image]({{ "assets/images/htsm_mindmap_2.jpg" | absolute_url }})
 
-## Version History
+# Versions
 
 1.0.0 - Initial post - [Download here]({{ "assets/mindmaps/hstm_1_0_0.xmind" | absolute_url }})
 
-## Tools
+# Tools
 
 XMind - [Download here](https://www.xmind.net/download/)
