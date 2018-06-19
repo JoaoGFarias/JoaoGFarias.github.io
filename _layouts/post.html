@@ -13,11 +13,15 @@ layout: default
         <span itemprop="name">{{ page.author }}</span>
       </span>
       {% endif %}
+      {% if page.tags %}
+      <br>
+      <span>{% include collecttags.html %}</span>
+      {% endif %}
       {% include rss-subscribe.html %}
       Reading time: {{ content | reading_time_as_s }}
     </p>
   </header>
-
+  
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
