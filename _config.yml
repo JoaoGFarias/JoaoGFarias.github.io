@@ -22,7 +22,6 @@ timezone: America/Recife
 plugins:
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-time-to-read
 
 deploy:
       host: github_pages

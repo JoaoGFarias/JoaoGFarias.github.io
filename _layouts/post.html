@@ -18,7 +18,7 @@ layout: default
       <span>{% include collecttags.html %}</span>
       {% endif %}
       {% include rss-subscribe.html %}
-      Reading time: {{ content | reading_time_as_s }}
+      Reading time: {% include read_time.html %}
     </p>
   </header>
   
