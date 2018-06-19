@@ -14,6 +14,7 @@ layout: default
       </span>
       {% endif %}
       {% include rss-subscribe.html %}
+      Reading time: {{ content | reading_time_as_s }}
     </p>
   </header>
 

@@ -33,3 +33,6 @@ pages_list:
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-time-to-read
