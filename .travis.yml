@@ -3,7 +3,6 @@ rvm:
 - 2.3.3
 
 before_script: 
- - python ./tag_generator.py
  - chmod +x ./script/cibuild
 
 script: ./script/cibuild
