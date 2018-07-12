@@ -10,7 +10,9 @@ description: Day 1 of 30 of Automation - Definitions
 
 # 30 Days of Automation
 
-This text was written as an answer to the "30 Days of Automation" Challenge. Check it out in the [Ministry of Testing forum](https://www.ministryoftesting.com/dojo/lessons/30-days-of-automation-in-testing).
+This text was written as an answer to the "30 Days of Automation in Testing" Challenge. Check it out in the [Ministry of Testing forum](https://www.ministryoftesting.com/dojo/lessons/30-days-of-automation-in-testing).
+
+Checkout other posts of the #30Days in this blog [here](/tag/30-days.html).
 
 ## Industrial Automation
 
