@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "30 days of Automation: Industrial Automation x Test Automation"
+title:  "#30daysoftesting - Day 1: Industrial Automation x Test Automation"
 date: 2018-07-09 11:11:00 +0200
 author: João Farias
 version: 1.0.0
@@ -12,7 +12,7 @@ description: Day 1 of 30 of Automation - Definitions
 
 This text was written as an answer to the "30 Days of Automation in Testing" Challenge. Check it out in the [Ministry of Testing forum](https://www.ministryoftesting.com/dojo/lessons/30-days-of-automation-in-testing).
 
-Checkout other posts of the #30Days in this blog [here](/tag/30-days.html).
+Checkout other posts of the #30daysoftesting in this blog [here](/tag/30-days.html).
 
 ## Industrial Automation
 
