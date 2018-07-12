@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "30 days of Automation: Start Reading an Automation Book"
+title:  "#30daysoftesting - Day 2: Start Reading an Automation Book"
 date: 2018-07-12 11:24:00 +0200
 author: João Farias
 version: 1.0.0
 tags: testing automation reading book 30-days
-description: Day 2 of 30 of Automation - Start Reading an Automation Book
+description: Day 2 of 30 of Automation in Testing - Start Reading an Automation Book
 ---
 
 # 30 Days of Automation
