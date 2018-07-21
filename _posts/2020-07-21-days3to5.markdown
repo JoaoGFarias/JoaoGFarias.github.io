@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "#30daysoftesting - Days 3 to 5"
+date: 2018-07-21 10:40:00 +0200
+author: João Farias
+version: 1.0.0
+tags: testing automation reading book 30-days
+description: The accumulation of Days 3 to 5 of the 30 Days of Automation in Testing
+---
+
+# 30 Days of Automation
+
+This text was written as an answer to the "30 Days of Automation in Testing" Challenge. Check it out in the [Ministry of Testing forum](https://www.ministryoftesting.com/dojo/lessons/30-days-of-automation-in-testing).
+
+Checkout other posts of the #30daysoftesting in this blog [here](/tag/30-days.html).
+
+## Day 3: Explore “The Club” and Contribute
+
+I've made some comments regarding automation microservices, acceptance criteria, and diff tools. Check it out [here](https://club.ministryoftesting.com/t/30-days-of-automation-in-testing-day-3-explore-the-club-and-contribute/16309/11?u=joaofarias).
+
+## Day 4: What types of testing can automation support you with?
+
+My answer considered a slightly different question: "How can automation support testing?". Check it out [here](https://club.ministryoftesting.com/t/30-days-of-automation-in-testing-day-4-what-types-of-testing-can-automation-support-you-with/16223/23?u=joaofarias).
+
+## Day 5 - Find, use and share your thoughts on a web UI testing tool
+
+Some links regarding Ember.js tools to testing. Check it out [here](https://club.ministryoftesting.com/t/30-days-of-autoamation-testing-day-5-find-use-and-share-your-thoughts-on-a-web-ui-testing-tool/16427/18?u=joaofarias).
+
+One comment in the thread of this day caught my attention:
+[Mark (mwinteringham)](https://club.ministryoftesting.com/u/mwinteringham) make a comment regarding how often people use automation UI tools to test other parts of a system, such as the backend. He created a mnemonic called TuTTu (Testing the UI or Testing Through the UI). Check it out [here](https://club.ministryoftesting.com/t/30-days-of-autoamation-testing-day-5-find-use-and-share-your-thoughts-on-a-web-ui-testing-tool/16427/17?u=joaofarias)
