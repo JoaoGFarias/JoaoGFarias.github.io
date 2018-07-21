@@ -22,7 +22,7 @@ I've made some comments regarding automation microservices, acceptance criteria,
 
 My answer considered a slightly different question: "How can automation support testing?". Check it out [here](https://club.ministryoftesting.com/t/30-days-of-automation-in-testing-day-4-what-types-of-testing-can-automation-support-you-with/16223/23?u=joaofarias).
 
-## Day 5 - Find, use and share your thoughts on a web UI testing tool
+## Day 5: Find, use and share your thoughts on a web UI testing tool
 
 Some links regarding Ember.js tools to testing. Check it out [here](https://club.ministryoftesting.com/t/30-days-of-autoamation-testing-day-5-find-use-and-share-your-thoughts-on-a-web-ui-testing-tool/16427/18?u=joaofarias).
 
