@@ -22,7 +22,7 @@ When we isolate components and check their behavior in isolation, we lose the hi
 
 Services testing is already stabilized, with many tools which enable progressive level of granularity, from unit (function level) testing to API testing (black-box checks on the whole service).
 
-Web UI historically lacked this kind of tools, because it was based on HTML and CSS, with small portions of Javascript (logic worth fine-grained checks). Using end-to-end checks could be sufficient to cover UI as well.
+Web UI historically lacked this kind of tools, because it was based on HTML and CSS, with small portions of JavaScript (logic worth fine-grained checks). Using end-to-end checks could be sufficient to cover UI as well.
 
 However, this is **the past**. More and more logic is added on UI, even on low performance devices<sup>1</sup>, as smartphones. Checking thoroughly the number of decisions and business logic on modern frontend applications is for Tony Stark (rich) and Dr. Meirschultz (mad scientist). Bring the techniques used on services checking to the frontend is necessary for the best usage of developers' time and organization's resources.
 
