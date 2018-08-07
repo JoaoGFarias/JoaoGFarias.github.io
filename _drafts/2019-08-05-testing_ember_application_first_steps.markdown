@@ -53,12 +53,42 @@ In summary, the goal of Application Tests is to validate how all components beha
 
 Below you can find two simple Application Test:
 
-....
+```javascript
+test("should say welcome at landing page", async function(assert) {
+  await visit("/");
+  assert.equal(
+    this.element.querySelector(".welcome_message").textContent,
+    "Welcome!",
+    "should say 'Welcome'"
+  );
+});
+```
+
+```javascript
+test("filtering rental list", async function(assert) {
+  await visit("/");
+  await fillIn(".list-filter input", "Urban Living");
+
+  assert.ok(
+      this.element.querySelectorAll(".results .listing").length,
+      1,
+      "should display 1 listing"
+    );
+    assert.equals(
+      this.element
+        .querySelector(".listing .location")
+        .textContent,"Urban Living"),
+      "should display only the location Urban Living"
+    );
+});
+```
 
 Very similar to a Selenium test, right?
 
-On the first test, we simply access a page, click on the Say Hello button, and check if the app answered "Hello!".
-On the second test, we access the same page, click on the Say Bye button, and check if the app answered "Bye!".
+On the first test, we simply access page app root page, waiting for any Ajax call to end (auto-magic page load wait) and check if the message is the one we expected.
+
+On the second test, we access the same page again,
+fill the input with a specific location and check both if the list displays only one item and that the title of this item is exactly the text we searched.
 
 After each test, the app is totally destroyed and rebuilt - so, if we had had some state after our actions, it would be gone. It deals with most cases of flakiness and allow the holy grail of parallel execution. We just need to run 1.000.000 of Ember apps in a machine, no need to touch databases. AWESOME!
 
@@ -68,7 +98,7 @@ We've created an object with cool functions which wrap the interaction with the 
 Of course, this is primitive - Luckily tThe Ember.js community created an awesome Page Object addon.
 I will talk about it in details, and give some tips, in the future.
 
-Let's say our app have a "What's the date" button, which asks for a service the current date and displays a message with it. Do we need check it with end-to-end tests?
+Let's say an app called "What's the date?", which asks for a service the current date and displays a message with it. Do we need check it with end-to-end tests?
 
 Nope...
 
@@ -76,14 +106,30 @@ That´s when another great addon appears: Mirage.
 
 Mirage´s goal is to intercept web requests to services and return mock data. It fools the Ember app, making it behave as if a real service have returned a response. Let´s see how it works:
 
-....
+```javascript
+test("displays a date in the american format", async function(assert) {
+  await visit("/american-date");
+  assert.equal(
+    this.element.querySelector(".date").textContent,
+    "12/31/2018",
+    "should display the last date of 2018 in american format"
+  );
+});
+```
 
-The first file contains the test - similar to the others. The mirage.js file is the new thing.
+```javascript
+// File: /mirage/config.js
+this.get("/date", function(db, request) {
+  return { day: "31", month: "12", year: "2018" };
+});
+```
+
+The first file contains the test - similar to the others. The config.js file is the new thing.
 
 In it, we indicate the route that we want to intercept and a function to process the request.
 In this case, we completely ignored the requested data and just returned a fixed date.
 
-That's what we need for your test. We want to know if the app will behave correctly when receiving a (any!) date as a response. So, instead of being dependable of a correct implementation of the service, we are focusing on our frontend app. More complex situations can be created using just in-memory processing, avoiding touching databases or network.
+That's what we need for your test. We want to know if the app will behave correctly when receiving a (**any!**) date as a response. So, instead of being dependable of a correct implementation of the service, we are focusing on our frontend app. More complex situations can be created using just in-memory processing, avoiding touching databases or network.
 
 ## Components Tests
 
@@ -91,48 +137,119 @@ We argued that the point of testing frontend in isolation was because of the inc
 
 This kind of testing is interested in verify the behavior (specially rendering) of each component in isolation - mocking every dependency, both services and other components.
 
-The test below will validate how the Message component, used on the Hello/Bye examples, behaves.
+The test below will validate how the _rental-listing_ component behaves.
 
-...
+```javascript
+test('should display rental details', async function(assert) {
+    const ownerName = faker.name.findName();
+    const city = faker.address.city();
+    const rental = {
+        image: 'fake.png',
+        title: faker.name.findName(),
+        owner: ownerName,
+        owner_email: faker.internet.email(),
+        price: faker.commerce.price(),
+        city: city,
+        bedrooms: faker.random.number({min:1, max:10});
+    };
+    await render(hbs`{{rental-listing rental=rental}}`);
+    assert.equal(this.element.querySelector('.listing .owner').textContent.trim(), ownerName, `Owner name: ${ownerName}`);
+    assert.equal(this.element.querySelector('.listing .city').textContent.trim(), city, `City: ${city}`);
+  });
+```
 
-Firstly, we have to prepare mock data to be injected into the component. It gives total control to this test on the cases we want to validate - independently on the contexts that this component will be used in the app.
+Firstly, we have to prepare mock data to be injected into the component. It gives us total control to this test on the cases we want to validate - independently on the contexts that this component will be used in the app.
 
-Secondly, we render the component using this data. The Ember.js engine will create the minimal environment to render this component - as if the whole app was only this message.
+However, I really don't care about the data itself, I just want to know the the exact data I am using is displayed. That's why we can use the [Faker.js](https://github.com/marak/Faker.js/) library to create realistic random data for each field at each test execution. This way, we cover more space and may ended up find some cases where we wrongly judge the domain boundaries.
+
+Secondly, we render the _rental-listing_ component using this data. The Ember.js engine will create the minimal environment to render this component - as if the whole app was only this list of rentals.
 
 Lastly, we check the displayed message. We use CSS Selectors because this test really renders the component. It behaves exactly as if if was in an app.
 
-This allow us to go deep in different scenarios without having to create other objects, optimizing our suite performance.
+This allow us to go deep in different scenarios without having to create other objects, optimizing the suite performance.
 
-...
+```javascript
+test('displays full name with first and last name', async function(assert) {
+    this.set('firstName', 'Mary');
+    this.set('lastName', 'Johnson');
+
+    await render(hbs`
+      {{#fullNameDisplayer}}
+    `);
+    assert.equal(this.element.querySelector('.full_name').textContent, 'Johnson, Mary');
+}
+```
+
+```javascript
+test('displays full name with only first name', async function(assert) {
+    this.set('firstName', 'Mary');
+    this.set('lastName', null);
+
+    await render(hbs`
+      {{#fullNameDisplayer}}
+    `);
+    assert.equal(this.element.querySelector('.full_name').textContent, 'Mary');
+}
+```
 
 ## Unit Tests
 
 Well... We always can try to go deeper, right?
 
-Let's say that we represent an User as the following:
+Let's look how the _fullNameDisplayer_ component calculates the full name based on its two attributes:
 
-... (first name, last name, age)
+```javascript
+fullName: computed('fullName', function() {
+    const firstName = this.get('firstName');
+    const lastName = this.get('lastName');
+    if(lastName) {
+        return `${lastName}, ${firstName}`;
+    } else {
+        return firstName;
+    }
+}
+```
 
-On the component test above, we forcibly set the Message attribute the way we wanted.
-However, the message is actually calculated by some code:
+On the component test above, we forcibly set the attributes we wanted, rendered the component and check if the calculated value was correct.
 
-...
+However, the calculation itself has nothing with rendering.
 
-We have to test this function. Maybe there is a bug due an untreated null value or an overflow.
-But, do we need to render each possible situation on the screen? Aren´t we interested only if the function returns the correct string value? We already checked that the message is rendered for a mocked result of this function.
+We have to test this **function** - the returned values in various situations - and test the rendering for only one situation.
 
 That's when Unit Tests enter in scene. Ember.js' Unit Tests have **no** rendering - they are composed purely of in memory operations (as fast as it gets).
 
 Let's take a look in some examples:
 
-...
+```javascript
+test("should display last name and first name in order", function(assert) {
+  // get the controller instance
+  const controller = this.owner.lookup("controller:names");
+
+  controller.set("firstName", "Michael");
+  controller.set("lastName", "Jordan");
+
+  assert.equal(someThing.get("fullName"), "Jordan, Michael");
+});
+```
+
+```javascript
+test("should display only the first name if no last name exist", function(assert) {
+  // get the controller instance
+  const controller = this.owner.lookup("controller:names");
+
+  controller.set("firstName", "Michael");
+  controller.set("lastName", null);
+
+  assert.equal(someThing.get("fullName"), "Michael");
+});
+```
 
 Pretty straightforward, right?
 We set the parameters that the function takes (the pure attributes), call the function with them, and check its return. Easy-peasy...
 
 The second test teaches us a lesson: When possible try to go to lower levels of checking.
 
-Previously, we were checking the ellipsis on the Component Test level, however, after looking deep into the function which create the message values, we realized that we don't need rendering, only the logic. Thus, let's write an Unit Test and **delete** the Component Test.
+Previously, we were checking the nullable _lastName_ case on the Component Test level, however, after looking deep into the function which create the full names, we realized that we don't need rendering, only the logic. Thus, we can write an Unit Test and **delete** the Component Test.
 
 Improving performance without loosing coverage: AWESOME!
 
