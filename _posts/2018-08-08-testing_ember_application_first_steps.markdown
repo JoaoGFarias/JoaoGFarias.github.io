@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing Ember Applications: First Steps"
+title: "Testing Ember Applications: First Steps"
 date: 2018-08-08 08:00 +0200
 author: João Farias
 version: 1.0.0
@@ -235,7 +235,7 @@ test('displays full name with first and last name', async function(assert) {
     this.set('lastName', 'Johnson');
 
     await render(hbs`
-      {{#fullNameDisplayer}}
+      {{fullNameDisplayer}}
     `);
     assert.equal(this.element.querySelector('.full_name').textContent, 'Johnson, Mary');
 }
@@ -247,7 +247,7 @@ test('displays full name with only first name', async function(assert) {
     this.set('lastName', null);
 
     await render(hbs`
-      {{#fullNameDisplayer}}
+      {{fullNameDisplayer}}
     `);
     assert.equal(this.element.querySelector('.full_name').textContent, 'Mary');
 }
