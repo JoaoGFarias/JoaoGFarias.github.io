@@ -38,7 +38,7 @@ Below is a architectural representation of an Ember.js app (image from [Karuna S
 
 Without going into many details, an Ember.js app starts with the access in an URL, which is decomposed by the Router and the Route Handler.
 
-This will determine which objects should be created, the model (data) and the template, which is a HTML representation, attached to components (Javascript).
+This will determine which objects should be created, the model (data) and the template, which is a HTML representation, attached to components (JavaScript).
 
 With these objects, the user is able to interact with the web app, and the components will determine the reaction to these actions.
 
@@ -194,7 +194,7 @@ We want to know if the app will behave correctly when receiving a (**any!**) dat
 
 We argued that the point of testing frontend in isolation was because of the increasing load of business logic on these applications. So, since Application Tests setup a "whole Ember app" on each test, we can expect hit the performance wall if we try to broadly cover our app using this tool. Luckily, we can go one-level down and perform checking at the component level.
 
-This kind of testing is interested in verifing the behavior (specially rendering) of each component in isolation - mocking every dependency, both services and other components.
+This kind of testing is interested in verifying the behavior (specially rendering) of each component in isolation - mocking every dependency, both services and other components.
 
 The test below will validate how the _rental-listing_ component behaves.
 
@@ -319,7 +319,7 @@ Previously, we were checking the nullable _lastName_ case on the Component Test 
 
 Improving performance without loosing coverage: AWESOME!
 
-## End-to-End is NOT dead
+# End-to-End is NOT dead
 
 **WAIT!** Don't delete your Selenium suite.
 
@@ -335,7 +335,7 @@ Either way, in any system there is space checks in levels below the end-to-end. 
 
 Try to use a silver bullet and you will find trouble.
 
-## From here...
+# From here...
 
 We've just touched the basics of testing Ember.js apps. Other very interesting topics are:
 
