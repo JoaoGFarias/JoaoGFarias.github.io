@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "The Scribe's Oath for Testers"
-date:   2018-03-13 23:21:22 -0300
+title: "The Scribe's Oath for Testers"
+date: 2018-03-13 23:21:22 -0300
 author: João Farias
 categories: testing ethics software
 ---
 
 # The Scribe's Oath
 
-Bob Martin (aka Uncle Bob) is one of giants of software development. Every single time I have the chance to (re-)read what he says I grab my notebook and a pencil, because it is almost certainty that I will get something to improve my professional life. And The Scribe's Oath (previously know as The Programmer's Oath) is one of my favorites lessons regarding professional ethics.
+Bob Martin (a.k.a. Uncle Bob) is one of giants of software development. Every single time I have the chance to (re-)read what he says I grab my notebook and a pencil, because it is almost certainty that I will get something to improve my professional life. And The Scribe's Oath (previously know as The Programmer's Oath) is one of my favorites lessons regarding professional ethics.
 
 The Oath is composed of nine statements about how software developers should face their craft. It's an ethical guide - inspired by Egyptian scribes' way of working - against a world which may transform programmers into machines of producing products (depressed and personally unsatisfied machines, by the way).
 
@@ -92,7 +92,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
 - "I will make frequent, small, releases so that I do not impede the progress of others."
 
-  - Nothing of "testing at the end" of the timebox (even in short sprints) - Be involved in all high-level meetings and discussions - even "technical" ones. So you will be aware of the direction the project is going, and its risks - Work closely to people, so that testing ideas and practices are exercised as soon as possible
+      - Nothing of "testing at the end" of the timebox (even in short sprints) - Be involved in all high-level meetings and discussions - even "technical" ones. So you will be aware of the direction the project is going, and its risks - Work closely to people, so that testing ideas and practices are exercised as soon as possible
 
 - "I will fearlessly and relentlessly improve my creations at every opportunity. I will never degrade them."
 
@@ -119,7 +119,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
       The two things that come to my mind with this need to keep productivity high are automation (all sort of automation) and simplification.
 
       Do you do some non-value adding activity periodically?
-      
+
       Maybe once upon a time the gathering of a given metric was important for some people - but is it still? Is it still delivered in the most efficient way?
 
       Send a message to the receiver and ask how to improve it. You maybe suprised with awnsers as "Sorry Dave, I don't even read this email" or "We just need the current number, we don't need that interactive chart".
@@ -127,7 +127,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
       After simplification, the next step is automation.
 
       Test and [build automation](https://www.youtube.com/watch?v=FznggUvk5i0) is obviously useful in order to remove frequent work.
-      
+
       But process automation is important as well:
 
       You can create tools so that your colleagues may [easily interact with your test management tool](https://developer.atlassian.com/server/jira/platform/rest-apis/), in order to make processes be [automatically trigged by some event](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html).
@@ -136,8 +136,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
       Even if you don't have all the awnsers or decision power, you can be a change-driver force, connecting people in ways to produce better result.
 
-
-- "I will continuously ensure that others can cover for me, and that I can cover for them."
+* "I will continuously ensure that others can cover for me, and that I can cover for them."
 
       Have you team ever got agitated when that person said she was leaving for vacations, new-born license, or to another company? Besides friendship, other cause of agitation is certain situations is the phrase "But only she knows how to do X".
 
@@ -153,7 +152,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
       - Lack of knowledge in the automation suite from part of the team (tester and developers);
       - Lack of authorization to some tester to investigate important parts of the system or specific environments;
-      - Exaggerated processes of work review (i.e., reviews focused on checking correctness instead of learning). 
+      - Exaggerated processes of work review (i.e., reviews focused on checking correctness instead of learning).
 
       The reasons for these situation vary widely: Previous catastrophes due errors of less senior members, upper-management neurosis with security, etc.
 
@@ -165,13 +164,13 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
       And to get for the "I can cover for them" part of the statement, make sure you understand other's work, and that you can learn to perform these activities: Ask questions and offer help - each daily small step is a step forward towards more robust teams.
 
-- "I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty."
+* "I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty."
 
       I thought:
             - "9 oaths -> 20 min each => 3 hours";
             - "Little intro and conclusion => 25 min"
             - "Review => 15 min"
-      
+
       So, do you think I finished this text in 3 hours and 40 min? :)
 
       Estimates are doomed to fail: we don't know a bunch of things of our work, a new meme will explode on the internet, people get sick.
@@ -180,17 +179,42 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
       - Continuously work to make them more precise: Do your metrics measure what is really necessary? Are you able to explain why ([deeply](https://www.mindtools.com/pages/article/newTMC_5W.htm)) the estimates failed? Do you continuously list and execute the estimate improvements actions?
       - You will be sincere: This means saying some numbers that you know people will not like and/or explaining risks and unknowns that you have to consider. Have you thought about the things that can go wrong?
-      - Range estimates: Exact estimates are rarely met, and giving one means that you have so much confidence in the work to be done that you consider nothing is out of your control - it's lying.  Although almost nobody will get mad about an overestimate, it is still an estimate error. Instead, using the two tips above, be more sincere and say that you consider something can be achieved between X and Y periods of time. 
-      
+      - Range estimates: Exact estimates are rarely met, and giving one means that you have so much confidence in the work to be done that you consider nothing is out of your control - it's lying.  Although almost nobody will get mad about an overestimate, it is still an estimate error. Instead, using the two tips above, be more sincere and say that you consider something can be achieved between X and Y periods of time.
+
       Make sure you explain the reasons for your estimate, the steps needed and that you will keep the people receive the estimate informed. The continuous communication will create confidence because people will be able to adapt their plans on the way; and range estimates will be more easily accepted, because they will be met.
 
-- "I will never stop learning and improving my craft."
+* "I will never stop learning and improving my craft."
 
-      - The landscape is always changing
-            - People work in new ways
-            - New kinds of products and software architectures
-      - Specialization is important, but you need to expand in order to contribute
+      This statement has two parts:
+
+      - "never stop learning"
+      If there is an area of work that no single person on Earth thinks things don't change all the time that is software development.
+      Put aside the new and shine frameworks and programming languages created every year (and often don't bring new things in essence), the basics usage of software in human life change frequently (and tend to continue to do so):
+
+            - From mainframes and work stations in the 40s/50s, to personal computers on every person home, to the internet, to mobile phones, to Internet of Things and Bio-computing;
+
+            - From a few hundred lines of procedural near-to-assembly code, aim to run in a specific machine, to hundreds of independent micro-services running in multi-processor/thread computing farms in the cloud;
+
+            - From CLI and batch processing applications to AI/Big Data based applications, whose behavior is flexible according the user and others' (users, events and applications) activities.
+
+      Both for programmers and testers, the message is the same: "Current knowledge and skills may rapidly become obsolate and unefficient. It is necessary to, **wisely**, constantly learn about the necessities of the context you are in."
+
+      - "never stop improving my craft"
+
+      Knowledge and skill is the first step.
+      The next one is change how you work in order to produce the best work possible (second statment) - constantly reviewing and experimenting new ways of work, which include working with colleagues to improve their craft as well (statment 5).
 
 ## YOU are your ONLY client and employer!
 
+A general lesson from the 9 statements of the Scribe's Oath is that it is your responsibility, and yours only, as an individual to take your capacities to a higher level of professionalism - both on the technical and on the ethical senses.
+
+Difficulties regarding technical challenges and unprofessional individuals (colleagues, managers, and clients) will appear and you may fail, at least partially, to keep your values. However, as stated repeadatlly throughout the text, acknowledgment of these errors and correction of behavior will increase your capacity to face future situations with more ease. The compound interest of experience and anti-fragility will create in you and in your peers a stronger and more ethical group of professionals.
+
 ### Links to Bob's work and others'
+
+Robert Martin:
+
+- [The original blog post](https://blog.cleancoder.com/uncle-bob/2015/11/18/TheProgrammersOath.html);
+- [51-min presentation at YOW! 2016](https://www.youtube.com/watch?v=X31Jc6HQUcs)
+- [59-min presentation at GOTO 2017](https://www.youtube.com/watch?v=Tng6Fox8EfI)
+- [Series of 9 1-min long videos talking about each Promise](https://www.youtube.com/watch?v=36NgPu9OyRM&list=PLWKjhJtqVAbno-B4RmJHCDO0ZUKC2tpUQ)
