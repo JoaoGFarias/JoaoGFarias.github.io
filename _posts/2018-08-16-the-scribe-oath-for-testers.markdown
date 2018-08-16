@@ -15,6 +15,8 @@ The Oath is composed of nine statements about how software developers should fac
 
 Lo and behold! The Scribe's Oath:
 
+![The Ancient Egyptian Scribe]({{ "assets/images/scribes.jpg" | absolute_url }})
+
 **In order to defend and preserve the honor of the profession of computer programmers,**
 
 **I promise that, to the best of my ability and judgement:**
