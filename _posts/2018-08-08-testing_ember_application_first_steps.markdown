@@ -211,7 +211,7 @@ test('should display rental details', async function(assert) {
         city: city,
         bedrooms: faker.random.number({min:1, max:10});
     };
-    await render(hbs`{{rental-listing rental=rental}}`);
+    await render(hbs`{ {rental-listing rental=rental} }`);
     assert.equal(this.element.querySelector('.listing .owner').textContent.trim(), ownerName);
     assert.equal(this.element.querySelector('.listing .city').textContent.trim(), city);
   });
@@ -235,7 +235,7 @@ test('displays full name with first and last name', async function(assert) {
     this.set('lastName', 'Johnson');
 
     await render(hbs`
-      {{fullNameDisplayer}}
+      { {fullNameDisplayer} }
     `);
     assert.equal(this.element.querySelector('.full_name').textContent, 'Johnson, Mary');
 }
@@ -247,7 +247,7 @@ test('displays full name with only first name', async function(assert) {
     this.set('lastName', null);
 
     await render(hbs`
-      {{fullNameDisplayer}}
+      { {fullNameDisplayer} }
     `);
     assert.equal(this.element.querySelector('.full_name').textContent, 'Mary');
 }
