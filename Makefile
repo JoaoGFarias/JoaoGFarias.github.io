@@ -8,4 +8,4 @@ build:
 	bundle exec jekyll build
 
 run:
-	bundle exec jekyll serve --incremental
+	bundle exec jekyll serve --incremental --watch
