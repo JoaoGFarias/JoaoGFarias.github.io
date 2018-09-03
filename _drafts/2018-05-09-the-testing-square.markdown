@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "The Testing Square: Completing the Testing Pyramid"
-date:   2018-05-09 20:15:00 -0300
+title: "The Testing Square: Completing the Testing Pyramid"
+date: 2018-05-09 20:15:00 -0300
 author: João Farias
 version: 1.0.0
 categories: testing automation user-testing testing-pyramid testing-square
@@ -15,9 +15,9 @@ The Testing Pyramid (TP) is now a widely known, and widely adopted, idea/best pr
 
 #### IMAGE OF THE TP
 
-The most known interpretation of the image above is that we should cover most our application with unit-level tests. After that, in a smaller number, we should have integration tests, just to check if the invidual parts communicate correctly with each other. And lastly, in an even smaller proportion, we should have tests that touches the user interface, experimenting the system as an user would.
+The most known interpretation of the image above is that we should cover most our application with unit-level tests. After that, in a smaller number, we should have integration tests, just to check if the individual parts communicate correctly with each other. And lastly, in an even smaller proportion, we should have tests that touches the user interface, experimenting the system as an user would.
 
-The rationale for this distribution is that cost increases as you go up the pyramid and test precison ("the error happen exactly in this function") increases as you go down the pyramid.
+The rationale for this distribution is that cost increases as you go up the pyramid and test precision ("the error happen exactly in this function") increases as you go down the pyramid.
 
 #### IMAGE OF THE PRECISION COST DIAGRAM
 
