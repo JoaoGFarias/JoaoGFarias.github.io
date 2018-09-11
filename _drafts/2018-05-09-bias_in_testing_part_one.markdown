@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Biases in Testing: Part 1"
 date: 2018-05-09 20:15:00 -0300
 author: João Farias

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "The Testing Square: Completing the Testing Pyramid"
 date: 2018-05-09 20:15:00 -0300
 author: João Farias

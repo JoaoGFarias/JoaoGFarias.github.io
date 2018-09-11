@@ -1,7 +1,7 @@
 ---
-layout: post
-title:  "The Heuristic Testing Strategy Model Mindmap"
-date:   2018-06-18 20:15:00 -0300
+layout: single
+title: "The Heuristic Testing Strategy Model Mindmap"
+date: 2018-06-18 20:15:00 -0300
 author: João Farias
 version: 1.0.0
 tags: testing exploratory strategy quality
