@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "5 Links about Refactoring"
 date: 2018-08-28 20:54:00 +0200
 author: João Farias

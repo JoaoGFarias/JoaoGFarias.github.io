@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Testing Ember Applications: First Steps"
 date: 2018-08-08 08:00 +0200
 author: João Farias

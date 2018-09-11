@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "The Scribe's Oath for Testers"
 date: 2018-08-16 08:00 +0200
 author: João Farias

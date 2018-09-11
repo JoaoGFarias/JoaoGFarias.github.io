@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "#30daysoftesting - Day 2: Start Reading an Automation Book"
+layout: single
+title: "#30daysoftesting - Day 2: Start Reading an Automation Book"
 date: 2018-07-12 11:24:00 +0200
 author: João Farias
 version: 1.0.0

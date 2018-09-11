@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "#30daysoftesting - Days 3 to 5"
+layout: single
+title: "#30daysoftesting - Days 3 to 5"
 date: 2018-07-21 10:40:00 +0200
 author: João Farias
 version: 1.0.0

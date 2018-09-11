@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "#30daysoftesting - Day 1: Industrial Automation x Test Automation"
+layout: single
+title: "#30daysoftesting - Day 1: Industrial Automation x Test Automation"
 date: 2018-07-09 11:11:00 +0200
 author: João Farias
 version: 1.0.0

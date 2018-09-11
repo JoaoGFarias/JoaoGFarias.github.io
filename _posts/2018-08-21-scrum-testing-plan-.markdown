@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "A Testing Planning Ceremony for Scrum Teams"
 date: 2018-08-21 20:37:00 +0200
 author: João Farias
