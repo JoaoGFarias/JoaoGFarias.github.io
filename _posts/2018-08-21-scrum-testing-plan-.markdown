@@ -4,7 +4,15 @@ title: "A Testing Planning Ceremony for Scrum Teams"
 date: 2018-08-21 20:37:00 +0200
 author: João Farias
 version: 1.0.0
-categories: scrum agile testing planning automation exploratory
+categories:
+  - testing
+tags:
+  - scrum
+  - agile
+  - testing
+  - planning
+  - automation
+  - exploratory
 description: Mini-waterfall and separated/uncoordinated groups of developers and testers is a common problem. In this post, I will describe a simple planning ceremony to better integrate team members in testing activities.
 ---
 

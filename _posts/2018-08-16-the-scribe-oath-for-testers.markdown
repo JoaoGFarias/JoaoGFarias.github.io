@@ -3,6 +3,8 @@ layout: single
 title: "The Scribe's Oath for Testers"
 date: 2018-08-16 08:00 +0200
 author: João Farias
+header:
+  teaser: /assets/images/scribes.jpg
 categories: testing ethics software-development craft
 description: Some thoughts on Bob Martin's ethics guides from a tester perspective
 ---

@@ -4,6 +4,8 @@ title: "The Heuristic Testing Strategy Model Mindmap"
 date: 2018-06-18 20:15:00 -0300
 author: João Farias
 version: 1.0.0
+header:
+  teaser: /assets/images/htsm.jpg
 tags: testing exploratory strategy quality
 description: James Bach's HTSM in Mindmap format
 ---
