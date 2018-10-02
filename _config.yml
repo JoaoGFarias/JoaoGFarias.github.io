@@ -22,7 +22,7 @@ words_per_minute: 360
 comments:
   provider: "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname: "JoaoGFarias"
+    shortname: "thatsabug"
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -77,7 +77,7 @@ analytics:
 author:
   name: "João Farias"
   avatar: "/assets/images/avatar.png"
-  bio: "Half tester, half developer, half curiosity incarnated incarnate"
+  bio: "Half tester, half developer, half curiosity incarnate"
   location: "Wroclaw, PL"
   ? email
   ? uri
@@ -95,7 +95,6 @@ author:
   linkedin: "joaogfarias"
   ? pinterest
   ? soundcloud
-  stackoverflow: "12740/joão-farias"
   ? steam
   ? tumblr
   twitter: "JFThatsABug"
@@ -182,7 +181,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
+      read_time: true
       comments: true
       share: true
       related: true
