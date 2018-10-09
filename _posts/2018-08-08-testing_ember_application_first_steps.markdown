@@ -150,7 +150,7 @@ We've created an object with cool functions which wrap the interaction with the 
 
 A.k.a.: Page Object :)
 
-Of course, this is primitive. Luckily the Ember.js community created [an awesome Page Object](ember-cli-page-object.js.org/) addon.
+Of course, this is primitive. Luckily the Ember.js community created [an awesome Page Object](https://ember-cli-page-object.js.org/) addon.
 I will talk about it in details, and give some tips, in the future.
 
 Let's say we have an app called "What's the date?", which asks for a service the current date and displays a message with it.
