@@ -69,7 +69,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
     Although this is true, as I've mentioned, these Oaths are guidelines - points to aim. So, in this case, the Oath would require of us a reflection of the reasons we are not producing the best work possible. Maybe you are having bad sleep frequently, some financial situation keeps your mind uneasy, you are having trouble with your coworkers. Many things can disturbed our work potential. The important thing is to find the real root cause of these disturbances. The [5-Whys Technique](https://www.mindtools.com/pages/article/newTMC_5W.htm) can help you to dialogue with yourself.
 
-  - "defective either in behavior or structure" talks about [internal and external quality](wiki.c2.com/?InternalAndExternalQuality). The concept of external quality is already established in the testing community, so I will focus on internal quality.
+  - "defective either in behavior or structure" talks about [internal and external quality](http://wiki.c2.com/?InternalAndExternalQuality). The concept of external quality is already established in the testing community, so I will focus on internal quality.
 
     Although [Kent Beck](https://dl.acm.org/citation.cfm?id=318762) says that internal quality is interest of development, for it deals with how systems are designed, I would argue that testers should be interested in keeping a high internal quality for products.
 
