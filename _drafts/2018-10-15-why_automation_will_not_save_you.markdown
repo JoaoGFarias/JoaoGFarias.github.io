@@ -52,7 +52,7 @@ I am talking about the inherited necessity of human evaluation in testing. It ca
 
 - Testing what is not being tested:
 
-  As mentioned above, the almost-mindless activities of checking performed by low-skill testers apparently can be performed by a computer. "Apparently", because, although everything written in an test case can indeed be simulated by a computer, when a human reproduce the procedure, inevitably, his/her mind will be performing unnumberers other evaluations: If a part of the screen blinks, even if it is unrelated to the test case, it will raise a small alert of potential risk. High-skilled testers deal with these signals in a structured way: While [testing](http://www.satisfice.com/articles/what_is_et.shtml), the search to awnser some questions will yield other questions, that can be investigate afterwards depending on the risk analysis and resources available. Low-skilled testers will ignore the signals and proceed with the test case steps. But, **on both cases**, the human **did** an evaluation - the computer **simply could not do it**.
+  As mentioned above, the almost-mindless activities of checking performed by low-skill testers apparently can be performed by a computer. "Apparently", because, although everything written in an test case can indeed be simulated by a computer, when a human reproduce the procedure, inevitably, his/her mind will be performing unnumbered other evaluations: If a part of the screen blinks, even if it is unrelated to the test case, it will raise a small alert of potential risk. High-skilled testers deal with these signals in a structured way: While [testing](http://www.satisfice.com/articles/what_is_et.shtml), the search to answer some questions will yield other questions, that can be investigate afterwards depending on the risk analysis and resources available. Low-skilled testers will ignore the signals and proceed with the test case steps. But, **on both cases**, the human **did** an evaluation - the computer **simply could not do it**.
 
 - Testing what is being tested:
 
@@ -62,7 +62,7 @@ I am talking about the inherited necessity of human evaluation in testing. It ca
 
   This site may seem perfectly OK for most people. However, if I ask a blind person to evaluate it, the result may be different. Super users are usually adapted to the flow of an application - however, regular users will find the same flow impossible to understand.
 
-  Therefore, the test oracle is not necessarly static and final. Testing is a risk evaluation activity - and risk is subjective (no-encodable).
+  Therefore, the test oracle is not necessarily static and final. Testing is a risk evaluation activity - and risk is subjective (no-encodable).
 
 Given that, even with [tools that automatically detect non-functional issues](https://github.com/ember-a11y/ember-a11y-testing) and usage of [AI to detect bugs](test.ai), testing continues to demand human evaluation at its core.
 
