@@ -4,7 +4,7 @@ title: "5 Things to Read This Week - 10/29/2018"
 date: 2018-10-29 00:00:00 +0200
 author: João Farias
 version: 1.0.0
-tags: testing estimation career
+tags: testing estimation career 5-things-to-read
 description: Five links to read this week
 ---
 
