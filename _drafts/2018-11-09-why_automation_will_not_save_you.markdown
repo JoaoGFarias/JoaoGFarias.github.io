@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "3 Reasons Why Automation Will Not Save You"
-date: 2018-05-15 20:15:00 -0100
+date: 2018-11-09 00:00:00 -0000
 author: João Farias
 version: 1.0.0
 categories: Automation testing
@@ -11,23 +11,23 @@ It's not uncommon to see senior developers and managers mesmerized by Automation
 Many of these people have stories of slow and complicated feedback provided by multitudes
 of unskilled testers who think number of test cases in an excel file and bugs registered on Jira
 are a good metric of their performance.
-In this context, of little contact with high-skilled testing practices, it is understandable
-that the image of Selenium scripts clicking and checking state in your web application would look
-like as the silver bullet, the secret for unleashing of all their potential to develop great software,
+In this context of little contact with high-skilled testing practices, it is understandable
+that the image of Selenium scripts clicking and checking state in your web application would sound
+as the secret for unleashing of all the potential to develop great software,
 rapidly and cheaply, without being limited by the almost archaic "testing phase".
 And **this is true**: Automation can perform most **checks** necessary in software project; and
-it, thus, can increase greatly feedback speed and reduce costs. However, it is necessary to notice
+it, thus, can greatly increase feedback speed and reduce costs. However, it is necessary to notice
 that it will only affect a small part of the testing activities ([testing != checking](http://www.developsense.com/blog/2009/08/testing-vs-checking/)).
 
-Automation can be
+And even for this subset of testing activities, Automation have drawbacks and can fail:
 
 ## 1 - Automation is costly
 
 When shallow testing performed by many people is the normal, the idea of having two or three people working on Selenium scripts
-that can be run over and over again at basically no cost with cloud services seems very attractive in financial terms.
-However, the creation of those Automation suites require a very unique mindset and skills, with feet of both testing aspects
+that can be ran over and over again, at basically no cost with cloud services, seems very attractive in financial terms.
+However, the creation of those suites require a very unique mindset and skills, with each feet in both testing
 and development aspects.
-When early implementation of Automation in organizations result in high costs, two aspects usually come together:
+When early implementation of Automation in organizations result in high costs, two things usually come together:
 
 - Unexperienced professionals
 
@@ -46,9 +46,9 @@ Strategies for mitigating these problems exist, but they require maturity from t
 
 ## 2 - You cannot automate everything
 
-... And I am not talking about the [problem of combinatorial explosion in testing](https://www.ps.uni-saarland.de/~niehren/index.html/vorlesung/node5.html) is well known since the 1960's and has being tackled in many contexts with reasonable success. Most of us are comfortable with release a calculator software without testing every possible number in every possible operation.
+... And I am not talking about the [problem of combinatorial explosion in testing](https://www.ps.uni-saarland.de/~niehren/index.html/vorlesung/node5.html), which is well known since the 1960's and has been tackled in many contexts with reasonable success. Most of us are comfortable with release a calculator software without testing every possible number in every possible operation.
 
-I am talking about the inherited necessity of human evaluation in testing. It can be seen in two moments:
+I am talking about the inerent necessity of human evaluation in testing. It can be seen in two moments:
 
 - Testing what is not being tested:
 
@@ -68,13 +68,17 @@ Given that, even with [tools that automatically detect non-functional issues](ht
 
 ## 3 - You can only automate what you already know
 
-You can only automate what you know
-Related to the previous one, but maybe more important
-Our knowledge is always limited
-In what we can do
-In how we can do
-In what we need to do
-If any we don't know any of these three, we would not know that certain thing can be done in a certain - therefore, we cannot instruct a machine in doing so
-Review
-Automation is awesome, but it will not save you because it costs, you cannot automate everything, and you can only automate what you know
-It's necessary to keep on learning and experimenting, so we can uncover more information - which is the only thing that will really improve our work. The rest is just a consequence of the uncovering
+At any given time, our knowledge is always limited
+
+- In what we need to do (motive) - In how we can do (means)
+
+Without these two, we would not perform the activities of checking some aspect in a certain way - therefore, we cannot instruct a machine in doing so.
+
+And this is where the view of testing as a discovery activity, through exploration and learning, shows the limitation of Automation. Exploration serves to discover new risks and aspects that we had not thought about. Through learning, we explore techniques and tools against the under test aspect of the product.
+
+Only after knowing this one is able to instruct a computer to reproduce the a checking procedure - which is a simplification of all the discovery process.
+
+# Review
+
+Automation is awesome, but it will not save you because it costs, you cannot automate everything, and you can only automate what you know.
+It's necessary to **keep on learning and experimenting**, so we can uncover more information - which is the **only thing** that will really improve our work.
