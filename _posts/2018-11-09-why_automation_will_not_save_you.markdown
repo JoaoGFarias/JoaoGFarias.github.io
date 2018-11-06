@@ -3,7 +3,7 @@ layout: post
 title: "3 Reasons Why Automation Will Not Save You"
 date: 2018-11-09 00:00:00 -0000
 author: João Farias
-version: 1.0.0d
+version: 1.0.0
 categories: Automation testing
 description: Many companies start focusing on Automation and fail. Let's see three common reasons for that
 ---
