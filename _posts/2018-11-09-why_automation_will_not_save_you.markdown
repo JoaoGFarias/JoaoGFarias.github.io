@@ -8,6 +8,8 @@ categories: Automation testing
 description: Many companies start focusing on Automation and fail. Let's see three common reasons for that
 ---
 
+![Robot]({{ "assets/images/robot.jpg" | absolute_url }})
+
 It's not rare to see senior developers and managers mesmerized by Automation.
 Many of these people have stories of slow and complicated feedback provided by multitudes
 of unskilled testers who think number of test cases in an Excel file and bugs registered on Jira
