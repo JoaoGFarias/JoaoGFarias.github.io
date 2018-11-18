@@ -84,7 +84,7 @@ from them.
 
 Post-Purchase Rationalization (PPR) is happens when we overlook any faults, difficulties or defects of an expensive product we've bought in order to justify its purchase.
 
-## Neglecting Probability + Bias + Status-Quo Bias + Hindsight Bias
+## Neglecting Probability Bias + Status-Quo Bias + Hindsight Bias
 
 ## Observational Selection Bias + Attentional Bias
 

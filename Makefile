@@ -9,3 +9,6 @@ build:
 
 run:
 	bundle exec jekyll serve --incremental --watch
+
+save:
+	git add . && git commit -m ${MESSAGE}

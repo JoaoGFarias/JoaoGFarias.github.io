@@ -4,7 +4,7 @@ title: "5 Things to Read This Week - 11/12/2018"
 date: 2018-11-12 08:00:00 +0100
 author: João Farias
 version: 1.0.0
-tags: 5-things-to-read testing contract-testing requirements
+tags: 5-things-to-read testing refactoring agile life
 description: Five links to read this week
 ---
 
