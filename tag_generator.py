@@ -23,7 +23,7 @@ filenames = list(itertools.chain.from_iterable([glob.glob(post_dir + extension)
 
 total_tags = []
 for filename in filenames:
-    f = open(filename, 'r', encoding="utf8")
+    f = open(filename, 'r')
     crawl = False
     for line in f:
         if crawl:
