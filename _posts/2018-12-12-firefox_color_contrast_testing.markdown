@@ -28,4 +28,4 @@ If shows a yellow alert if the contrast can be improved to provide better visual
 
 Checkout how to use the new feature on the Developer Accessibility Tools on Youtube:
 
-[![Firefox 64 - New Accessibility Color contrast Feature](https://img.youtube.com/vi/g2j5kYt00CQ/0.jpg)](https://www.youtube.com/watch?v=g2j5kYt00CQ "Firefox 64 - New Accessibility Color contrast Feature")
+{%include youtube.html link="https://www.youtube.com/embed/g2j5kYt00CQ" %}
