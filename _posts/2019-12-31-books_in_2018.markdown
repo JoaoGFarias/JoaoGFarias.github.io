@@ -1,0 +1,55 @@
+---
+layout: post
+title: "The 43 Books I've Read in 2018"
+date: 2018-12-31 08:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: reading 2018
+description: The list of 43 books I've read in 2018
+---
+
+![Reading]({{ "assets/images/read_all_the_books.jpg" | absolute_url }})
+
+- [The 50th Law -  50 Cent and Robert Greene](https://www.goodreads.com/book/show/6043946-the-50th-law)
+- [The Lord of the Rings](https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings)
+- [New Libertarian Manifesto - Samuel Edward Konkin III](https://www.goodreads.com/book/show/168900.New_Libertarian_Manifesto)
+- [The Art of People - Dave Kerpen](https://www.goodreads.com/book/show/25776063-the-art-of-people)
+- [50 Positive Habits](https://www.goodreads.com/book/show/31828629-50-positive-habits)
+- [The 48 Laws of Power - Robert Greene](https://www.goodreads.com/book/show/1303.The_48_Laws_of_Power)
+- [Mastery - Robert Greene](https://www.goodreads.com/book/show/13589182-mastery)
+- [Don't Hurt People and Don't Take Their Stuff - Matt Kibbe](https://www.goodreads.com/book/show/17992692-don-t-hurt-people-and-don-t-take-their-stuff)
+- [One Up On Wall Street -  Peter Lynch and John Rothchild](https://www.goodreads.com/book/show/762462.One_Up_On_Wall_Street)
+- [Unshakeable - Tony Robbins](https://www.goodreads.com/book/show/33965707-unshakeable)
+- [Money, Master the Game - Tony Robbins](https://www.goodreads.com/book/show/23014006-money-master-the-game)
+- [Anatomy of the State - Murray Rothbard](https://www.goodreads.com/book/show/6613404-anatomy-of-the-state)
+- [Capitalism's Toxic Assumptions - Eve Poole](https://www.goodreads.com/book/show/23245518-capitalism-s-toxic-assumptions)
+- [Rich Dad, Poor Dad - Robert T. Kiyosaki](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad)
+- [The 4-Hour Workweek - Tim Ferris](https://www.goodreads.com/book/show/368593.The_4_Hour_Workweek)
+- [The Beast in the Cave - H.P. Lovecraft](https://www.goodreads.com/book/show/6621012-the-beast-in-the-cave)
+- [Bothon - H.P. Lovecraft](https://www.goodreads.com/book/show/21011059-bothon)
+- [Be Obsessed or Be Average - Grant Cardone](https://www.goodreads.com/book/show/27246148-be-obsessed-or-be-average)
+- [Machinery of Freedom - David D. Friedman](https://www.goodreads.com/book/show/112849.Machinery_of_Freedom)
+- [The Millionaire Booklet - Grant Cardone](https://www.goodreads.com/book/show/31284204-the-millionaire-booklet)
+- [An Agorist Primer - Samuel Edward Konkin III](https://www.goodreads.com/book/show/6057120-an-agorist-primer)
+- [The Origins of Money - Carl Menger](https://www.goodreads.com/book/show/8048252-the-origins-of-money)
+- [12 Rules for Life - Jordan B. Peterson](https://www.goodreads.com/book/show/30257963-12-rules-for-life)
+- [Antifragile - Nassim Taleb](https://www.goodreads.com/book/show/13530973-antifragile)
+- [No-Drama Discipline - Daniel J. Siegel](https://www.goodreads.com/book/show/40873423-no-drama-discipline)
+- [Getting to Yes -  Roger Fisher, William Ury, and Bruce Patton](https://www.goodreads.com/book/show/313605.Getting_to_Yes)
+- [The Art of Unit Testing - Roy Osherove](https://www.goodreads.com/book/show/6487349-the-art-of-unit-testing)
+- [The Black Swan - Nassim Taleb](https://www.goodreads.com/book/show/242472.The_Black_Swan)
+- [Pep Guardiola - Martí Perarnau](https://www.goodreads.com/book/show/32325212-pep-guardiola)
+- [Agorist Class Theory - Wally Conger](https://www.goodreads.com/book/show/19266804-agorist-class-theory)
+- [21 Lessons for the 21st Century - Yuval Noah Harari](https://www.goodreads.com/book/show/38820046-21-lessons-for-the-21st-century)
+- [Crush It! - Gary V](https://www.goodreads.com/book/show/6474550-crush-it)
+- [Kick Ass - Mel Robbins](https://www.goodreads.com/book/show/40037508-kick-ass-with-mel-robbins)
+- [The Thank You Economy - Gary V](https://www.goodreads.com/book/show/9203287-the-thank-you-economy)
+- [The Four Agreements - Miguel Ruiz](https://www.goodreads.com/book/show/6596.The_Four_Agreements)
+- [The Social Skills Guidebook - Chris MacLeod](https://www.goodreads.com/book/show/28728007-the-social-skills-guidebook)
+- [The Fifth Agreement - Miguel Ruiz](https://www.goodreads.com/book/show/6979404-the-fifth-agreement)
+- [The Politically Incorrect Guide to Western Civilization - Anthony M. Esolen](https://www.goodreads.com/book/show/2442595.The_Politically_Incorrect_Guide_to_Western_Civilization)
+- [Brief Answers to the Big Questions - Stephen Hawking](https://www.goodreads.com/book/show/40277241-brief-answers-to-the-big-questions)
+- [Weaponized Lies - Daniel J. Levitin](https://www.goodreads.com/book/show/33932218-weaponized-lies)
+- [The Laws of Human Nature - Robert Greene](https://www.goodreads.com/book/show/39330937-the-laws-of-human-nature)
+- [Ayn Rand and the World She Made - Anne C. Heller](https://www.goodreads.com/book/show/3561809-ayn-rand-and-the-world-she-made)
+- [The Road to Serfdom - Friedrich A. Hayek](https://www.goodreads.com/book/show/299215.The_Road_to_Serfdom)
