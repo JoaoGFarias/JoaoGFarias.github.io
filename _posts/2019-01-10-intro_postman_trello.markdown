@@ -4,7 +4,7 @@ title: "CRUD Testing with Postman and Trello API"
 date: 2019-01-10 08:00:00 +0100
 author: João Farias
 version: 1.0.0
-tags: api-testing postman
+tags: api-testing postman postman-series
 description: First steps with Postman using Trello API
 ---
 
@@ -442,7 +442,7 @@ Another test that could be done would be to request the deleted board, using the
 
 * We are not exploring: In the steps, we were validating only the entity we are dealing with, the board, the list, and the card. However, we were not checking the consequences of the changes in the target entities: For instance, when you create a card in a list, the card should be returned on the _/lists/{id}/cards_ endpoint. So, we would need to fetch the cards in the list **before** the request, make the request itself, and check if the new set of cards is equal to the previous one plus the new card.
 
-## Conclusions
+## Conclusion
 
 We've seen how Postman enable us to rapidly step interactions with an API, using simple authentication methods and test operations over entities that we created. The steps above are the core of API Testing using Postman; however, to improve the reliability of our suite, we can to use Postman features discussed above.
 

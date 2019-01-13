@@ -4,7 +4,7 @@ title: "5 Things to Read This Week - 12/10/2018 + Announcement"
 date: 2018-12-10 08:00:00 +0100
 author: João Farias
 version: 1.0.0
-tags: 5-things-to-read api-testing performance postman scrum tools
+tags: 5-things-to-read testing micro-services visual-testing
 description: Five links to read this week on micro services on frontend, development roles, basis of testing and CSS checking on Ember.js Apps
 ---
 
