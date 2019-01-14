@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "5 Things to Read This Week - 01/07/2019"
-date: 2019-01-07 08:00:00 +0100
+title: "5 Things to Read This Week - 01/14/2019"
+date: 2019-01-14 08:00:00 +0100
 author: João Farias
 version: 1.0.0
-tags: 5-things-to-read interview scrum QA functional-programming
+tags: 5-things-to-read technical-interview scrum QA functional-programming
 description: Five links to read this week on coding interviews, Scrum and Testing, meaning of Q.A., and functional programming beauty
 ---
 
