@@ -5,7 +5,7 @@ date: 2019-01-17 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: api-testing postman postman-series
-description: Let's learn how to run many Postman requests in sequence
+description: Let's learn how to run a manifold of Postman requests
 ---
 
 See all posts of this series [here](http://thatsabug.com/tag/postman-series.html)
