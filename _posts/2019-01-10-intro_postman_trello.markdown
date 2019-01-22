@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postman-series
 title: "CRUD Testing with Postman and Trello API"
 date: 2019-01-10 08:00:00 +0100
 author: João Farias

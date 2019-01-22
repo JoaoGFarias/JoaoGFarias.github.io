@@ -1,32 +1,51 @@
 ---
-layout: post
+layout: postman-series
 title: "Postman Runner and Workflows"
-date: 2019-01-17 08:00:00 +0100
+date: 2019-01-21 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: api-testing postman postman-series
 description: Let's learn how to run a manifold of Postman requests
 ---
 
-See all posts of this series [here](http://thatsabug.com/tag/postman-series.html)
-
 ## In the last episode...
 
-// TODO - Recap the Trello API suite from last post
-// TODO - Problem: How to create an execution flow of all requests, so we can test the flow with only one click
+One the [last post](http://thatsabug.com/2019/01/10/intro_postman_trello.html) we've learned how to investigate the Trello
+API using Postman.
+
+We've [created a board](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-1-create-a-board), [some lists](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-2-create-two-lists), [a couple of cards](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-3-creating-a-card), [moved them around](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-5-moving-the-card-between-lists), [checked the behavior of some invalid operations](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-51-invalid-operations), and [deleted the board](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-6-deleting-the-board).
 
 You can download the suite here and run it by yourself:
 
 [Postman Suite Download](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/api_postman_post/assets/images/postman_intro/thats_a_bug_postman_trello.postman_collection.json)
 
+So far, so good... However, to perform the all these operations, we have to click on the _Run_ button of each of the 6 requests... **IN ORDER**.
+If we skip the request to create the lists, the cards cannot be created.
+
+This is error-prone, and, worse of all, it is **BORING**.
+
+I don't know you, but I would prefer to spend me time doing other things that looking at Postman running requests...
+That's we will start using the Postman Runner!
+
 ## Postman Runner
 
-// TODO - What's Postman Runner
-// TODO - How to access the Postman Runner
+When we were building our requests, we aggregated them in a folder, on the left side of Postman.
+
+![Postman Collection]({{ "assets/images/postman_runner/postman_collection.png" | absolute_url }})
+
+This folder is a _Collection_.
+
+Postman Runner is a feature that allow us to run all requests of a collection at once, so we can evaluate flows such
+as the one we did for the Trello API.
+
+To access Postman Runner for a given collection, hover over the collection, click on the _Play_ button, and on the
+_Run_ blue button:
 
 ![Accessing Postman Runner]({{ "assets/images/postman_runner/postman_runner/accessing.png" | absolute_url }})
 
-![Postman Runner UI]({{ "assets/images/postman_runner/postman_runner/runner_ui.png" | absolute_url }})
+This will open a new window where we can configure the execution of the collection:
+
+![Postman Runner UI]({{ "assets/images/postman_runner/postman_runner/runner_UI.png" | absolute_url }})
 
 ### Configuring the suite
 
