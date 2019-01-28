@@ -10,14 +10,14 @@ description: Let's learn how to run a manifold of Postman requests
 
 ## In the last episode...
 
-One the [last post](http://thatsabug.com/2019/01/10/intro_postman_trello.html) we've learned how to investigate the Trello
+... we have [learned](http://thatsabug.com/2019/01/10/intro_postman_trello.html) how to investigate the Trello
 API using Postman.
 
 We've [created a board](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-1-create-a-board), [some lists](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-2-create-two-lists), [a couple of cards](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-3-creating-a-card), [moved them around](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-5-moving-the-card-between-lists), [checked the behavior of some invalid operations](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-51-invalid-operations), and [deleted the board](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-6-deleting-the-board).
 
-You can download the suite here and run it by yourself:
+You can get the suite here and run it by yourself:
 
-[Postman Suite Download](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/api_postman_post/assets/images/postman_intro/thats_a_bug_postman_trello.postman_collection.json)
+[Download here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/api_postman_post/assets/images/postman_intro/thats_a_bug_postman_trello.postman_collection.json)
 
 So far, so good... However, to perform the all these operations, we have to click on the _Run_ button of each of the 6 requests... **IN ORDER**.
 If we skip the request to create the lists, the cards cannot be created.
@@ -25,7 +25,7 @@ If we skip the request to create the lists, the cards cannot be created.
 This is error-prone, and, worse of all, it is **BORING**.
 
 I don't know you, but I would prefer to spend me time doing other things that looking at Postman running requests...
-That's we will start using the Postman Runner!
+That's why we will start using the Postman Runner!
 
 ## Postman Runner
 
@@ -47,11 +47,37 @@ This will open a new window where we can configure the execution of the collecti
 
 ![Postman Runner UI]({{ "assets/images/postman_runner/postman_runner/runner_UI.png" | absolute_url }})
 
+The first region is a collection picker. It allows us to change the collection.
+
+The second region have configuration fields to the execution itself.
+
+The third region shows the history of execution.
+
+Let's take a deeper look at the configuration fields.
+
 ### Configuring the suite
 
 // TODO - Configurations: Environment, Iterations, Delay, Logging
 
 ![Accessing Postman Runner Configuration]({{ "assets/images/postman_runner/configuring/configuring.png" | absolute_url }})
+
+The first field allow us to pick the environment where the execution will happen.
+An environment is a set of key-value pairs; that's the place where we have stored our initial variables values.
+You can use the environment setup to perform the same flow for different users (by changing the credentials) or different domains, such as QA, Dev or Prod (by changing the base URL of the API).
+
+The second field, _Interations_, tells Postman how the number of times that the flow should run.
+
+The third field, _Delay_, indicates the halting time between each request (not between iterations). This feature is generally used to simulate a bit more the way a human user would use an API. It can also serve to simulate the acceptance criteria of duplication of data across a data warehouse, although other tools, focused on performance, are more indicated than Postman.
+
+The forth field, _Log Responses_, offers the logging options. You can use it to improve performance, because logging can be a bottleneck, specially for long collection.
+
+There are three options:
+
+- _For all requests_: Log responses for all requests;
+- _For failed requests_: If at least **one test** fails, the response will be logged;
+- _For no requests_: No response logging.
+
+We will talk about the _Data_ field in the future.
 
 ### Execution
 
@@ -79,4 +105,4 @@ This will open a new window where we can configure the execution of the collecti
 
 We've seen how to integrate the execution of many requests [we've created before](http://thatsabug.com/2019/01/10/intro_postman_trello.html) using Postman Runner. Additionally, we were able to create specific flows for request re-use, using nextRequest function.
 
-With these tools, we can indeed simulate the end-to-end usage of the Trello's API with only one click! 
+With these tools, we can indeed simulate the end-to-end usage of the Trello's API with only one click!
