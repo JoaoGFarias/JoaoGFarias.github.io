@@ -57,8 +57,6 @@ Let's take a deeper look at the configuration fields.
 
 ### Configuring the suite
 
-// TODO - Configurations: Environment, Iterations, Delay, Logging
-
 ![Accessing Postman Runner Configuration]({{ "assets/images/postman_runner/configuring/configuring.png" | absolute_url }})
 
 The first field allow us to pick the environment where the execution will happen.
@@ -77,23 +75,44 @@ There are three options:
 - _For failed requests_: If at least **one test** fails, the response will be logged;
 - _For no requests_: No response logging.
 
-We will talk about the _Data_ field in the future.
+We will talk about the _Data_ field in a future post.
 
 ### Execution
 
 // TODO - How to execute
+
+To run the suite, we simply click on _Run_
+
 ![Postman Runner Summary]({{ "assets/images/postman_runner/execution/click_on_run.png" | absolute_url }})
+
+Postman will run every request in sequence, repeating the process according to the number of iteration we've setup.
+
 ![Postman Runner Screen]({{ "assets/images/postman_runner/execution/runner_screen.png" | absolute_url }})
+
+Since we have a total of 23 checks in the suite, with 3 iterations, we will have a total of 69 checks for each
+run.
+
 ![Postman Runner Summary]({{ "assets/images/postman_runner/execution/summary.png" | absolute_url }})
+
+The detailed screen has in three parts:
+
+1 - The title of each request;
+2 - The list of tests inside each request;
+3 - The list of iterations, that allow us to jump to each execution.
+
 ![Postman Runner Execution Parts]({{ "assets/images/postman_runner/execution/execution_parts.png" | absolute_url }})
+
+We can also see a summarized version of this screen:
+
 ![Postman Runner Summary Button]({{ "assets/images/postman_runner/execution/run_summary_button.png" | absolute_url }})
+
+This view will display the title of each request, and the result (Green or Red) for each iteration.
+
 ![Postman Runner Run Summary]({{ "assets/images/postman_runner/execution/run_summary.png" | absolute_url }})
+
+We can export the results in a JSON file, for future reference.
+
 ![Postman Runner Execution JSON]({{ "assets/images/postman_runner/execution/execution_json.png" | absolute_url }})
-
-### Results
-
-// TODO - Results display
-// TODO - Exporting results
 
 ## Postman Flows with nextRequest
 
