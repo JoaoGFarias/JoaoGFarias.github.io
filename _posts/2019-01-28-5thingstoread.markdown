@@ -3,9 +3,9 @@ layout: post
 title: "5 Things to Read This Week - 01/28/2019"
 date: 2019-01-28 08:00:00 +0100
 author: João Farias
-version: 1.0.0
-tags: 5-things-to-read javascript philosophy test-case process programmming
-description: Five links to read this week on testing in Javascript, aphorisms, test cases, processes and ownership, and professional programming
+version: 1.0.1
+tags: 5-things-to-read automation estimation test-design exploratory react scrum
+description: Five links to read this week on page objects, estimation, test design + exploration, react testing, and user stories
 ---
 
 # 5 Things to Read
