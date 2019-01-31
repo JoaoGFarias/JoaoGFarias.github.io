@@ -10,7 +10,7 @@ description: Let's learn how to run a manifold of Postman requests
 
 ## In the last episode...
 
-... we have [learned](http://thatsabug.com/2019/01/10/intro_postman_trello.html) how to investigate the Trello
+... we've [learned](http://thatsabug.com/2019/01/10/intro_postman_trello.html) how to investigate the Trello
 API using Postman.
 
 We've [created a board](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-1-create-a-board), [some lists](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-2-create-two-lists), [a couple of cards](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-3-creating-a-card), [moved them around](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-5-moving-the-card-between-lists), [checked the behavior of some invalid operations](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-51-invalid-operations), and [deleted the board](http://thatsabug.com/2019/01/10/intro_postman_trello.html#step-6-deleting-the-board).
@@ -116,12 +116,101 @@ We can export the results in a JSON file, for future reference.
 
 ## Postman Flows with nextRequest
 
-// TODO - Removing duplicated list creation
-// TODO - Creating and moving 100 cards
+### The problem
 
+If you have ever used Trello, you probably created way more cards than lists or boards.
+It means the card creation endpoint should be used more often.
+
+The problem with our current approach is that it would require us to duplicate the _Create Learn on That's a Bug card_
+request - i.e. **duplication**.
+
+![Yoda hates duplication]({{ "assets/images/postman_runner/nextRequest/yoda.png" | absolute_url }})
+
+So, let's solve this...
+
+### The _setNextRequest_ function
+
+The Postman's function _setNextRequest_ allow us to programmatically choose the next request to be executed.
+For instance, the code:
+
+```javascript
+postman.setNextRequest("Delete board");
+```
+
+will force Postman Runner to jump to the _Delete board_ request, regardless of the request's _physical_ order.
+
+### Creating 100 cards
+
+So, how you create several cards without duplicating the request itself?
+
+Let's add some code to be run before the request execution and its tests, using the _Pre-Request Script_ tab:
+
+![setNext Request]({{ "assets/images/postman_runner/nextRequest/setNextRequest.png" | absolute_url }})
+
+Explanation:
+
+1 - We create a sort of counter to track how many cards should we still create.
+
+```javascript
+const remainingCards = "remainingCards";
+
+if(pm.environment.get(remainingCards) === undefined) {
+    pm.environment.set(remainingCards, 100);
+}
+```
+
+The constant ```remainingCards``` serves as an [Enum](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html),
+avoiding typos that would be debugging harder.
+
+As we learn [on the last post](http://thatsabug.com/2019/01/10/intro_postman_trello.html), we use environmental variables 
+to share information between requests. They can be used also for multiple calls to the same request.
+
+Then, on the first execution of the card creation request, there is no _"remainingCards"_ environmental variable. We check
+it using the [strict comparision operator](https://stackoverflow.com/a/359509/2252076), against the _undefined_ value. If
+we indeed do not have this variable, we create it, setting the value _100_ to it.
+
+2 - Setting the same request to run again
+
+```javascript
+if(pm.environment.get(remainingCards) > 0) {
+    
+    pm.environment.set(
+        remainingCards,
+        pm.environment.get(remainingCards) - 1
+    );
+    
+    postman.setNextRequest("Create Learn on That's a Bug card");
+}
+```
+
+First we check if we still have cards to be created.
+If so, we decrement our _counter_ and inform Postman that we want to execute the same request.
+
+However, if we don't have cards to be created...
+
+```javascript
+else {
+    pm.environment.unset(remainingCards) 
+    postman.setNextRequest("Move card from TODO to Done");
+}
+
+```
+
+We can delete the counter variable and save to Postman that we can proceed with the card moving request.
+
+If you execute Postman Runner now:
+
+![setNext Execution]({{ "assets/images/postman_runner/nextRequest/execution.png" | absolute_url }})
+
+You can see that the _"Create Learn on That's a Bug card"_ request was executed multiple times - 
+and Postman executed the tests for each request.
+
+**AWESOME!**
 
 ## Conclusion
 
-We've seen how to integrate the execution of many requests [we've created before](http://thatsabug.com/2019/01/10/intro_postman_trello.html) using Postman Runner. Additionally, we were able to create specific flows for request re-use, using nextRequest function.
+We've seen how to integrate the execution of many requests [we've created before](http://thatsabug.com/2019/01/10/intro_postman_trello.html) using Postman Runner. Additionally, we were able to create specific flows for request re-use, using _setNextRequest_ function.
 
 With these tools, we can indeed simulate the end-to-end usage of the Trello's API with only one click!
+
+Download the final collection [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/api_postman_post/assets/images/postman_runner/thats_a_bug_postman_trello.postman_collection.json)
