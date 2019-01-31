@@ -1,7 +1,7 @@
 ---
 layout: postman-series
 title: "Postman Runner and Workflows"
-date: 2019-01-21 08:00:00 +0100
+date: 2019-02-01 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: api-testing postman postman-series
