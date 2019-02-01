@@ -5,7 +5,7 @@ date: 2019-02-01 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: api-testing postman postman-series
-description: Let's learn how to run a manifold of Postman requests
+description: Let's learn how to run all Postman requests with ONE click
 ---
 
 ## In the last episode...
@@ -60,7 +60,7 @@ Let's take a deeper look at the configuration fields.
 ![Accessing Postman Runner Configuration]({{ "assets/images/postman_runner/configuring/configuring.png" | absolute_url }})
 
 The first field allow us to pick the environment where the execution will happen.
-An environment is a set of key-value pairs; that's the place where we have stored our initial variables values.
+An environment is a set of key-value pairs; That's the place where we have stored our initial variables values.
 You can use the environment setup to perform the same flow for different users (by changing the credentials) or different domains, such as QA, Dev or Prod (by changing the base URL of the API).
 
 The second field, _Interations_, tells Postman how the number of times that the flow should run.
@@ -79,8 +79,6 @@ We will talk about the _Data_ field in a future post.
 
 ### Execution
 
-// TODO - How to execute
-
 To run the suite, we simply click on _Run_
 
 ![Postman Runner Summary]({{ "assets/images/postman_runner/execution/click_on_run.png" | absolute_url }})
@@ -97,7 +95,9 @@ run.
 The detailed screen has in three parts:
 
 1 - The title of each request;
+
 2 - The list of tests inside each request;
+
 3 - The list of iterations, that allow us to jump to each execution.
 
 ![Postman Runner Execution Parts]({{ "assets/images/postman_runner/execution/execution_parts.png" | absolute_url }})
@@ -114,7 +114,7 @@ We can export the results in a JSON file, for future reference.
 
 ![Postman Runner Execution JSON]({{ "assets/images/postman_runner/execution/execution_json.png" | absolute_url }})
 
-## Postman Flows with nextRequest
+## Postman Flows with _setNextRequest_
 
 ### The problem
 
@@ -124,7 +124,7 @@ It means the card creation endpoint should be used more often.
 The problem with our current approach is that it would require us to duplicate the _Create Learn on That's a Bug card_
 request - i.e. **duplication**.
 
-![Yoda hates duplication]({{ "assets/images/postman_runner/nextRequest/yoda.png" | absolute_url }})
+![Yoda hates duplication]({{ "assets/images/postman_runner/nextRequest/yoda.jpg" | absolute_url }})
 
 So, let's solve this...
 
@@ -193,7 +193,6 @@ else {
     pm.environment.unset(remainingCards) 
     postman.setNextRequest("Move card from TODO to Done");
 }
-
 ```
 
 We can delete the counter variable and save to Postman that we can proceed with the card moving request.
