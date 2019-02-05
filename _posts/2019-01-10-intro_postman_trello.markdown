@@ -436,7 +436,7 @@ Another test that could be done would be to request the deleted board, using the
 
  The step-by-step above ignores some features that Postman has which could improve the productivity and reliability of the tests:
     
-* We are not using Postman Runner: It chains the many requests in a flow, executing them in the sequency we define. Besides allowing us to run all requests with one click, a fixed flow would ensure we are not running them in a sequence that would break our tests: For instance, if we hit the board creation request twice, the environment variable would hold only the second board - the first one would be idle forever.
+* We are not using Postman Runner: It chains the many requests in a flow, executing them in the sequency we define. Besides allowing us to run all requests with one click, a fixed flow would ensure we are not running them in a sequence that would break our tests: For instance, if we hit the board creation request twice, the environment variable would hold only the second board - the first one would be idle forever. We have a post on Postman Runner, [click here to check it out](http://thatsabug.com/2019/02/01/postman_runner.html)
 
 * We are keeping all variables, even when not used anymore: It can lead bugs in our Runner flows, because some variable may be used in an unexpected way.
 
