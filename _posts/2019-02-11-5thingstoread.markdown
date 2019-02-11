@@ -12,7 +12,7 @@ description: Five links to read this week on Javascript's future, code review fo
 
 ![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
 
-- **[Future JavaScript: what is still missing?]( http://2ality.com/2019/01/future-js.html)**
+- **[Future JavaScript: what is still missing?](http://2ality.com/2019/01/future-js.html)**
   - Since ES6, released in 2015, ECMA has adopted a policy of yearly major releases for Javascript. To keep up with the whole package every year is hard and wearying, specially if you don't use the language often or deeply. Axel Rauschmayer has one of the [best blogs on Javascript](http://2ality.com/index.html), and has listed some features in the road of the Javascript language, from capacity of comparing values by value to proposals on [pipeline operators](http://2ality.com/2019/01/future-js.html#pipeline-operator).
 - **[How do you review test automation code?](https://club.ministryoftesting.com/t/how-do-you-review-test-automation-code/22071)**
   - Thread on the Ministry of Testing Club on how to review automation code. [Here are my two cents on the discussion](https://club.ministryoftesting.com/t/how-do-you-review-test-automation-code/22071/3?u=joaofarias)
