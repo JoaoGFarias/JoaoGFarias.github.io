@@ -11,27 +11,25 @@ description: Mini-waterfall and separated/uncoordinated groups of developers and
 ## Testing in Scrum Teams
 
 Scrum teams' main goal is to deliver a valuable increment at the end of each iteration (sprint),
-so that the stakeholders can clearly see progress and provide feedback for the direction of the project.
+enabling stakeholders to see progress and to provide feedback for the direction of the project.
 
-Obviously, in order to deliver value (new features without breaking existing ones), it is necessary
-a rigorous evaluation of product, a.k.a. **testing**. Although many teams have reached maturity
+To deliver value (new features without breaking existing ones), it is necessary
+a rigorous evaluation of product, a.k.a. **testing**. Although most teams have reached certain level of maturity
 regarding incrementally building new features and infra-structure, testing activities commonly
 fell into the trap of the mini-waterfall - i.e., they are delayed until the end of the iteration
 or to later phases of the project.
 
-Many teams divide their iterations in _development week_ and _testing week_. On the first, developers work at full speed in all user stories planned for the iteration, integrating the new features into a single package. This package is then evaluated in the _testing week_, where the evil testing people come into scene and point
-out the mess that would be if the team deliver this package. Developers, then, spend all this time trying to
-get things into order so that _no so many known bugs_ pass into the next sprint ("unknown bugs
-will be introduced, surely).
+Many teams divide their iterations in _development week_ and _testing week_. On the first week, developers work at full speed in all user stories planned for the iteration, integrating the new features into a single package. This package is then evaluated in the _testing week_, where the evil testing people come into scene and point out the mess that would be if the team deliver this package. Developers, then, spend all this time trying to
+get things into order so that _no so many known bugs_ pass into the next sprint ("unknown bugs will be introduced, surely).
 
 One of the possible root causes of this situation is the separation between the work of testers and
 developers, on both sides. Developers don't know what kind of risks the testers will evaluate - and
 testers don't know the implementation approach that the developers plan to use (and the new approaches
-that they discovered during the sprint). This situation results in more bugs, less velocity, worse quality, more re-work and, **worst of all**, conflicts and low moral in the team.
+that they discovered during the sprint). This situation results in more bugs, slower velocity, worse quality, more re-work and, **worst of all**, conflicts and low moral in the team.
 
 ## Goal
 
-In order to mitigate this vacuum, developers and testers should work together in the problems, both
+To mitigate this vacuum, developers and testers should work together in the problems, both
 on the (iteration) planning phase and during iteration execution. In this post, I will be focusing
 on the planning phase, describing a testing planning ceremony that enables developers and testers
 to think about the risks involved in the increment building, and how they will approach testing
@@ -39,20 +37,20 @@ activities (writing of automated checks, areas to explore for failures and risks
 
 ## Context
 
-The example given below is thought to be used by a team of no more than 10 people, preferably
+The example given below is thought to be used by a team of around 10 people, preferably
 co-located - however, adjustments can be done to deal with (a bit) more people or geo-disperse
 groups (quick suggestions about that at the end of the post).
 
 Additionally, the imaginary team has a diverse check automation suite, relying on checks from basic
-units, like functions, up until whole-system, working in conjunction, rather than as indenpendts entities.
+units, such as functions, up until the whole-system level; working in conjunction, rather than as independents entities.
 This configuration, [besides being more reliable and organic](http://thatsabug.com/2018/08/08/testing_ember_application_first_steps.html), takes
 great advantage of the testing planning ceremony, for the discussion will generate better-thought
-organization of the many different types of check.
+organization of the different types of check.
 
 ## Testing Planning Ceremony Overview
 
-The ceremony is a meeting between many members of the team. Although the participation of
-all members is not a must, it is necessary to have diverse expertise in the room (testers with
+The ceremony is a meeting between all members of the team. This broader audience is necessary
+because it creates expertise diversity (testers with
 automation background and testers more exploratory background | front-end and back-end developers, etc).
 
 The ceremony is held after the first half of the planning phase, when the Product Owner have already
@@ -72,7 +70,7 @@ In this point, the members should not discuss deeply the validity of the ideas -
 the obviously unnecessary or repeated ones.
 
 The different points of view, due the diverse expertise, will create very specific validation ideas;
-and other members will slowing learn the common points of risk in each area of the project.
+and other members will slowing learn about the risks in each area of the project.
 
 With list of testing ideas, and the learning created by the discussion and exposition, the members can
 discuss how to better implement each idea:
@@ -86,7 +84,7 @@ The result of the ceremony, besides the team learning, is a well-thought list of
 **during the development** of the increment, usually attached to the specific acceptance criteria and/or user
 stories.
 
-This allows both developers and testers to better coordinate their work, performing the necessary activities
+This allows developers and testers to better coordinate their work, performing the necessary activities
 as soon as possible. Additionally, effort for completing a given user story can encompass both developers and
 testers work, thus improving the quality of estimations.
 
