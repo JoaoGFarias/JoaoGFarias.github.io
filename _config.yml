@@ -7,7 +7,7 @@
 
 # Site settings
 title: That's a Bug!
-email: jgfarias42@gmail.com
+email: joao@thatsabug.com
 description:
   Writing the software the right way through hardcore testing.
 long_description:
@@ -18,7 +18,7 @@ long_description:
 url: "https://thatsabug.com/"
 footer_links:
   email:
-    jgfarias42@gmail.com
+    joao@thatsabug.com
   linkedin:
     username:  
       joaogfarias
