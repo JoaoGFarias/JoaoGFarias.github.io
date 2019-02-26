@@ -212,4 +212,4 @@ We've seen how to integrate the execution of many requests [we've created before
 
 With these tools, we can indeed simulate the end-to-end usage of the Trello's API with only one click!
 
-Download the final collection [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/api_postman_post/assets/images/postman_runner/thats_a_bug_postman_trello.postman_collection.json)
+Download the final collection [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/images/postman_runner/thats_a_bug_postman_trello.postman_collection.json)
