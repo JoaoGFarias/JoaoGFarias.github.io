@@ -9,7 +9,7 @@ description: Five links to read this week
 ---
 
 - **[Automating page tabability (is that a word?) with visual testing](http://vivrichards.co.uk/testing/automating-page-tab-flows-using-visual-testing-and-javascript)**
-  - Viv Richards shows a feature of the awesome [Chromelens](chromelens.xyz), where the path that a visually impaired user, using the tab key, would pass on the website is traced, facilitating analysis on this important accessibility characteristic.
+  - Viv Richards shows a feature of the awesome [Chromelens](http://chromelens.xyz), where the path that a visually impaired user, using the tab key, would pass on the website is traced, facilitating analysis on this important accessibility characteristic.
 - **[What Is A Test Coach?](https://thoughtsontest.wordpress.com/2018/11/09/what-is-a-test-coach/)**
   - How to multiply yourself by spreading testing skills to **EVERYBODY**
 - **[A False Dichotomy of Modern Testing](http://testerstories.com/2018/11/a-false-dichotomy-of-modern-testing/)**
