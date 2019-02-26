@@ -67,7 +67,7 @@ I am talking about the inerent necessity of human evaluation in testing. It can 
 
   Therefore, the test oracle is not necessarily static and final. **Testing is a risk evaluation activity** - and risk is subjective (no-encodable).
 
-Given that, even with [tools that automatically detect non-functional issues](https://github.com/ember-a11y/ember-a11y-testing) and usage of [AI to detect bugs](test.ai), testing continues to demand human evaluation at its core.
+Given that, even with [tools that automatically detect non-functional issues](https://github.com/ember-a11y/ember-a11y-testing) and usage of [AI to detect bugs](https://test.ai), testing continues to demand human evaluation at its core.
 
 ## 3 - You can only automate what you already know
 
