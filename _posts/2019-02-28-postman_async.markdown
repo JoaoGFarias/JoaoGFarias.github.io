@@ -1,7 +1,7 @@
 ---
 layout: postman-series
 title: "Exploratory Testing with Postman Async"
-date: 2019-02-14 08:00:00 +0100
+date: 2019-02-28 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: api-testing postman postman-series
