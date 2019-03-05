@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Via Negativa - 3 Non-Technical Things to Boost You Career"
+title: "3 Non-Technical Things to Boost You Career"
 date: 2019-03-14 08:00:00 +0100
 author: João Farias
 version: 1.0.0
