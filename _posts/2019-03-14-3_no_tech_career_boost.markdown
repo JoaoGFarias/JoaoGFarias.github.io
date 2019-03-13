@@ -77,6 +77,6 @@ money quickly and without bureaucracies. It usually imply less growth on the inv
 makes it clear we are not looking for extraordinary growth at this point.
 
 ## Exercise
-## Clean your Enviorment
+## Clean your Environment
 
 # Conclusion
