@@ -30,7 +30,7 @@ So... let's do it:
 
 ## Create an Emergency Fund
 
-## Definition
+### Definition
 
 An Emergency Fund is an investment stash that covers 6 to 12 months of your expenses.
 _"your expenses"_ seems precise, but it is not. In the case of an emergency fund, we are talking
@@ -44,7 +44,7 @@ probably **not** be included here.
 Monthly savings of 20% of this minimum are already a good starting point - although killing possible
 debts can be workable along this savings, if it is something your struggling as well.
 
-## Why would I need this?
+### Why would I need this?
 
 The Emergency Fund will remove a good portion of the "what if (something bad) happen?" from your life
 and give you the freedom to pursue something better with full force.
@@ -56,7 +56,7 @@ for something better. Also, if your employer politely dismiss your efforts, you 
 This freedom will not improve your life as a professional per se, but it will enable you to make some
 moves towards it that would be too risky otherwise. Knowing that life in our hands is truly empowering.
 
-## Tips
+### Tips
 
 Remember I said an Emergency Fund is an **investment**?
 
@@ -77,6 +77,7 @@ money quickly and without bureaucracies. It usually imply less growth on the inv
 makes it clear we are not looking for extraordinary growth at this point.
 
 ## Exercise
+
 ## Clean your Environment
 
 # Conclusion
