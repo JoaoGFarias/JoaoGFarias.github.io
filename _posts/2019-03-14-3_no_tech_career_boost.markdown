@@ -109,6 +109,31 @@ that constant progress and frequency are important. If you think about yourself 
 the gym, you use bad form or have a regression in load you will automatically reflect how can you compensate for it, instead of thinking
 "Ah... not a big deal".
 
-## Clean your Environment
+## Clean Up Your Environment
+
+At first, I thought of naming this section "Clean Up Your Room", but it would may confuse people with [Jordan Peterson's Clean Up
+Your Room](https://www.youtube.com/watch?v=BBR5v89L6gk). But let's talk about the more materialistic / practical part of Peterson's
+idea: To organize and simplify your everyday activities.
+
+It's ease to see yourself in a situation that everything you deal with is big and complicated: Your notes are spread throughout 5 apps
+and 3 notebooks in an unorganized manner, your computer desktop have 35 icons, you are learning about 3 tools and 2 programming languages your wardrobe consists of randomly thrown clothes, etc. And your project? _No need to talk about that..._
+
+The problem with such environments is that, although it's possible to perform any activity, they are inherently slow and error-prone. Every decision demands both mental power and physical effort - draining your capacity throughout the day. On top of that, since the environment is already complex, daily increments in its complexity pass unnoticed.
+
+To mitigate these problems, like you don't change tires of a car while driving, it's necessary to stop your daily activities and apply three verbs in the target messy area:
+
+- To Organize;
+- To Remove;
+- To Limit.
+
+_To organize_ will create environments of **high cohesion**, meaning that related things will be close together. For instance, in the confusing note situation described above, a step to organize would be to use only **one** notebook - digital or physical: Notes are all related to each other, so let's keep them near each other. Do you need to look for a note? Go look in **that one** notebook. In this case, obviously, you can increase inner cohesion by creating organized folders in a deep structure, where each folder have very few direct sub-folders, but many indirect sub-folders.
+
+_To Remove_ will simplify the environment by keeping only items that are necessary. In the note taking situation, you will probably throw away the notes about that J2ME class you had in 2005 and those intranet sites from your previous job. Besides out-dated things, you may want to throw away things that do not provide you at least medium-term benefits: If you have a 200 blog posts links in a TO-READ note, you may want to simply cut 80% of it - if you are alive until know with it, you will probably continue to do so; and good chances is that a good part of the deleted links are no longer of value to you.
+
+_To Limit_
+
+
+### Tips
+
 
 # Conclusion
