@@ -73,10 +73,41 @@ creation of the Fund) **for sure** - no variable growth or risk of loosing money
 
 - D+1 maximum reclaim time: It means that the investment should be transformable in money in your account
 in 24h or less. Since we want to be prepared for emergencies, we want to be able to put our hands on this
-money quickly and without bureaucracies. It usually imply less growth on the investment, but the first tip
+money quickly and without bureaucracies. It usually implies less growth on the investment, but the first tip
 makes it clear we are not looking for extraordinary growth at this point.
 
 ## Exercise
+
+Side-by-side with good nutrition and inner-psychologic understanding, the single-most force to keep the human
+machine functioning is exercising.
+
+The small and constant stress and deterioration that weight-lifting and running cause on bones and muscles
+are essential to keep them healthy. And more than that, they benefit from the small dosages of chaos - becoming
+stronger and stronger every week.
+
+Exercises can help you in your career by keeping you on the game for more time. During your 20s and 30s, your body can deal
+with pretty much any lifestyle. However, from 40 years old onwards, the body will no longer be able to follow the intensity
+of the mind - you will be less willing to travel and to stand long hours of work. On the other hand, during 20s and 30s, you
+will be still growing in your career, your ability ot impact will be limited. Later stages of your careers is when you have the
+experience and influence to cause big impact - and it is in that period that you will need a strong body.
+
+The exercising period can serve as moments for meditation and relaxation from everyday life, when the control of the environment
+and goals is yours and yours only.
+
+### Tips
+
+- Make the exercising period short and frequent: I prefer 1-1,5 hours session 3-4 times per week. It allows me to go strong at each
+session while not taking a big portion of my agenda;
+
+- Engage in activities in which you can constantly progress: The idea to increase the likelihood of engaging in the activity itself
+in a constant manner. If we are talking about something that one cannot get "better", such as dishwashing, the level of motivation to
+perform the activity is low. In exercising, I would say that nothing is easier to track progress that weightlifting and running. Activities
+like soccer or martial arts, although funny and with great benefits, are harder to measure progress.
+
+- Face it like a profession: It may sound extreme, but the exercise of thinking about exercising (going meta...) will fool your mind
+that constant progress and frequency are important. If you think about yourself as a professional weightlifter, every time you miss
+the gym, you use bad form or have a regression in load you will automatically reflect how can you compensate for it, instead of thinking
+"Ah... not a big deal".
 
 ## Clean your Environment
 
