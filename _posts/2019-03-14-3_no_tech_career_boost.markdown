@@ -120,7 +120,7 @@ and 3 notebooks in an unorganized manner, your computer desktop have 35 icons, y
 
 The problem with such environments is that, although it's possible to perform any activity, they are inherently slow and error-prone. Every decision demands both mental power and physical effort - draining your capacity throughout the day. On top of that, since the environment is already complex, daily increments in its complexity pass unnoticed.
 
-To mitigate these problems, like you don't change tires of a car while driving, it's necessary to stop your daily activities and apply three verbs in the target messy area:
+To mitigate these problems, as you don't change tires of a car while driving, it's necessary to stop your daily activities and apply three verbs in the target messy area:
 
 - To Organize;
 - To Remove;
@@ -130,7 +130,7 @@ _To organize_ will create environments of **high cohesion**, meaning that relate
 
 _To Remove_ will simplify the environment by keeping only items that are necessary. In the note taking situation, you will probably throw away the notes about that J2ME class you had in 2005 and those intranet sites from your previous job. Besides out-dated things, you may want to throw away things that do not provide you at least medium-term benefits: If you have a 200 blog posts links in a TO-READ note, you may want to simply cut 80% of it - if you are alive until know with it, you will probably continue to do so; and good chances is that a good part of the deleted links are no longer of value to you.
 
-_To Limit_
+_To Limit_ is the process of creating rules for the usage and management of the environment. Coming back to the note taking situation, I can set a rule of never have a _and_ in a folder name: I.e. a folder can only contain **one exact** type of thing; or I can set on my calendar to every move all notes that I haven't edit to a _Archive_ folder every 6 months. Rules are not meant to be restrictive: After all, there is **none** to complain if you change or not apply them. This is a pro and a con at the same time: You will be the only one responsible for following the rules and evaluating their effectiveness. There is when meta-rules come in scene: You can create rules for when to evaluate the rules - this interval has to both long enough to make the rule a habit (automatic action/decision) and short enough to you to remember how were things before the rule.
 
 
 ### Tips
