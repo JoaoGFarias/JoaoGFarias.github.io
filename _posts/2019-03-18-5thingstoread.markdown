@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "5 Things to Read This Week - 03/10/2019"
-date: 2019-03-10 07:00:00 +0100
+title: "5 Things to Read This Week - 03/18/2019"
+date: 2019-03-18 07:00:00 +0100
 author: João Farias
 version: 1.0.0
-tags: 5-things-to-read cross-browser hiring AI testability automation
-description: Five links to read this week on tools for cross-browser testing, hiring of top-level people, problems with AI, testability and the real reason for automation
+tags: 5-things-to-read podcast testing backlog scrum visual-testing api-design
+description: Five links to read this week on testing podcasts, random checking, backlogs, Visual Testing and a book on Web API Design
 ---
 
 # 5 Things to Read
@@ -18,7 +18,7 @@ description: Five links to read this week on tools for cross-browser testing, hi
   - Pytest is an awesome Python library for random checking - similar to [Haskell's Quickcheck](http://hackage.haskell.org/package/QuickCheck). Although test design techniques are crucial to have good coverage, it never hurts to have some machine power to unfold some miss edge cases.
 - **[Scrum by Example: Product Backlog Refinement in Action](https://agilepainrelief.com/notesfromatooluser/2019/02/scrum-product-backlog-refinement.html)**
   - Backlog Refinement is maybe the Scrum event where more work is done. "Why?", you may ask. Because a good refinement session makes you **not** to work on things that are not important or shouldn't be done. [Mark Levison](https://twitter.com/mlevison?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) talks about what happen on Refinements.  
-- **[Easy Free Automation Part V: Visual Tests ](http://thethinkingtester.blogspot.com/2019/02/easy-free-automation-part-v-visual-tests.html)**
+- **[Easy Free Automation Part V: Visual Tests](http://thethinkingtester.blogspot.com/2019/02/easy-free-automation-part-v-visual-tests.html)**
   - Although I haven't tried yet, BackstopJS seems to be a good tool for simple visual checking in web apps. Kristin Jackvony talks a bit about it here.
 - **[The Web API Design Guidelines for Happy Developers: A short pragmatic guide to build effective and funny Web APIs](https://www.amazon.com/Web-Design-Guidelines-Happy-Developers-ebook/dp/B019RWDAFS)**
   - I love learning about internal quality: The analysis on **how** things are built. I will start reading this short ebook this month; maybe a post reviewing it in the future. Wanna join me?
