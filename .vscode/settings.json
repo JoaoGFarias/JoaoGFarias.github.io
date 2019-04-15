@@ -2,4 +2,7 @@
   "spellright.language": "en",
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
   "html.format.enable": false,
+  "cSpell.words": [
+    "mindmap"
+  ],
 }
