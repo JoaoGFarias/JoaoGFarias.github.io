@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "5 Things to Read This Week - 04/29/2019"
-date: 2019-04-29 07:00:00 +0100
+title: "5 Things to Read This Week - 05/06/2019"
+date: 2019-05-06 07:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: 5-things-to-read agile testing hiring information scrum
