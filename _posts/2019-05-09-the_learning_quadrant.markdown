@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Learning Quadrants: Avoid Burnout and Maximize Knowledge"
-date: 2019-03-26 08:00:00 +0100
+date: 2019-05-09 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: career learning personal-development
