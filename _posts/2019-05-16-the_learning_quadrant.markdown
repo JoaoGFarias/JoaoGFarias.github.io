@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Learning Quadrants: Avoid Burnout and Maximize Knowledge"
-date: 2019-05-09 08:00:00 +0100
+date: 2019-05-16 08:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: career learning personal-development
@@ -10,27 +10,35 @@ description:
 
 # Adding Chaos to Learning
 
-One of the worst expectations that schools create in young folk is that structure and
-_the best path_ will be handed to them by default. On initial levels on education - but not
+One of the worst expectations schools create in young folk is that structure and
+_the best path_ will be handed to them by default. 
+
+On initial levels on education - but not
 uncommonly extending until bachelors programs, and even on the professional academic field - the _steps_,
-_points_, _levels_, and _requirements_ will appear as the single path to follow.
+_points_, _levels_, and _requirements_ will appear.
 
-Have you ever stumbled on [any list _from beginner to advanced_](https://whatpixel.com/best-java-books/)?
+Have you ever stumbled on any[ _from beginner to advanced_](https://whatpixel.com/best-java-books/) list?
 
-It's understandable the search for such guidelines: They help the person to follow a path and connect the dots.
+It's understandable the search for such guidelines: They represent a path and connect the dots.
 
 However, there are three major problems with such approach:
 
-1 - **The dots were already connected**: Any guide will be proposed by someone - meaning that it will carry any pre-concept
+1 - **The dots are already connected**: Any guide will be proposed by someone - meaning that it will carry any pre-concept
 from this person or group about what is important and how things are related. Hardly it will match what is important
-**to you** and how things are related in **your understanding**.
+**to you** and how things should related in **your context**.
 
 2 - **It doesn't allow exploration**: "The path is this" can speed up your walking towards the final destiny, however,
-it does not (or hardly) allow you to see what is around the path. Every problem and concept is multifaceted; and every
+it does not (or hardly does) allow you to see what is around the path. Every problem and concept is multifaceted; and every
 course will show you just a handful of these perceptives.
 
 3 - **You are protected from mistakes**: Have you ever taken a course where the instructions were to
-look at the raw documentation and try out many things that will end up being wrong? ...yeah... and these mistakes provide deeper and broader understanding of the problem.
+look at the raw documentation and try out many things that will end up being wrong? 
+
+...Yeah... 
+
+I haven't as well.
+
+And these mistakes provide deeper and broader understanding of the problem.
 
 So, how to fight out of this situation without re-inventing the wheel?
 
@@ -43,27 +51,30 @@ our learning.
 # The Learning Quadrants
 
 After reflecting on my typical learning schedule, I've realized that I could categorize the ways I absorb information
-in 4 areas - Let's call them **The Learning Quadrants**:
+in 4 areas
+
+Let's call them **The Learning Quadrants**:
 
 ![The Learning Quadrants]({{ "assets/images/learning_quadrants/basic_learning_quadrants.png" | absolute_url }})
 
-## The Axis: Attention and Goal
+## The Axes: Attention and Goal
 
-The Quadrant has two axis of interpretation.
+The Quadrant has two axes of interpretation.
 
-The _Attention_ axis is related to the level of concentration that I use during the learning process.
+The **_Attention_ axis** is related to the level of concentration used during the learning process.
+
 For instance, if I am reading a technical book and taking notes, I can classify this activity as _Deep_
 in Attention, because I close my mind to any other sort of information*. On the other hand, if I am copying
 information from hand-written notes to a mindmap software, probably my mind can be significally free - therefore,
-I can say this is a _Shallow_ Attention activity.
+I can say this is a _Shallow_ in Attention activity.
 
 \* I like to listen to music during Deep Attention activities, but they serve just as background noise.
 
 The second axis is related to the level of structure in the activity - the _Goal_ axis.
 Back to the technical book, if my goal is to read it cover to cover throughout months to master its topic, I can say
 that this is a _Specific_ Goal activity. However, if I will watch 15 Youtube videos talking about investments, programming,
-testing, fitness, and the latests political scandal, I can say this is a _Exploratory_ Goal activity: I am learning all the time,
-but the goal is to walk around as much as possible in the hope to stumble in something deeply interesting from time to time..
+testing, fitness, and the latest political scandal, I can say this is a _Exploratory_ Goal activity: I am learning all the time,
+but the goal is to walk around as much as possible in the hope to stumble in something interesting eventually...
 
 ## Examples in the Four Areas
 
@@ -71,7 +82,7 @@ What can we fit in each area?
 
 ### Quadrant 1: Shallow and Exploratory
 
-This is the more relaxed area. Most of the times, these activities are performed to avoid time waste
+This is the more relaxed area. Most of the times, these activities are performed to avoid wasting time
 in our daily routines.
 
 Out of the top of my head, I can think of:
@@ -86,7 +97,7 @@ Out of the top of my head, I can think of:
 
 ### Quadrant 2: Shallow and Specific
 
-Here we are adding some more structure by focusing on a single topic, by engaging in it continously
+Here we are adding some more structure by focusing on a single topic, by engaging in it continuously
 during a good period (few weeks), but usually the time dedicated to the activities will make the learning shallower.
 
 Shallow and Specific could be...
@@ -99,7 +110,7 @@ Shallow and Specific could be...
 
 ### Quadrant 3: Deep and Exploratory
 
-On this Quadrant, the activities will take more time and focus a bit more on a specific topic, but the
+In this Quadrant, the activities will take more time and focus a bit more on a specific topic, but the
 learning ends on one or two instances of this activity.
 
 - Watching conference talks, where the topic is exhausted in 40-90 minutes;
@@ -150,7 +161,7 @@ of importance you have of the that.
 Let's have an example:
 
 - Quadrant 1: While reading Hacker News, you may hear about _Logic Programming with Prolog_. You spend 5 minutes scrolling
-through [a blog post about it](https://www.matchilling.com/introduction-to-logic-programming-with-prolog/), reading a piece of code such as:
+through [a blog post about it](https://www.matchilling.com/introduction-to-logic-programming-with-prolog/), reading that the following piece of code asks the computer if Socrates is mortal, given that Socrates is a man and all men are mortals.:
 
 ```prolog
 man(socrates).
@@ -159,7 +170,7 @@ mortal(X) :- man(X).
 ?- mortal(socrates).
 ```
 
-- Quadrant 2: You found this Logic Programming thing cool, so you spend 10 minutes per day on the following [watching some Youtube videos on it](https://www.youtube.com/watch?v=gJOZZvYijqk), getting a bit more familiar with the syntax;
+- Quadrant 2: You found this Logic Programming thing cool, so you spend 10 minutes per day on the following week [watching some Youtube videos on it](https://www.youtube.com/watch?v=gJOZZvYijqk), getting a bit more familiar with the syntax;
 
 - Quadrant 3: You want to try out some coding, to get your fingers and brain familiar to thinking in Prolog, so you copy-and-paste some code from [Learning X in Y Minutes](https://learnxinyminutes.com/docs/prolog/), try to change one thing and other to explore what is the program reaction. Additionally, you watch some [conference talks about
 deeper usage of Prolog](https://www.youtube.com/watch?v=G_eYTctGZw8). You can spend one or two weeks on this, but now you are giving 20-30 minutes per day for Prolog.
@@ -168,6 +179,6 @@ deeper usage of Prolog](https://www.youtube.com/watch?v=G_eYTctGZw8). You can sp
 
 ## Conclusion
 
-When we left school, it's easy to get frustated in learning new things, both because now we have less time available for such and also because (and specially) it's hard to allocate the remaining time efficiently. Feelings of be learning something useless or not be focusing on learning anything come when we don't think about our learning.
+When we left school, it's easy to get frustrated in learning new things, both because now we have less time available for such and also because (and specially) it's hard to allocate the remaining time efficiently. Feelings of be learning something useless or not be focusing on learning anything come when we d0on't think about our learning.
 
 In school, this thinking was already done for us. Outside it, we need to take over the responsibility with ourselves to become master of our craft and mind. The Learning Quadrants can be used to understand how are we learning things and if we are using our time in the better way possible.
