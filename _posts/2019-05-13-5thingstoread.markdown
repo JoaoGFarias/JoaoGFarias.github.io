@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "5 Things to Read This Week - 05/13/2019"
-date: 2019-04-13 07:00:00 +0100
+date: 2019-05-13 07:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: 5-things-to-read javascript a11y-testing agile testing git
