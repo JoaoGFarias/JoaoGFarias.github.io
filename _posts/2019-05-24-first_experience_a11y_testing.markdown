@@ -10,8 +10,25 @@ description: A short report of my first experiences with Accessibility Testing f
 
 # The Problem
 
+* App not built to suuport a11y used for more than 100k users.
+* 10% color blind or blind users
+* Business had to prioritize fixes -> They needed a backlog for a11y compatibility
+
 # Solutions
+
+We had to act fast to create this backlog, but some shifts in practices had to be implemented
+for the long-term.
+
+In summary, we did the following:
 
 ## Immediate
 
+* Automation right now
+* Exploration of main flows
+
 ## Long-term
+
+* Improvements in requirements
+* A11y in the DoD -> Zero bug policy
+* Testing in production
+  * Investigate usage of a11y target users
