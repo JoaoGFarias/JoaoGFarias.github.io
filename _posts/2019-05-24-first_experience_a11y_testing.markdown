@@ -8,6 +8,10 @@ tags: a11y-testing
 description: A short report of my first experiences with Accessibility Testing for the Ministry of Testing Bloggers Club
 ---
 
-# Intro
+# The Problem
 
-# Conclusion
+# Solutions
+
+## Immediate
+
+## Long-term
