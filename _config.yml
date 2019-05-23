@@ -42,6 +42,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+  - jemoji
 
 deploy:
       host: github_pages
