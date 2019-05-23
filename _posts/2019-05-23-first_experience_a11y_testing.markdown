@@ -15,7 +15,7 @@ You can find more posts about first experiences with accessibility (a11y) testin
 
 I used to work on a web project based on Ember.js for frontend.
 
-Most developers touched the frontend with the purpose of change the functionality of the application or improve performance. We had one single person that was focused on the UI details, such as color pallets and, guess what, a11y.
+Most developers touched the frontend with the purpose of change the functionality of the application or improve performance. We had a single person that was focused on the UI details, such as color pallets and, guess what, a11y.
 
 Our requirements for a11y were a standard "should be a11y compatible" - nobody used to discuss the implications of proposed changes to a11y aspects.
 
@@ -23,20 +23,20 @@ Testers (including myself) would basically ignore these requirements, restrictin
 
 In a calm afternoon, we get a feedback that our application should be smoothly usable by disabled users. This caught us by surprise, given the time the app was already in production.
 
-But before jumping into work, we've decided to investigate if request had a business reason or was more motivated by politics. The goal was not to fight back business, but to help them to make the best possible decision.
+But before jumping into work, we've decided to investigate if request had a business reason or it was more motivated by politics. The goal was not to fight back business, but to help them to make the best possible decision.
 
 We scraped the usage logs a bit and rapidly discover that ~10% of our users were interacting with the application through the default a11y assistance tool (blind and color-blind). Needless to say that a11y really became a high priority for POs, testers and developers.
 
-Everyone sit and decided to plan well how to include a11y in our regular work. The first request was to create a a11y fixes backlog, so the PO could prioritize it together with the rest of the work.
+Everyone sit and decided to plan well how to include a11y in our regular work. The first request was to create an a11y fixes backlog, so the PO could prioritize it together with the rest of the work.
 
 # Solutions
 
 ## Short-term
 
-Although not so known as Angular.js and React, Ember.js excel on its testing
+Although not so known as Angular.js and React, Ember.js excels on its testing
 tools (BTW, I have written a tutorial about it [here](http://thatsabug.com/2018/08/08/testing_ember_application_first_steps.html)).
 
-We leveraged well these tools for all functional testing of the frontend, from unit to application level, but now we needed something for a11y.
+We leveraged well these tools for all functional testing of the frontend, from unit to application levels, but now we needed something for a11y.
 
 Luckily, there an awesome addon called [ember-a11y-testing](https://github.com/ember-a11y/ember-a11y-testing). It enables checking more than 78 a11y rules with a few lines of code.
 
