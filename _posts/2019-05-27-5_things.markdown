@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Bob Martin - 5 Talks to Watch - 2019/05/27"
+date: 2019-05-27 08:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: 5-things-to-read 
+description: Five Bob Martin's talks to watch this week
+---
+
+# Bob Martin - 5 Talks to Watch
+
+![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+
+This past week I haven't visit the blogsphere, but our list of 5 things will still hit the streets. Below are five presentations of one of my software heroes, [Bob Martin](https://twitter.com/unclebobmartin).
+
+Tip: He usually spends the first 10 minutes talking about some nerdy history - you can jump if you want to go directly to the software stuff :D
+
+- **[The Principles of Clean Architecture](https://www.youtube.com/watch?v=o_TH-Y78tt4)**
+  - Architecture talks tend to be an endless boring river of diagrams and "best" practices. This one has some "best" practices, some diagrams, but it's very insightful. It starts questioning why we can identify the framework (Ruby on Rails in this case) used in an application by the **folder** structure, while the application intent is hidden in the code. The framework is a first-class citizen and the **application is second-class** - we change basically everything, but if you want to change the framework...
+  The importance of other tools, such as DBs and the Web, are questioned as well.
+  
+  "Good architectures allow major architectural decisions to be deferred".
+  
+- **[Effective Estimation (or: How not to Lie)](https://www.youtube.com/watch?v=eisuQefYw_o)**
+  - Estimations (and planning, btw) are essential and at the same time pretty much useless. Either you are estimating a situation that you know exactly how it will roll out (and you will come back home riding unicorns) or you have uncertainties that you will discover along the way (or afterwards). Under the latter, any estimation will likely to be wrong. So, you can either lie that you are in the unicorn situation, with certain estimates, or you can say the bloody truth. Bob talks a bit how to say the truth in these situations.
+
+- **[The Scribe's Oath](https://www.youtube.com/watch?v=Tng6Fox8EfI)**
+  - Bob give us 9 statements that should guide the ethical behavior of software developers. They touch technical, social, and truthfulness aspects. BTW, I have written for tester version of the Scribe's Oath [here](http://thatsabug.com/testing/ethics/software-development/craft/2018/08/16/the-scribe-oath-for-testers.html).
+
+- **[SOLID Principles of Object Oriented and Agile Design](https://www.youtube.com/watch?v=TMuno5RZNeE)**
+  - SOLID is one of "only if they had told me this when I was a kid" things I have in my life. I was exposed to every kind of principles and design patterns during college and my first few years of a coder, but only after too much suffering with brittle code that I can to listen about SOLID. Although I know that I haven't embrace all the five principles, they are great coding mantras that help to refactor for simplicity and greatness.
+
+- **[The Single Responsibility Principle](https://www.youtube.com/watch?v=Gt0M_OHKhQE)**
+  - The Single Responsibility Principle is the first of the SOLID principles. For me, it is the simplest to understand, but the one that has more impact for make code better.

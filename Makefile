@@ -12,3 +12,6 @@ build:
 
 run:
 	bundle exec jekyll serve --incremental --watch
+
+copy_5_things:
+	cp ./_drafts/XXXX-XX-XX-5_things.markdown ./_posts
