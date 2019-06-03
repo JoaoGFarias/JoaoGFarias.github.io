@@ -29,12 +29,12 @@ from this person or group about what is important and how things are related. Ha
 
 2 - **It doesn't allow exploration**: "The path is this" can speed up your walking towards the final destiny, however,
 it does not (or hardly does) allow you to see what is around the path. Every problem and concept is multifaceted; and every
-course will show you just a handful of these perceptives.
+course will show you just a handful of these points of view.
 
 3 - **You are protected from mistakes**: Have you ever taken a course where the instructions were to
-look at the raw documentation and try out many things that will end up being wrong? 
+look at the raw documentation and try out many things that will end up being wrong?
 
-...Yeah... 
+...Yeah...
 
 I haven't as well.
 
@@ -43,7 +43,7 @@ And these mistakes provide deeper and broader understanding of the problem.
 So, how to fight out of this situation without re-inventing the wheel?
 
 Following a Barbell Strategy, we can mitigate the bad aspects of structured learning paths with some chaotic and
-unstructured learning. By exploring _unkown unknows_ we can broad our chances to find opportunities that can shift drastically
+unstructured learning. By exploring _unknown unknowns_ we can broad our chances to find opportunities that can shift drastically
 our learning.
 
 ![Barbell]({{ "assets/images/learning_quadrants/barbell_strategy.png" | absolute_url }})
@@ -65,7 +65,7 @@ The **_Attention_ axis** is related to the level of concentration used during th
 
 For instance, if I am reading a technical book and taking notes, I can classify this activity as _Deep_
 in Attention, because I close my mind to any other sort of information*. On the other hand, if I am copying
-information from hand-written notes to a mindmap software, probably my mind can be significally free - therefore,
+information from hand-written notes to a mindmap software, probably my mind can be significantly free - therefore,
 I can say this is a _Shallow_ in Attention activity.
 
 \* I like to listen to music during Deep Attention activities, but they serve just as background noise.
