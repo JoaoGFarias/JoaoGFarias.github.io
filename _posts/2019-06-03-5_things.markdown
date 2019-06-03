@@ -1,0 +1,38 @@
+---
+layout: post
+title: "5 Things to Read This Week - 2019/06/03"
+date: 2019-06-03 08:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: 5-things-to-read pattern BDD scrum quality graph
+description: Five links to read this week on anti-patterns, BDD, Scrum, team building, and graph tools
+---
+
+# 5 Things to Read
+
+![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+
+- **[Anti-patterns - Christian Findlay](https://christianfindlay.com/2019/06/01/anti-patterns/)**
+  - Christian questions the definition of anti-patterns, raising the issue of technical demonization of these practices (and deification of the _patterns_). Every problem is contextual and its solution as well - therefore, applying these solution to every similar situation can be problematic.
+- **[Divide & conquer à la BDD: story, rule, scenario - Gáspár](http://gasparnagy.com/2019/05/divide-conquer-a-la-bdd-story-rule-scenario/)**
+  - Gáspár shares another great and practical guide in how to extract BDD scenarios from a simple User Story title, by creating _Rules_ and extracting _Examples_ from them.
+- **[Scrum is fragile, not Agile - Dennis Weyland](http://www.dennisweyland.net/blog/?p=43)**
+  - I don't agree completely with the view Dennis share here, but he raises important questions regarding how Scrum can be misused and go into contradiction to the Agile Manifesto.
+- **[Building a team path for quality - Bruce](https://undevelopedbruce.com/2019/05/29/building-a-team-path-for-quality/)**
+  - _Undeveloped_ Bruce shares a great story of how his team has driven the development of their project through retrospective, collective thinking, and user telemetry data.
+- **[Raw Graph](http://app.rawgraphs.io/)**
+  - From Bruce's post, I came to discover Raw Graph. AWESOME TOOL!
+
+  Check it out:
+
+  You pass data in a CSV format
+
+  ![Raw Graph Data]({{ "assets/images/rawgraphs/data.png" | absolute_url }})
+
+  You choose the graph type you want
+
+  ![Raw Graph Type]({{ "assets/images/rawgraphs/type.png" | absolute_url }})
+
+  And they plot a great graph using d3.js
+
+  ![Raw Graph Result]({{ "assets/images/rawgraphs/result.png" | absolute_url }})
