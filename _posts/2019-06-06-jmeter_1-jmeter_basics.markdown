@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "JMeter Basics Part 1 of 5 - Fetching Bitcoin orders data"
-date: 2019-06-02 07:00:00 +0100
+title: "JMeter Basics Part 0 of 4 - Fetching Bitcoin orders data"
+date: 2019-06-06 07:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: jmeter jmeter-series
@@ -54,7 +54,6 @@ A Thread Group have three main configuration parameters:
    - ...
    - Thread 50 - time 250
 
-
 - Loop Count: The number of times the Thread Group will be executed as a whole - it is basically a... loop. In the example above, if you setup a Loop Count of 3, JMeter will take 250 seconds to start the first 60 requests; then, when all of them finish, JMeter will take more 250 seconds to start 60 more requests; and then it again. The total number of requests will be 180 - however, the total time will not be 250*3=750 seconds; it will be 750 + total time that take for the last request finish (if you application has bad performance...).
 
 ![Thread Group Details]({{ "assets/jmeter/post1/thread_group_details.png" | absolute_url }})
@@ -97,4 +96,17 @@ The _Summary Report_ shows statistical data from the set of requests, regarding 
 
 ![Listener Details]({{ "assets/jmeter/post1/listener_summary.png" | absolute_url }})
 
+You can download the JMeter suite [here](https://github.com/JoaoGFarias/JoaoGFarias.github.io/blob/jmeter_1/assets/jmeter/post1/jmeter_basics.jmx)
+
 ## What to do from here?
+
+JMeter has a manifold of features - different types of servers, different listeners.
+
+In this tutorial series, we will focus more on how to create usable and extensive JMeter suites, in order to make them a tool to enable agility.
+
+Our series will follow talking about:
+
+1 - Variables
+2 - Tests
+3 - Authentication OAuth
+4 - Running JMeter on Jenkins

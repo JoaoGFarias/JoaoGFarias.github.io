@@ -10,8 +10,7 @@ description: As in life, our actions in Postman have consequences. Let's learn h
 
 ## In the last episode...
 
-... we've [learned](http://thatsabug.com/2019/02/01/postman_runner.html) how to investigate the Trello
-API using Postman Runner to [run a series of requests in sequence](http://thatsabug.com/2019/02/01/postman_runner.html#execution) and the [setNextRequest function to repeat the same request multiple times](http://thatsabug.com/2019/02/01/postman_runner.html#postman-flows-with-setnextrequest).
+... we've [learned](http://thatsabug.com/2019/02/01/postman_runner.html) how to investigate the Trello API using Postman Runner to [run a series of requests in sequence](http://thatsabug.com/2019/02/01/postman_runner.html#execution) and the [setNextRequest function to repeat the same request multiple times](http://thatsabug.com/2019/02/01/postman_runner.html#postman-flows-with-setnextrequest).
 
 You can get the suite here and run it by yourself:
 
