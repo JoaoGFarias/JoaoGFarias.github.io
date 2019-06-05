@@ -1,0 +1,33 @@
+---
+layout: post
+title: "JMeter Basics Part 1 of 4 - Variables"
+date: 2019-06-13 07:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: jmeter jmeter-series
+description: After extending our suite, we ended up with a lot of duplicated code and now we have a lot of work to make any change. Let's fix this problem.
+
+---
+
+# JMeter Variables
+
+## Where are we?
+
+On the last post we created the foundation for investigating the performance of the orderbook service of [Mercado Bitcoin](https://www.mercadobitcoin.com.br), a Brazilian cryptocurrencies exchange.
+
+You can download it [here](https://github.com/JoaoGFarias/JoaoGFarias.github.io/blob/master/assets/jmeter/post1/jmeter_basics.jmx).
+
+For this post we will start from a more developed suite.
+
+![New suite]({{ "assets/jmeter/post2/updated_suite.png" | absolute_url }})
+
+In a summary, we have:
+
+* Two Thread Groups: One for the cryptocurrency Litecoin (LTC) and one for Bitcoin (BTC);
+
+* For each Thread Group we will hit two endpoint: 
+  * _Orderbook_: the list of _asks_ and the list of _bids_
+  * _Trades_: A list of all completed trades, with information such as price, amount, and date.
+
+
+You can download it [here](https://github.com/JoaoGFarias/JoaoGFarias.github.io/blob/master/assets/jmeter/post2/jmeter_variable1.jmx).
