@@ -1,0 +1,24 @@
+---
+layout: post
+title: "5 Things to Read This Week - 2019/06/10"
+date: 2019-06-10 08:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: 5-things-to-read
+description: Five links to read this week on programming languages and bugs, unit testing and deep work
+---
+
+# 5 Things to Read
+
+![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+
+- **[On the Impact of Programming Languages on Code Quality](https://arxiv.org/abs/1901.10220)**
+  - Great paper from the Cornell University where GitHub projects in eleven different languages are analysed regarding bugs.
+- **[The 5 unit testing guidelines](https://xebia.com/blog/the-5-unit-testing-guidelines/)**
+  - Quick tips to keep unit tests clean and useful.
+- **[Unit Testing Code Boundaries](https://8thlight.com/blog/ashley-bye/2019/06/04/unit-test-code-boundaries.html)**
+  - Unit testing at the boundaries (external system and standard libraries) of an application is hard and ends up creating [_integrated tests_ (a scam)](https://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam). Ashley Bye give us some tips how to deal with tests in these areas.
+- **[The Complete Guide to Deep Work](https://doist.com/blog/complete-guide-to-deep-work/)**
+  - Be able to concentrate in a task essential to get things done, and the world runs in ways to make it harder and harder. The tips here may help you to mitigate these difficulties.
+- **[Types and Tests](http://blog.cleancoder.com/uncle-bob/2019/06/08/TestsAndTypes.html)**
+  - Uncle Bob discusses the relation of unit tests and type systems: Can a type system eliminate the necessity for unit tests? Is creating tests easier in static or dynamic languages?
