@@ -102,7 +102,7 @@ The _Summary Report_ shows statistical data from the set of requests, regarding 
 
 ![Listener Details]({{ "assets/jmeter/post1/listener_summary.png" | absolute_url }})
 
-You can download the JMeter suite [here](https://github.com/JoaoGFarias/JoaoGFarias.github.io/blob/master/assets/jmeter/post1/jmeter_basics.jmx)
+You can download the JMeter suite [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post1/jmeter_basics.jmx)
 
 ## What to do from here?
 
