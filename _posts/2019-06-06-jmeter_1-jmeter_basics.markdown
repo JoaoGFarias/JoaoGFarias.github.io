@@ -12,6 +12,12 @@ description: Let's learn the basic components of JMeter, shall we?
 
 ## What is JMeter?
 
+![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
+
+JMeter is a load testing tool designed and maintained by Apache released in 1998.
+It is written in Java, which makes it easy to run out-of-the-box in any system
+with a JVM.
+
 ## Fetching Bitcoin Orders from Mercado Bitcoin API
 
 ### What We Will Do
@@ -112,7 +118,7 @@ In this tutorial series, we will focus more on how to create usable and extensiv
 
 Our series will follow talking about:
 
-- Variables
+- [Variables](http://thatsabug.com/2019/06/21/jmeter_2.html)
 - Tests
 - Authentication OAuth
 - Running JMeter on Jenkins

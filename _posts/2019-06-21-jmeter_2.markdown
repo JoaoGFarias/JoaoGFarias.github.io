@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JMeter Basics Part 1 of 4 - Variables"
-date: 2019-06-13 07:00:00 +0100
+date: 2019-06-21 07:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: jmeter jmeter-series
@@ -11,17 +11,19 @@ description: After extending our suite, we ended up with a lot of duplicated cod
 
 # JMeter Variables
 
+![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
+
 ## Where are we?
 
-On the last post we created the foundation for investigating the performance of the orderbook service of [Mercado Bitcoin](https://www.mercadobitcoin.com.br), a Brazilian cryptocurrency exchange.
+[On the last post](http://thatsabug.com/2019/06/06/jmeter_1-jmeter_basics.html) we created the foundation for investigating the performance of the orderbook service of [Mercado Bitcoin](https://www.mercadobitcoin.com.br), a Brazilian cryptocurrency exchange.
 
-You can download it [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post1/jmeter_basics.jmx).
+You can download the JMeter suite [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post1/jmeter_basics.jmx).
 
 For this post we will start from a more developed suite.
 
 ![New suite]({{ "assets/jmeter/post2/updated_suite.png" | absolute_url }})
 
-In a summary, we have:
+In a summary we have:
 
 * Two Thread Groups: One for the cryptocurrency Litecoin (LTC) and one for Bitcoin (BTC);
 
@@ -33,7 +35,7 @@ You can download the updated suite [here](https://raw.githubusercontent.com/Joao
 
 # What is the problem?
 
-If you exam closely many strings are duplicated in each HTTP Request and Thead Group:
+If you exam closely the new suite we will see that many strings are duplicated in each HTTP Request and Thead Group:
 
 * The Thread Group configuration values
 
@@ -59,19 +61,19 @@ If you exam closely many strings are duplicated in each HTTP Request and Thead G
 
 ![Path]({{ "assets/jmeter/post2/duplicated_8.png" | absolute_url }})
 
-As with any software definition, duplication is always a code smell: It leads to more effort to implement changes, increase the chance of error, and makes things harder to understand.
+As with any software, duplication is always a code smell: It leads to more effort to implement changes, increases the chance of error, and makes things harder to understand.
 
-Let's solve this using JMeter Variables!
+Let's solve this using **JMeter Variables!**
 
 # Variables
 
 JMeter allows creation of variables at the Test Plan level.
 
-In the Test Plan tab we can see an area for the creation and update of variables
+In the Test Plan tab we can see an area for the definition of variables
 
 ![Variables]({{ "assets/jmeter/post2/variables.png" | absolute_url }})
 
-After the definition we can use the varibles through the _${**variable_name**}_ notation.
+After the definition we can use the variables through the _${**variable_name**}_ notation.
 
 On the Thread Groups:
 
@@ -93,5 +95,7 @@ And on run-time, JMeter will translate the placeholder notation with the proper 
 
 ![Variables Usage 2]({{ "assets/jmeter/post2/variables_usage7.png" | absolute_url }})
 
-TODO
-# Variables from the command line
+There you have it!
+The basic configuration values are defined only once, making our suite easy to understand and change.
+
+You can see all posts of this JMeter series [here](http://thatsabug.com/tag/jmeter-series.html)
