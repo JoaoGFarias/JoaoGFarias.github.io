@@ -1,0 +1,39 @@
+---
+layout: post
+title: "JMeter Basics Part 2 of 4 - Assertions"
+date: 2019-06-28 07:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: jmeter jmeter-series
+description: TODO
+---
+
+# JMeter Assertions
+
+![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
+
+# Types of Assertions
+
+## Response Assertion
+
+![Response Assertion]({{ "assets/jmeter/post3/response1.png" | absolute_url }})
+
+![Response Assertion]({{ "assets/jmeter/post3/response2.png" | absolute_url }})
+
+![Response Assertion Results]({{ "assets/jmeter/post3/response3.png" | absolute_url }})
+
+![Response Assertion 2]({{ "assets/jmeter/post3/response4.png" | absolute_url }})
+
+![Response Assertion Results 2]({{ "assets/jmeter/post3/response5.png" | absolute_url }})
+
+## Duration Assertion
+
+![Duration Assertion]({{ "assets/jmeter/post3/duration1.png" | absolute_url }})
+
+![Duration Assertion]({{ "assets/jmeter/post3/duration2.png" | absolute_url }})
+
+![Duration Assertion Results]({{ "assets/jmeter/post3/duration3.png" | absolute_url }})
+
+## JSON Assertion
+
+You can see all posts of this JMeter series [here](http://thatsabug.com/tag/jmeter-series.html)
