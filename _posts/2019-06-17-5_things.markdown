@@ -1,0 +1,24 @@
+---
+layout: post
+title: "5 Things to Read This Week - 06/17/2019"
+date: 2019-06-17 08:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: 5-things-to-read
+description: Five links to read this week on JavaScript, test cases, automation teams, quality, and goal focus
+---
+
+# 5 Things to Read
+
+![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+
+- **[JavaScript Pro Tips - Code This, NOT That](https://youtu.be/Mus_vwhTCq0)**
+  - Very nice video with good JavaScript tips for beginners
+- **[Breaking the Test Case Addiction (Part 7)](https://www.developsense.com/blog/2019/06/breaking-the-test-case-addiction-part-7/)**
+  - A new blog post on the series where Michael Bolton talks about the taboo of the Test Cases many people have. Here, he suggests how to communicate what was tested, and the findings of the testing, without using Test Cases, changing the focus to more face-to-face conversations.
+- **[Beware the Inexperienced Automation Team](https://beaufortfairmont.com/beware-the-inexperienced-automation-team/)**
+  - If you consider testing a simple and straightforward, with no need for deep cognitive capacity and knowledge, then, if you want to automate testing (whatever you consider it), you probably don't need people with extensive experience in coding, correct? I've talked a bit about it on [3 Reasons Why Automation Will Not Save You](http://thatsabug.com/automation/testing/2018/11/08/why_automation_will_not_save_you.html)
+- **[Of Quality, Testing and Other Demons](https://unremarkabletester.com/2019/06/10/of-quality-testing-and-other-demons/)**
+  - A tester will **never** be able to _"Assure Quality"_. Quality is multi-faceted. Here Areti Panou about how a tester can sparkle quality-focus work on team members.
+- **[Your System is not a Sports Team](https://blogs.dropbox.com/tech/2019/06/your-system-is-not-a-sports-team/)**
+  - On how our daily work in a solution can create a bias that removes our focus from the company/team goal to the product itself. Products are tools - and tools should be discarded when they don't help us to achieve goals.
