@@ -12,7 +12,54 @@ description: TODO
 
 ![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
 
+Following our JMeter series we reach a point where we are able to create different scenarios
+for testing multiple endpoints, [using Thread Groups and Listeners](http://thatsabug.com/2019/06/06/jmeter_1-jmeter_basics.html),
+and avoid duplication of configuration [using variables](http://thatsabug.com/2019/06/21/jmeter_2.html).
+
+Theses tools allow us to evaluate the responses' contents and the time took to them to reach us back.
+
+![Summary]({{ "assets/jmeter/post3/summary.png" | absolute_url }})
+![View]({{ "assets/jmeter/post3/view.png" | absolute_url }})
+
+However we would see a failure only if a request fails to return a 200 OK.
+
+In situations of heavy load, all sort of problems can happen on the server:
+
+- Response's content may be corrupted;
+- Specific response can take a long time to return, which is not acceptable for some products;
+
+Additionally, we may want to investigate how the server reacts in situations different from
+200 OK:
+
+- If a resource does not exist, does the system returns a 404 fast enough?
+- If a server error occurs (500 code), does the system continues to work properly?
+
+To answer such questions, it is necessary to run additional validations to each request.
+In JMeter, these validations are called _Assertions_.
+
+Let's take a look at some of the most simplest, but useful JMeter Assertions.
+
 # Types of Assertions
+
+JMeter offers a vast range of Assertions:
+
+| Type                	| Usage                                                                                                                          	|
+|---------------------	|--------------------------------------------------------------------------------------------------------------------------------	|
+| Response Assertion  	| Apply a string pattern to verify against the server response                                                                   	|
+| Duration Assertion  	| Check the response was received within a given elapsed time                                                                    	|
+| Size Assertion      	| Check the size of the server response contains the wanted number of bytes                                                      	|
+| XML Assertion       	| Check the response is a valid XML document                                                                                     	|
+| Beanshell Assertion 	| Execute your own logic using Beanshell scripting                                                                               	|
+| MD5Hex Assertion    	| Allows to check the MD5 hash of the response data (great for static files)                                                     	|
+| HTML Assertion      	| Check html response syntax using JTidy                                                                                         	|
+| XPath Assertion     	| Tests if a document is well-formed, with possible DTD validation, or putting the document through JTidy and testing with XPath 	|
+| XML Shema Assertion 	| Validate an XML response against an XML schema                                                                                 	|
+| JSR223 Assertion    	| Run your own code logic using a JSR223 Script                                                                                  	|
+| Compare Assertion   	| Compares results between themselves                                                                                            	|
+| SMIME Assertion     	| Evaluate the sample results from the Mail Reader Sampler                                                                       	|
+| JSON Assertion      	| Execute JsonPath expressions and validate Json documents                                                                       	|
+
+For this post, we will focus on Response Assertion, Duration Assertion, and JSON Assertion.
 
 ## Response Assertion
 
@@ -35,5 +82,8 @@ description: TODO
 ![Duration Assertion Results]({{ "assets/jmeter/post3/duration3.png" | absolute_url }})
 
 ## JSON Assertion
+
+![JSON Assertion]({{ "assets/jmeter/post3/json_1.png" | absolute_url }})
+![JSON Assertion]({{ "assets/jmeter/post3/json_2.png" | absolute_url }})
 
 You can see all posts of this JMeter series [here](http://thatsabug.com/tag/jmeter-series.html)
