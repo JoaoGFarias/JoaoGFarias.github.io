@@ -12,29 +12,30 @@ description: TODO
 
 ![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
 
-Following our JMeter series we reach a point where we are able to create different scenarios
+Following our JMeter series we are able to create different scenarios
 for testing multiple endpoints, [using Thread Groups and Listeners](http://thatsabug.com/2019/06/06/jmeter_1-jmeter_basics.html),
 and avoid duplication of configuration [using variables](http://thatsabug.com/2019/06/21/jmeter_2.html).
 
-Theses tools allow us to evaluate the responses' contents and the time took to them to reach us back.
+These tools allow us to evaluate the responses' contents and the time they took to reach us back.
 
 ![Summary]({{ "assets/jmeter/post3/summary.png" | absolute_url }})
+
 ![View]({{ "assets/jmeter/post3/view.png" | absolute_url }})
 
-However we would see a failure only if a request fails to return a 200 OK.
+However, unless the server give us some response different than _200 OK_, we would never see a failure.
 
 In situations of heavy load, all sort of problems can happen on the server:
 
 - Response's content may be corrupted;
 - Specific response can take a long time to return, which is not acceptable for some products;
 
-Additionally, we may want to investigate how the server reacts in situations different from
-200 OK:
+Additionally, we may want to investigate how the server reacts in situations different from _200 OK_:
 
-- If a resource does not exist, does the system returns a 404 fast enough?
-- If a server error occurs (500 code), does the system continues to work properly?
+- If a resource does not exist, does the system return a _404 response_ fast enough?
+- If a server error occurs (_500 code_), does the system continues to work properly?
 
 To answer such questions, it is necessary to run additional validations to each request.
+
 In JMeter, these validations are called _Assertions_.
 
 Let's take a look at some of the most simplest, but useful JMeter Assertions.
@@ -58,18 +59,38 @@ JMeter offers a vast range of Assertions:
 | Compare Assertion   	| Compares results between themselves                                                                                            	|
 | SMIME Assertion     	| Evaluate the sample results from the Mail Reader Sampler                                                                       	|
 | JSON Assertion      	| Execute JsonPath expressions and validate Json documents                                                                       	|
-
+  
 For this post, we will focus on Response Assertion, Duration Assertion, and JSON Assertion.
 
 ## Response Assertion
 
+The Response Assertion performs content validations on the response, both on the data or meta-data.
+
+Its goal is to detect bad responses generated during heavy server load and stress.
+
+In the example below, we have defined a response validation for all Thread Groups (note the definition on the same level as the Thread Groups).
+
+This Assertion will act (_Apply to_) to the first response (_Main sample_) and re-directs (_sub-sample_), if any.
+
+The validation itself checks if the _Response Code_ _Equals_ to _200_
+
 ![Response Assertion]({{ "assets/jmeter/post3/response1.png" | absolute_url }})
+
+We can create as many _All-Thread-Groups_ level Assertions as we want.
+
+Below, we are checking if the _Response Message_ _Equals_ to _OK_.
 
 ![Response Assertion]({{ "assets/jmeter/post3/response2.png" | absolute_url }})
 
+When we run again, all responses continue to be green, because they fullfil both criteria.
+
 ![Response Assertion Results]({{ "assets/jmeter/post3/response3.png" | absolute_url }})
 
+Let's change the first Assertion to an invalid value, _500_ (_Server Error_ code).
+
 ![Response Assertion 2]({{ "assets/jmeter/post3/response4.png" | absolute_url }})
+
+Now we see the exact Assertion that failed and the diff between what was expected (_comparison_) and what we got (_received_).
 
 ![Response Assertion Results 2]({{ "assets/jmeter/post3/response5.png" | absolute_url }})
 
