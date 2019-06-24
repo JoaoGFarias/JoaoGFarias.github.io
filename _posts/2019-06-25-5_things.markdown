@@ -1,0 +1,24 @@
+---
+layout: post
+title: "5 Things to Read This Week - 25th Jun 2019"
+date: 2019-06-25 08:00:00 +0100
+author: João Farias
+version: 1.0.0
+tags: 5-things-to-read design frontend chaos-engineering scrum database-testing
+description: Five links to read this week on evolution in frontend design, importance of correct abstractions, Chaos Engineering, anti-pattern of hardening sprint, and database testing
+---
+
+# 5 Things to Read
+
+![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+
+- **[Micro Frontends - Cam Jackson](https://martinfowler.com/articles/micro-frontends.html)**
+  - I've first heard of Micro-frontends in 2016, on [an Allegro.tech post](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html). The idea is to bring the same approach of micro-services to break the frontend monoliths. Cam Jackson does an overview of this on Martin Fowler's blog.
+- **[Why keeping levels of abstraction matters - Javier Garcia](https://8thlight.com/blog/javier-garc%C3%ADa/2019/06/11/refactoring-levels-of-abstraction.html)**
+  - Abstractions in software are something only seldomly tackled in proper way in computer science college courses. Abstractions are not about _UI_, _Bussiness_, and _Data_ layers. Abstractions are about making the correct questions to each entity in an application. When the app design is focused on placing these questions correctly, we end up with a more testable and extendable codebase.
+- **[Principles of Chaos Engineering](http://principlesofchaos.org/)**
+  - The lab is not reality. "Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production."
+- **[Scrum Anti-Patterns: The Hardening Sprint - Mark Levison](https://agilepainrelief.com/notesfromatooluser/2019/06/antipattern-hardening-sprint.html)**
+  - Anti-patterns are a sign that something can be better. There are moments when things just went south and needs to be fixed; but taking them as a solution is asking for more of them. Agile Principle: "The sponsors, developers, and users should be able to maintain a constant pace indefinitely."
+- **[Database Testing - Kristin Jackvony](https://thethinkingtester.blogspot.com/2019/06/database-testing.html)**
+  - Kristin give us some great ideas for investigating changes in a database (no coding here, but testing ideas).

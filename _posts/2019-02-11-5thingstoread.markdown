@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "5 Things to Read This Week - 02/11/2019"
+title: "5 Things to Read This Week - 11th Feb 2019"
 date: 2019-02-11 08:00:00 +0100
 author: João Farias
 version: 1.0.0
