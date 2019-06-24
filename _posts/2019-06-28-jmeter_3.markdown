@@ -5,14 +5,14 @@ date: 2019-06-28 07:00:00 +0100
 author: João Farias
 version: 1.0.0
 tags: jmeter jmeter-series
-description: TODO
+description: Time to add more specific validations to the responses JMeter gets
 ---
 
 # JMeter Assertions
 
 ![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
 
-Following our JMeter series we are able to create different scenarios
+Following [our JMeter series](http://thatsabug.com/tag/jmeter-series.html) we are able to create different scenarios
 for testing multiple endpoints, [using Thread Groups and Listeners](http://thatsabug.com/2019/06/06/jmeter_1-jmeter_basics.html),
 and avoid duplication of configuration [using variables](http://thatsabug.com/2019/06/21/jmeter_2.html).
 
@@ -22,12 +22,12 @@ These tools allow us to evaluate the responses' contents and the time they took 
 
 ![View]({{ "assets/jmeter/post3/view.png" | absolute_url }})
 
-However, unless the server give us some response different than _200 OK_, we would never see a failure.
+However, unless the server give us some response different than _200 OK_, we will **never see a failure**.
 
 In situations of heavy load, all sort of problems can happen on the server:
 
 - Response's content may be corrupted;
-- Specific response can take a long time to return, which is not acceptable for some products;
+- Specific response can take a long time to return, which is not acceptable for some products.
 
 Additionally, we may want to investigate how the server reacts in situations different from _200 OK_:
 
@@ -38,7 +38,7 @@ To answer such questions, it is necessary to run additional validations to each 
 
 In JMeter, these validations are called _Assertions_.
 
-Let's take a look at some of the most simplest, but useful JMeter Assertions.
+Let's take a look at some of the simplest, but useful JMeter Assertions.
 
 # Types of Assertions
 
@@ -64,7 +64,7 @@ For this post, we will focus on Response Assertion, Duration Assertion, and JSON
 
 ## Response Assertion
 
-The Response Assertion performs content validations on the response, both on the data or meta-data.
+The Response Assertion performs content validations on the response, both on the data and meta-data.
 
 Its goal is to detect bad responses generated during heavy server load and stress.
 
@@ -96,15 +96,48 @@ Now we see the exact Assertion that failed and the diff between what was expecte
 
 ## Duration Assertion
 
+Duration Assertions investigate the timing the request.
+
+Since this assertion is request specific, it only makes sense to have it under a Thread Group:
+
 ![Duration Assertion]({{ "assets/jmeter/post3/duration1.png" | absolute_url }})
 
 ![Duration Assertion]({{ "assets/jmeter/post3/duration2.png" | absolute_url }})
+
+Duration Assertion allows to define the acceptable time threshold for the request, in our
+case, we defined 500ms for the Litecoin Orderbook endpoint and 1 second for the Litecoin Trades endpoint.
+
+In case any request fails to meet this limit, JMeter will show a friendly error message:
 
 ![Duration Assertion Results]({{ "assets/jmeter/post3/duration3.png" | absolute_url }})
 
 ## JSON Assertion
 
+JSON is an extension of the Response Assertion.
+It aims to facilitate the navigation in JSON responses, in order to do simply integrity verifications
+of the data.
+
+In the _Assert JSON Path exists_, we set a JSON path and JMeter will throw an error if this does not exist.
+
+In our case, we want to check that the _asks_ key is composed of a 2-dimensional array: That's why we entered on the first element
+of the first element of the array mapped to _asks_.
+
+Additionally, we added a regular expression to match the element found on the path. In our case, I want to be sure we are talking about
+a decimal value (at least on numeric value, optionally followed by a dot _._, followed by zero or more numeric values).
+
 ![JSON Assertion]({{ "assets/jmeter/post3/json_1.png" | absolute_url }})
+
+To demonstrate a failure, I've marked the _"Invert assertion"_, we raises a failure if the regex matches.
+
 ![JSON Assertion]({{ "assets/jmeter/post3/json_2.png" | absolute_url }})
 
-You can see all posts of this JMeter series [here](http://thatsabug.com/tag/jmeter-series.html)
+With these three assertions, you can investigate further the responses you get with JMeter.
+
+You can see all posts of this JMeter series [here](http://thatsabug.com/tag/jmeter-series.html).
+
+And if you want to try out the resulting suite, you can download it [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post3/jmeter_test1.jmx).
+
+How would you implement the questions we asked at the beginning of this post?
+
+- If a resource does not exist, does the system return a _404 response_ fast enough?
+- If a server error occurs (_500 code_), does the system continues to work properly?

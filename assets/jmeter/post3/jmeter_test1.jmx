@@ -164,7 +164,7 @@ Make test last 1 minute (see Scheduler)</stringProp>
         <hashTree>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
             <stringProp name="JSON_PATH">$.asks.[0].[0]</stringProp>
-            <stringProp name="EXPECTED_VALUE">\d+\.?\d*</stringProp>
+            <stringProp name="EXPECTED_VALUE">\d+\.?\d*1</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
