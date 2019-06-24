@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "5 Things to Read This Week - 12/10/2018 + Announcement"
+title: "5 Things to Read This Week - 10th Dec 2018 + Announcement"
 date: 2018-12-10 08:00:00 +0100
 author: João Farias
 version: 1.0.0
