@@ -120,5 +120,5 @@ Our series will follow talking about:
 
 - [Variables](http://thatsabug.com/2019/06/21/jmeter_2.html)
 - Tests
-- Authentication OAuth
+- Google Drive and OAuth
 - Running JMeter on Jenkins
