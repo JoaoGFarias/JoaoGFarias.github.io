@@ -30,7 +30,13 @@ twitter_username: JFThatsABug
 github_username: JoaoGFarias
 search: true
 repository: "JoaoGFarias/JoaoGFarias.github.io"
+
 google_site_verification: OlBQQ_j-6gdx0hfWXMza3JW5VvCyNoj9WYuNSjpYs2A
+analytics:
+  provider: "google-universal"
+  google:
+    tracking_id: "UA-125612721-1"
+    anonymize_ip: true
 
 # Build settings
 markdown: kramdown
