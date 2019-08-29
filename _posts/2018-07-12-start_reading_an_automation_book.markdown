@@ -16,7 +16,7 @@ excerpt: "Day 2 of 30 of Automation in Testing - Start Reading an Automation Boo
 
 This text was written as an answer to the "30 Days of Automation in Testing" Challenge. Check it out in the [Ministry of Testing forum](https://www.ministryoftesting.com/dojo/lessons/30-days-of-automation-in-testing).
 
-Checkout other posts of the #30daysoftesting in this blog [here](/tag/30-days.html).
+Checkout other posts of the #30daysoftesting in this blog [here](/tags/#30-days).
 
 ## Greg Paskal's "Test Automation in the Real World"
 
