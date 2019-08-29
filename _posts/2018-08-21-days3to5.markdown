@@ -1,5 +1,5 @@
 ---
-title: "#30daysoftesting - Days 3 to 5"
+title: "#30daysoftesting - Day 3 to 5"
 date: 2018-06-18T20:15:00 -0300
 categories:
   - blog

@@ -1,11 +1,12 @@
 ---
 title: "CRUD Testing with Postman and Trello API"
 date: 2019-01-10T20:15:00 -0300
-categories:
+tags:
   - api-testing
   - postman
   - postman-series
-tags:
+categories:
+  - blog
 excerpt: "First steps with Postman using Trello API"
 ---
 

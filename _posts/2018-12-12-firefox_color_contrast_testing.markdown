@@ -1,10 +1,11 @@
 ---
 title: "Color Contrast Testing with Firefox 64"
 date: 2018-12-12T20:15:00 -0300
-categories:
+tags:
   - a11y-testing
   - firefox
-tags:
+categories:
+  - blog
 excerpt: "Firefox 64 shipped with a new feature for Color contrast Testing"
 ---
 

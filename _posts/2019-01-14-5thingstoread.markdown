@@ -13,16 +13,6 @@ categories:
 excerpt: "Five links to read this week on coding interviews, Scrum and Testing, meaning of Q.A., and functional programming beauty"
 ---
 
----
-layout: postman-series
-title: "CRUD Testing with Postman and Trello API"
-date: 2019-01-10 08:00:00 +0100
-author: João Farias
-version: 1.0.0
-tags: api-testing postman postman-series
-description: First steps with Postman using Trello API
----
-
 # 5 Things to Read
 
 ![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})

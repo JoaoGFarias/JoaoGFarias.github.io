@@ -1,11 +1,12 @@
 ---
 title: "Exploratory Testing with Postman Async"
 date: 2019-03-07T20:15:00 -0300
-categories:
+tags:
   - api-testing
   - postman
   - postman-series
-tags:
+categories:
+  - blog
 excerpt: "As in life, our actions in Postman have consequences. Let's learn how to explore affected entities."
 ---
 

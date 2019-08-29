@@ -1,11 +1,12 @@
 ---
 title: "Postman Runner and Workflows"
 date: 2019-02-01T20:15:00 -0300
-categories:
+tags:
   - api-testing
   - postman
   - postman-series
-tags:
+categories:
+  - blog
 excerpt: "Let's learn how to run all Postman requests with ONE click"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "JMeter Basics Part 2 of 4 - Assertions"
-date: 2018-06-28T20:15:00 -0300
+date: 2019-06-28T20:15:00 -0300
 categories:
   - blog
 tags:

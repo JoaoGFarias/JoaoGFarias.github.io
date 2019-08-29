@@ -1,9 +1,8 @@
 ---
 title: "JMeter Basics Part 1 of 4 - Variables"
-date: 2019-06-28T20:15:00 -0300
+date: 2019-06-21T20:15:00 -0300
 categories:
   - blog
-  - "2019-06-28"
 tags:
   - jmeter
   - jmeter-series
