@@ -29,6 +29,7 @@ breadcrumbs: true
 twitter_username: JFThatsABug
 github_username: JoaoGFarias
 search: true
+repository: "JoaoGFarias/JoaoGFarias.github.io"
 
 # Build settings
 markdown: kramdown
@@ -50,6 +51,11 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "thatsabug"
 
 author:
   name   : "João Farias"
