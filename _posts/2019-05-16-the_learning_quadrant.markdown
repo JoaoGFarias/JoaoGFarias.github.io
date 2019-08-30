@@ -8,6 +8,8 @@ tags:
 categories:
   - blog
   - "2019-05-16"
+toc: true
+toc_icon: "cog"
 ---
 
 
@@ -79,11 +81,11 @@ that this is a _Specific_ Goal activity. However, if I will watch 15 Youtube vid
 testing, fitness, and the latest political scandal, I can say this is a _Exploratory_ Goal activity: I am learning all the time,
 but the goal is to walk around as much as possible in the hope to stumble in something interesting eventually...
 
-## Examples in the Four Areas
+# Examples in the Four Areas
 
 What can we fit in each area?
 
-### Quadrant 1: Shallow and Exploratory
+## Quadrant 1: Shallow and Exploratory
 
 This is the more relaxed area. Most of the times, these activities are performed to avoid wasting time
 in our daily routines.
@@ -98,7 +100,7 @@ Out of the top of my head, I can think of:
 
 - Skimming blog posts from [HackerNews](https://news.ycombinator.com/).
 
-### Quadrant 2: Shallow and Specific
+## Quadrant 2: Shallow and Specific
 
 Here we are adding some more structure by focusing on a single topic, by engaging in it continuously
 during a good period (few weeks), but usually the time dedicated to the activities will make the learning shallower.
@@ -111,7 +113,7 @@ Shallow and Specific could be...
 
 - Discussing freely with a friend about a topic.
 
-### Quadrant 3: Deep and Exploratory
+## Quadrant 3: Deep and Exploratory
 
 In this Quadrant, the activities will take more time and focus a bit more on a specific topic, but the
 learning ends on one or two instances of this activity.
@@ -122,7 +124,7 @@ learning ends on one or two instances of this activity.
 
 - Discussing in real-time forums, such as [Ministry of Testing's Slack channel](https://www.ministryoftesting.com/slack_invite).
 
-### Quadrant 4: Deep and Specific
+## Quadrant 4: Deep and Specific
 
 Here we will add planning and concentration to our learning, because the goal is to deep dive on a topic:
 
@@ -130,7 +132,7 @@ Here we will add planning and concentration to our learning, because the goal is
 
 - Reading a philosophy book as [one should do it](https://youtu.be/Y_d7DdNzkLw?t=34).
 
-## Structuring your Day
+# Structuring your Day
 
 The understanding on how we can classify learning enable us to use our daily mental energy
 to efficiently plan our activities and keep a consistent routine.
@@ -155,7 +157,7 @@ I have no idea of the details or know-how";
 to multiple small pieces of knowledge, at "low cost" (of time). Skipping these activities not allow you to discover new items for your
 tool belt and making you deep into _Specific_ activities that are not optimal for your goals.
 
-## Nothing is Static
+# Nothing is Static
 
 One of the most interesting aspects of the Learning Quadrants is that they serve as a production line for knowledge topics, where they
 pass through "filters" of interest analysis. The same topic can go from Quadrant 1 to Quadrant 4 in a smooth way according with the impression
@@ -180,7 +182,7 @@ deeper usage of Prolog](https://www.youtube.com/watch?v=G_eYTctGZw8). You can sp
 
 - Quadrant 4: You realize you want to get really good at Prolog. You buy some books such as [Prolog Programming for Artificial Intelligence](https://www.amazon.com/Programming-Artificial-Intelligence-International-Computer/dp/0321417461/ref=zg_bs_3987_6?_encoding=UTF8&psc=1&refRID=37Y5CFAV033ZJ7KZ5NXB) and [Expert Systems in Prolog](https://www.amazon.com/Expert-Systems-Prolog-Dennis-Merritt/dp/1723821861/ref=zg_bs_3987_11?_encoding=UTF8&psc=1&refRID=37Y5CFAV033ZJ7KZ5NXB), take notes of your reading and practicing the specific exercises and building some small projects. Additionally, you may want to engage in an open source project, such as [Zamia AI](https://github.com/gooofy/zamia-ai). This is a slow and consistent process, from a few weeks to a few months, with isolated periods of 1-2 hours of total engagement in learning Prolog.
 
-## Conclusion
+# Conclusion
 
 When we left school, it's easy to get frustrated in learning new things, both because now we have less time available for such and also because (and specially) it's hard to allocate the remaining time efficiently. Feelings of be learning something useless or not be focusing on learning anything come when we d0on't think about our learning.
 

@@ -6,7 +6,9 @@ categories:
 tags:
   - jmeter
   - jmeter-series
-excerpt: "Time to add more specific validations to the responses JMeter gets "
+excerpt: "Time to add more specific validations to the responses JMeter gets"
+toc: true
+toc_icon: "cog"
 ---
 
 # JMeter Assertions

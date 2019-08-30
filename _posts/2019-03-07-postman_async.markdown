@@ -8,6 +8,8 @@ tags:
 categories:
   - blog
 excerpt: "As in life, our actions in Postman have consequences. Let's learn how to explore affected entities."
+toc: true
+toc_icon: "cog"
 ---
 
 ## In the last episode...
@@ -192,6 +194,6 @@ of our suite.
 
 Download the final collection [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/api_postman_post/assets/images/postman_async/thats_a_bug_postman_trello.postman_collection.json)
 
-### Bonus: Callback functions
+## Bonus: Callback functions
 
 You can learn more about Javascript callbacks on [this video](https://www.youtube.com/watch?v=pTbSfCT42_M)

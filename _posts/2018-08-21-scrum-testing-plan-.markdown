@@ -10,7 +10,9 @@ tags:
   - planning
   - automation
   - exploratory
-excerpt: "Mini-waterfall and separated/uncoordinated groups of developers and testers is a common problem. In this post, I will describe a simple planning ceremony to better integrate team members in testing activities. "
+excerpt: "Mini-waterfall and separated/uncoordinated groups of developers and testers is a common problem. In this post, I will describe a simple planning ceremony to better integrate team members in testing activities."
+toc: true
+toc_icon: "cog"
 ---
 
 ## Testing in Scrum Teams

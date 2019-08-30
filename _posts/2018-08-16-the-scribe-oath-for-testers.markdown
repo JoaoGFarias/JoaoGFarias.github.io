@@ -8,7 +8,9 @@ tags:
   - ethics
   - software-development
   - craft
-excerpt: "Some thoughts on Bob Martin's ethics guides from a tester perspective "
+excerpt: "Some thoughts on Bob Martin's ethics guides from a tester perspective"
+toc: true
+toc_icon: "cog"
 ---
 
 # The Scribe's Oath
@@ -41,7 +43,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
 # "Translating" to the Testing World
 
-- "I promise that, to the best of my ability and judgement"
+## "I promise that, to the best of my ability and judgement"
 
   Although this is not one of the nine statements, we need to think deeply about it: "to the best of my ability and judgment" makes clear that you **will** fail at keeping the Oaths.
 
@@ -49,7 +51,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   This statement is a personal reminder that the Oaths are guidelines, points to continuously aim, but circumstances (professional and personal) will cause deviations in your behavior from these goals. It is fine, given that you reflect and make efforts for re-adjust.
 
-- "I will not produce harmful code."
+## "I will not produce harmful code."
 
   This oath states the tester will not work on products and features aimed to damage the user and others.
 
@@ -65,7 +67,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   Eventually you may collaborate on products that warm people. Your duty is to acknowledge it, repair the damage as much as you can, and use your influence to make your network avoid these hiddenly harmful projects.
 
-- "The code that I produce will always be my best work. I will not knowingly allow code that is defective either in behavior or structure to accumulate."
+## "The code that I produce will always be my best work. I will not knowingly allow code that is defective either in behavior or structure to accumulate."
 
   This Oath touches the point that the results of our work will reflect our full potential. There are two parts which I would like to dive a bit:
 
@@ -81,7 +83,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   Secondly, one cannot thoroughly analyze the risks associated with an element (feature, module, variable, etc.) when one have only part of the information about it - it is a typical [Allegory of the Cave Problem](https://www.youtube.com/watch?v=1RWOpQXTltA). So, in order to have strong capacity of testing a system, one need to understand how the elements which compose the target element is implemented.
 
-- "I will produce, with each release, a quick, sure, and repeatable proof that every element of the code works as it should."
+## "I will produce, with each release, a quick, sure, and repeatable proof that every element of the code works as it should."
 
   For developers, this oath is a call for automated checks - code which exercise the system and checks if each behavior is as expected. This kind of software is a detailed executable documentation of the production code.
 
@@ -97,11 +99,11 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   OBS: As pair programming is a great way of making programmers have quick review and share information, [pair **testing**](https://www.agilealliance.org/resources/sessions/discover-the-power-of-pair-testing/) can help to share insights and the testing process.
 
-- "I will make frequent, small, releases so that I do not impede the progress of others."
+## "I will make frequent, small, releases so that I do not impede the progress of others."
 
   Nothing of "testing at the end" of the timebox (even in short sprints) - Be involved in all high-level meetings and discussions - even "technical" ones. So you will be aware of the direction the project is going, and its risks. Work closely to people, so that testing ideas and practices are exercised as soon and frequently as possible.
 
-- "I will fearlessly and relentlessly improve my creations at every opportunity. I will never degrade them."
+## "I will fearlessly and relentlessly improve my creations at every opportunity. I will never degrade them."
 
   For programmers, this Oath represents the need to always introduce adding value changes - and since [risk is anti-value](https://www.whizlabs.com/blog/what-is-value-driven-delivery-in-the-agile-world/), when a programmer increase the level of risk in a product, he is decreasing the value it provides.
 
@@ -121,7 +123,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
     No comment is necessary here.
 
-- "I will do all that I can to keep the productivity of myself, and others, as high as possible. I will do nothing that decreases that productivity."
+## "I will do all that I can to keep the productivity of myself, and others, as high as possible. I will do nothing that decreases that productivity."
 
   The two things that come to my mind with this need to keep productivity high are automation (all sort of automation) and simplification.
 
@@ -143,7 +145,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   Even if you don't have all the answers or decision power, you can be a change-driver force, connecting people in ways to produce better result.
 
-* "I will continuously ensure that others can cover for me, and that I can cover for them."
+## "I will continuously ensure that others can cover for me, and that I can cover for them."
 
   Have you team ever got agitated when that person said she was leaving for vacations, new-born license, or to another company? Besides friendship, other cause of agitation is certain situations is the phrase "But only she knows how to do X".
 
@@ -171,7 +173,7 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   And to get for the "I can cover for them" part of the statement, make sure you understand other's work, and that you can learn to perform these activities: Ask questions and offer help - each daily small step is a step forward towards more robust teams.
 
-* "I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty."
+## "I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty."
 
   I thought:
 
@@ -185,13 +187,13 @@ Although the Oath is written under a programmer's perspective, I think the nine 
 
   However, they are necessary in all parts of life, specially in software development. So, remembering that the goal is move towards the fullfiment of the Oath, not to be always fulfill it, 3 tips regarding estimates:
 
-  - Continuously work to make them more precise: Do your metrics measure what is really necessary? Are you able to explain why ([deeply](https://www.mindtools.com/pages/article/newTMC_5W.htm)) the estimates failed? Do you continuously list and execute the estimate improvements actions?
+  - Continuously work to make them more precise: Do your metrics measure what is really necessary? Are you able to explain why ([deeply](https://www.mindtools.com/pages/article/newTMC_5W.htm)) the estimates failed? Do you continuously list and execute the estimate improvement actions?
   - You will be sincere: This means saying some numbers that you know people will not like and explaining risks and unknowns that you have to consider. Have you thought about the things that can go wrong?
-  - Range estimates: Exact estimates are rarely met, and giving one means that you have so much confidence in the work to be done that you consider nothing is out of your control - it's lying. Although almost nobody will get mad about an overestimate, it is still an estimate error. Instead, using the two tips above, be more sincere and say that you consider something can be achieved between X and Y periods of time.
+  - Range estimates: Exact estimates are rarely met, and giving one means that you have so much confidence in the work to be done that you consider nothing is out of your control - it's lying. Although almost nobody will get mad about an underestimate, it is still an estimate error. Instead, using the two tips above, be more sincere and say that you consider something can be achieved between X and Y periods of time.
 
   Make sure you explain the reasons for your estimate, the steps needed and that you will keep the people receive the estimate informed. The continuous communication will create confidence because people will be able to adapt their plans on the way; and range estimates will be more easily accepted, because they will be met.
 
-* "I will never stop learning and improving my craft."
+## "I will never stop learning and improving my craft."
 
   This statement has two parts:
 

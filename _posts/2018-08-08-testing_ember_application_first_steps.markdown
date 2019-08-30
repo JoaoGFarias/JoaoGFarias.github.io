@@ -8,7 +8,9 @@ tags:
   - frontend
   - ember.js
   - selenium
-excerpt: "Ember.js provides great tools for testing your frontend, enable us to write faster, deeper, and more reliable checks than end-to-end tools, as Selenium. Let's test the UI, not through the UI. "
+excerpt: "Ember.js provides great tools for testing your frontend, enable us to write faster, deeper, and more reliable checks than end-to-end tools, as Selenium. Let's test the UI, not through the UI."
+toc: true
+toc_icon: "cog"
 ---
 
 # The problem with testing the UI using Selenium

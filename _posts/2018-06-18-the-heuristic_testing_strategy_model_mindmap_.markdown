@@ -8,7 +8,9 @@ tags:
   - exploratory
   - strategy
   - quality
-excerpt: "James Bach's HTSM in Mindmap format "
+excerpt: "James Bach's HTSM in Mindmap format"
+toc: true
+toc_icon: "cog"
 ---
 
 # The Heuristic Testing Strategy Model Mindmap

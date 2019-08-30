@@ -7,6 +7,8 @@ tags:
   - jmeter
   - jmeter-series
 excerpt: "Let's learn the basic components of JMeter, shall we?"
+toc: true
+toc_icon: "cog"
 ---
 
 
@@ -20,9 +22,9 @@ JMeter is a load testing tool designed and maintained by Apache released in 1998
 It is written in Java, which makes it easy to run out-of-the-box in any system
 with a JVM.
 
-## Fetching Bitcoin Orders from Mercado Bitcoin API
+# Fetching Bitcoin Orders from Mercado Bitcoin API
 
-### What We Will Do
+## What We Will Do
 
 [Mercado Bitcoin](https://www.mercadobitcoin.com.br) is one of the biggest cryptocurrencies exchanges from Brazil,
 providing its services for Bitcoin, Litecoin, Ethereum and others coins.
@@ -31,7 +33,7 @@ The platform provides an API to fetch data from its usage. The best thing is tha
 
 For this post we will investigate the performance of the _orderbook_ endpoint. The orderbook is the registration of all negotiation requests (selling and buying). We will simply hit the endpoint for the Bitcoin's orderbook **many times** and register how long does it take to complete our requests.
 
-### Creating Our Test Plan
+## Creating Our Test Plan
 
 The root for any JMeter project is the **Test Plan**.
 
@@ -47,7 +49,7 @@ Here we simply change the Test Plan name and JMeter updates it on the tree struc
 
 {% include figure image_path="assets/jmeter/post1/test_plan_details.png" alt="Test Plan Details" caption="Test Plan Details, where we name our set of interactions" %}
 
-### Thread Groups: Execution Configuration
+## Thread Groups: Execution Configuration
 
 Thread Groups elements serve to setup an execution scenario - they are the **"how"** we will run.
 
@@ -70,7 +72,7 @@ A Thread Group have three main configuration parameters:
 
 ![Thread Group Details]({{ "assets/jmeter/post1/thread_group_details.png" | absolute_url }})
 
-### Samplers: Our Tests
+## Samplers: Our Tests
 
 Sampler is the **"what"** we will test. It defines the request itself. 
 
@@ -86,7 +88,7 @@ It has two main parameters:
 
 ![Thread Group Tree]({{ "assets/jmeter/post1/sampler_details.png" | absolute_url }})
 
-### Listeners: Reporting Results
+## Listeners: Reporting Results
 
 Finally, in order to understand the behavior of our application, we must read how requests behaved.
 
@@ -112,7 +114,7 @@ The _Summary Report_ shows statistical data from the set of requests, regarding 
 
 You can download the JMeter suite [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post1/jmeter_basics.jmx)
 
-## What to do from here?
+# What to do from here?
 
 JMeter has a manifold of features - different types of servers, different listeners.
 

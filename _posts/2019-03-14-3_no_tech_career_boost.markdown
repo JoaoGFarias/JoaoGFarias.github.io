@@ -6,6 +6,8 @@ tags:
 categories:
   - blog
 excerpt: "Hard and soft skills are crucial to become a great professional, but there are some things they don't teach in school that can help you to boost your career"
+toc: true
+toc_icon: "cog"
 ---
 
 
@@ -29,9 +31,9 @@ In our context, I will show three Via Negativa actions that will remove some rec
 
 So... let's do it:
 
-## Create an Emergency Fund
+# Create an Emergency Fund
 
-### Definition
+## Definition
 
 An Emergency Fund is an investment stash that covers 6 to 12 months of your expenses.
 _"your expenses"_ seems precise, but it is not. In the case of an emergency fund, we are talking
@@ -45,7 +47,7 @@ probably **not** be included here.
 Monthly savings of 20% of this minimum are already a good starting point - although killing possible
 debts can be workable along this savings, if it is something your struggling as well.
 
-### Why would I need this?
+## Why would I need this?
 
 The Emergency Fund will remove a good portion of the "what if (something bad) happen?" from your life
 and give you the freedom to pursue something better with full force.
@@ -57,7 +59,7 @@ for something better. Also, if your employer politely dismiss your efforts, you 
 This freedom will not improve your life as a professional per se, but it will enable you to make some
 moves towards it that would be too risky otherwise. Knowing that life in our hands is truly empowering.
 
-### Tips
+## Tips
 
 Remember I said an Emergency Fund is an **investment**?
 
@@ -77,7 +79,7 @@ in 24h or less. Since we want to be prepared for emergencies, we want to be able
 money quickly and without bureaucracies. It usually implies less growth on the investment, but the first tip
 makes it clear we are not looking for extraordinary growth at this point.
 
-## Exercise
+# Exercise
 
 Side-by-side with good nutrition and inner-psychologic understanding, the single-most force to keep the human
 machine functioning is exercising.
@@ -95,7 +97,7 @@ experience and influence to cause big impact - and it is in that period that you
 The exercising period can serve as moments for meditation and relaxation from everyday life, when the control of the environment
 and goals is yours and yours only.
 
-### Tips
+## Tips
 
 - Make the exercising period short and frequent: I prefer 1-1,5 hours session 3-4 times per week. It allows me to go strong at each
 session while not taking a big portion of my agenda;
@@ -110,7 +112,7 @@ that constant progress and frequency are important. If you think about yourself 
 the gym, you use bad form or have a regression in load you will automatically reflect how can you compensate for it, instead of thinking
 "Ah... not a big deal".
 
-## Clean Up Your Environment
+# Clean Up Your Environment
 
 At first, I thought of naming this section "Clean Up Your Room", but it would may confuse people with [Jordan Peterson's Clean Up
 Your Room](https://www.youtube.com/watch?v=BBR5v89L6gk). But let's talk about the more materialistic / practical part of Peterson's
@@ -133,7 +135,7 @@ _To Remove_ will simplify the environment by keeping only items that are necessa
 
 _To Limit_ is the process of creating rules for the usage and management of the environment. Coming back to the note taking situation, I can set a rule of never have a _and_ in a folder name: I.e. a folder can only contain **one exact** type of thing; or I can set on my calendar to every move all notes that I haven't edit to a _Archive_ folder every 6 months. Rules are not meant to be restrictive: After all, there is **none** to complain if you change or not apply them. This is a pro and a con at the same time: You will be the only one responsible for following the rules and evaluating their effectiveness. There is when meta-rules come in scene: You can create rules for when to evaluate the rules - this interval has to both long enough to make the rule a habit (automatic action/decision) and short enough to you to remember how were things before the rule.
 
-### Tips
+## Tips
 
 _Clean Up Your Environment_ is all about making things simpler (_it's as expected_) and reduce number of explicit decisions throughout the day through the creation and refinement of habits. To make such changes easier, I would suggest three steps:
 

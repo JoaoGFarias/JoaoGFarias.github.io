@@ -7,6 +7,8 @@ tags:
   - jmeter
   - jmeter-series
 excerpt: "After extending our suite, we ended up with a lot of duplicated code and now we have a lot of work to make any change. Let's fix this problem."
+toc: true
+toc_icon: "cog"
 ---
 
 # JMeter Variables

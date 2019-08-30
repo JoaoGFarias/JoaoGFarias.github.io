@@ -7,6 +7,8 @@ tags:
   - testing
   - automation
 excerpt: "Many companies start focusing on Automation and fail. Let's see three common reasons for this"
+toc: true
+toc_icon: "cog"
 ---
 
 

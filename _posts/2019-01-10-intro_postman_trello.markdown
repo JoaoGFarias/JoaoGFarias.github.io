@@ -8,6 +8,8 @@ tags:
 categories:
   - blog
 excerpt: "First steps with Postman using Trello API"
+toc: true
+toc_icon: "cog"
 ---
 
 ## About Postman and the Trello API
@@ -53,7 +55,7 @@ However, there are two main reasons why these steps should be verified mainly on
 
 2 - **Performance**: Imagine that you want to remove petrol from under the ocean. You would need to pass through the water, the underwater sand and come back. An end-to-end (frontend + network + backend) test requires more processing than an API test (network + backend). If we can complete the API tests with pure frontend tests (network isolated) and [contract tests](https://martinfowler.com/bliki/ContractTest.html), we can have the same level of confidence of the end-to-end test, but faster. 
 
-## Starting: Fetching the our list of boards
+## Starting: Fetching the list of boards
 
 ### Sending a GET request
 
@@ -364,7 +366,7 @@ The tests are pretty straightforward now: Let's check the response code as OK, i
 
 ![Move Card Test]({{ "assets/images/postman_intro/move_card/card_test.png" | absolute_url }})
 
-## Step 5.1: Invalid operations
+### Step 5.1: Invalid operations
 
 Let's say we send a move request for a card that does not exist - maybe it never existed, or another application have deleted between our creation and move requests. 
 

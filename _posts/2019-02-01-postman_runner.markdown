@@ -8,6 +8,8 @@ tags:
 categories:
   - blog
 excerpt: "Let's learn how to run all Postman requests with ONE click"
+toc: true
+toc_icon: "cog"
 ---
 
 ## In the last episode...
