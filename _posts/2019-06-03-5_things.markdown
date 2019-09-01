@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on anti-patterns, BDD, Scrum, team buildi
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Anti-patterns - Christian Findlay](https://christianfindlay.com/2019/06/01/anti-patterns/)**
   - Christian questions the definition of anti-patterns, raising the issue of technical demonization of these practices (and deification of the _patterns_). Every problem is contextual and its solution as well - therefore, applying these solution to every similar situation can be problematic.
@@ -33,12 +33,12 @@ excerpt: "Five links to read this week on anti-patterns, BDD, Scrum, team buildi
 
   You pass data in a CSV format
 
-  ![Raw Graph Data]({{ "assets/images/rawgraphs/data.png" | absolute_url }})
+{% include figure image_path="/assets/images/rawgraphs/data.png" alt="Raw Graph Data" caption="" %}
 
   You choose the graph type you want
 
-  ![Raw Graph Type]({{ "assets/images/rawgraphs/type.png" | absolute_url }})
+{% include figure image_path="/assets/images/rawgraphs/type.png" alt="Raw Graph Type" caption="" %}
 
   And they plot a great graph using d3.js
 
-  ![Raw Graph Result]({{ "assets/images/rawgraphs/result.png" | absolute_url }})
+{% include figure image_path="/assets/images/rawgraphs/result.png" alt="Raw Graph Results" caption="" %}

@@ -12,3 +12,6 @@ build:
 
 run:
 	bundle exec jekyll serve --incremental --watch
+
+checkBuild:
+	sh ./script/cibuild

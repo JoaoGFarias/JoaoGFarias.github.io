@@ -25,4 +25,4 @@ excerpt: "Five links to read this week"
 - **["Are developers receiving training in testing?" - Michael Bolton on Twitter](https://twitter.com/michaelbolton/status/1062979723079401473)**
   - Michael Bolton digs on the reasons why a certain company suddenly started training developers into testing... **and firing the testers** oO
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}

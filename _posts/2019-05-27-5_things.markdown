@@ -1,17 +1,16 @@
 ---
 title: "Bob Martin - 5 Talks to Watch - 27th May 2019"
-date: 2019-06-27T20:15:00 -0300
+date: 2019-05-27T20:15:00 -0300
 tags:
   - 5-things-to-read
 categories:
   - blog
-  - "2019-06-27"
 excerpt: "Five Bob Martin's talks to watch this week"
 ---
 
 # Bob Martin - 5 Talks to Watch
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 This past week I haven't visit the blogsphere, but our list of 5 things will still hit the streets. Below are five presentations of one of my software heroes, [Bob Martin](https://twitter.com/unclebobmartin).
 

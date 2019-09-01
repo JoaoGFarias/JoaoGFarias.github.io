@@ -14,7 +14,7 @@ excerpt: "Five links to read this week on micro services on frontend, developmen
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 
 - **[Front-End Micro Services](https://jobs.zalando.com/tech/blog/front-end-micro-services/index.html)**

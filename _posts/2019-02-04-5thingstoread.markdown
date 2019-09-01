@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on agility, quality culture and API Testi
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Quality Culture](https://qablog.practitest.com/quality-culture/)**
   - Podcast from Rob Lambert talking about what Quality Culture means and how to change it in your company. (Spoiler: It's not maximum number of critical bugs in production or _100% automation_)

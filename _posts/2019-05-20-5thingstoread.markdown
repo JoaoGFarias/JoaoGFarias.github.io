@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on software architecture, presentations, 
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Making Architecture Matter](hhttps://www.youtube.com/watch?v=DngAZyWMGR0)**
   - This video from Martin Fowler is quite old (2014), but I ended always coming back to it. It talks about (software) architecture in ways that you probably haven't seen: Architecture is subjective and the goal is communication.  

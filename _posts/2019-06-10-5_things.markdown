@@ -12,7 +12,7 @@ excerpt: "Five links to read this week on programming languages and bugs, unit t
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[On the Impact of Programming Languages on Code Quality](https://arxiv.org/abs/1901.10220)**
   - Great paper from the Cornell University where GitHub projects in eleven different languages are analysed regarding bugs.

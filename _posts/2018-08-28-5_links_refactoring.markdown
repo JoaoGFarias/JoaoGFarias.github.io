@@ -41,4 +41,4 @@ This article shows how to implement the [Presentation-Domain-Data Layering archi
 
 [Refactoring to Functional Style (42 min - Youtube)](https://www.youtube.com/watch?v=Nn0aYf2kn1w)
 
-![Keep calm and Refactor]({{ "assets/images/keep_calm_refactor.png" | absolute_url }})
+{% include figure image_path="/assets/images/keep_calm_refactor.png" alt="Keep calm and Refactor" caption="" %}

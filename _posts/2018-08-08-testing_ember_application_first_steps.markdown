@@ -39,7 +39,7 @@ Most modern frontend frameworks provide their own tools for checking, this serie
 
 Below is a architectural representation of an Ember.js app (image from [Karuna Sehgal](https://medium.com/karuna-sehgal/discovering-ember-js-2e92e8d32e36)).
 
-![Ember.js app architecture]({{ "assets/images/ember_architecture.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/ember_architecture.jpg" alt="Ember.js app architecture" caption="Ember.js app architecture" %}
 
 Without going into many details, an Ember.js app starts with the access in an URL, which is decomposed by the Router and the Route Handler.
 

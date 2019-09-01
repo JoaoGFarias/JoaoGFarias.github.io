@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on testing podcasts, random checking, bac
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Feedspot for Software Testing Podcasts](https://blog.feedspot.com/software_testing_podcasts/)**
   - Although no so widespread as development podcasts, quite a few people out there are doing a great job in giving some radio shows about quality.

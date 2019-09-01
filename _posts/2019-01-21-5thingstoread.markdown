@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on testing in Javascript, aphorisms, test
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Node.js & JavaScript Testing Best Practices](https://medium.com/@me_37286/yoni-goldberg-javascript-nodejs-testing-best-practices-2b98924c9347)**
   - This text will take ~30 min, but it worth it. [Yoni Goldberg](https://medium.com/@me_37286) gives 29 tips, divided in 4 sections, about tests (checks) in Javascript. 

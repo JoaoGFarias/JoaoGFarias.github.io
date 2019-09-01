@@ -17,7 +17,7 @@ excerpt: "Five links to read this week on JS documentation, a11y problems in the
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[A Homepage for the JavaScript Specification](https://hacks.mozilla.org/2019/03/a-homepage-for-the-javascript-specification/)**
   - Ecma International's released a very nice site to display the open proposals to changes in the Javascript language.

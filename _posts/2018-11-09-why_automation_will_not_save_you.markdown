@@ -11,8 +11,7 @@ toc: true
 toc_icon: "cog"
 ---
 
-
-![Robot]({{ "assets/images/robot.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/robot.jpg" alt="Robot" caption="The Automated Tester?" %}
 
 It's not rare to see senior developers and managers mesmerized by Automation.
 Many of these people have stories of slow and complicated feedback provided by multitudes

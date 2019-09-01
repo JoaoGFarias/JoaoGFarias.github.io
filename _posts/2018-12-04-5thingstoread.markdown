@@ -25,4 +25,4 @@ excerpt: "Five links to read this week on API testing, software performance, Pos
 - **[Top Browser Extensions For Testing Software](https://www.ministryoftesting.com/dojo/lessons/top-browser-extensions-for-testing-software)**
   - Stephen Janaway points out a very comprehensive list of Chrome and Firefox (which can be used on IceCat as well) extensions to help you to test faster and better.
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}

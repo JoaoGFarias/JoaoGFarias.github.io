@@ -51,7 +51,7 @@ Following a Barbell Strategy, we can mitigate the bad aspects of structured lear
 unstructured learning. By exploring _unknown unknowns_ we can broad our chances to find opportunities that can shift drastically
 our learning.
 
-![Barbell]({{ "assets/images/learning_quadrants/barbell_strategy.png" | absolute_url }})
+{% include figure image_path="/assets/images/learning_quadrants/barbell_strategy.png" alt="Barbell" caption="" %}
 
 # The Learning Quadrants
 
@@ -60,7 +60,8 @@ in 4 areas
 
 Let's call them **The Learning Quadrants**:
 
-![The Learning Quadrants]({{ "assets/images/learning_quadrants/basic_learning_quadrants.png" | absolute_url }})
+{% include figure image_path="/assets/images/learning_quadrants/basic_learning_quadrants.png" alt="The Learning Quadrants" caption="" %}
+
 
 ## The Axes: Attention and Goal
 

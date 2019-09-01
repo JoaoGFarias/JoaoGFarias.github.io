@@ -15,7 +15,7 @@ excerpt: "Five links to read this week on badges, questions, the science of test
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Open Badges](https://openbadges.org/)**
   - Not a reading suggestion, but a link to an interesting iniciative: Open Badge is a system for recognition and skills achievement. Would this be the end of the traditional resumé?

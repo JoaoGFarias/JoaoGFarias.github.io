@@ -11,7 +11,8 @@ excerpt: "Five links to read this week on JavaScript, test cases, automation tea
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
 
 - **[JavaScript Pro Tips - Code This, NOT That](https://youtu.be/Mus_vwhTCq0)**
   - Very nice video with good JavaScript tips for beginners

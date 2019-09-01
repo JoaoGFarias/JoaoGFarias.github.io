@@ -25,4 +25,4 @@ excerpt: "Five links to read this week on agile, planning, Cypress, and context-
 - **[If we do a sanity testing before release, then do we need to do regression testing again? - Michael Bolton on Quora](https://www.quora.com/If-we-do-a-sanity-testing-before-release-then-do-we-need-to-do-regression-testing-again)**
   - Context is essential - "proven" receipts do work... for the contexts they were implemented. So, when is regression testing necessary?
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}

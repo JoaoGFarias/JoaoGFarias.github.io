@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on skills for agile success, James Bach o
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Technical Skills](https://ronjeffries.com/articles/019-01ff/tech-skills/)**
   - Ron Jeffries talks about technical skills and practices necessary for agile success that go beyond programming: Skills to deal with stories, change, understanding and more.

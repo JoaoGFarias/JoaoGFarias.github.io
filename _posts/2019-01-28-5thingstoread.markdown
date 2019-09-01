@@ -17,7 +17,7 @@ excerpt: "Five links to read this week on page objects, estimation, test design 
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Page Objects that Suck Less – Tips for writing more maintainable Page Objects](https://johnfergusonsmart.com/page-objects-that-suck-less-tips-for-writing-more-maintainable-page-objects/)**
   - A three-steps refactoring process to allow more flexibility and realibility on Page Objects.

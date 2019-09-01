@@ -27,7 +27,7 @@ The Heuristic Testing Strategy Model (HSTM) was created by [James Bach](http://w
 
 - **Perceived Quality** is the result of testing. You can never know the "actual" quality of a software product, but through the application of a variety of tests, you can make an informed assessment of it.
 
-![Bach's Heuristic Testing Strategy Model image]({{ "assets/images/htsm.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/htsm.jpg" alt="Bach's Heuristic Testing Strategy Model" caption="Bach's Heuristic Testing Strategy Model" %}
 
 The 5-page paper which describes the HTSM can be found [here](http://www.satisfice.com/tools/htsm.pdf).
 
@@ -35,9 +35,9 @@ Since the HTSM is a tool for reflection and continuous improvement, I find very 
 
 I have designed a mindmap which captures the information the aforementioned paper, joining some aspects and removing a few others. The intention is to, from time to time, improve upon this mindmap organization, adding, removing and topics. The mindmap, created using XMind, can be downloaded **[here]({{ "assets/mindmaps/heuristic_testing_strategy_model.xmind" | absolute_url }})**.
 
-![HTSM mindmap image]({{ "assets/images/htsm_mindmap.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/htsm_mindmap.jpg" alt="HTSM mindmap" caption="HTSM mindmap" %}
 
-![HTSM mindmap expanded image]({{ "assets/images/htsm_mindmap_2.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/htsm_mindmap_2.jpg" alt="HTSM mindmap" caption="HTSM mindmap" %}
 
 # Versions
 

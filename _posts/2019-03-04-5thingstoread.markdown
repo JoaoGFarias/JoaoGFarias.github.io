@@ -16,7 +16,7 @@ excerpt: "Five links to read this week on tools for cross-browser testing, hirin
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Browserling](https://www.browserling.com/)**
   - Browserling service provides browser instances under the OS of your choice. It seems pretty neat, especially because it provides SSH access to the running machines. Negative aspect? Only Windows and Android machines -_-  

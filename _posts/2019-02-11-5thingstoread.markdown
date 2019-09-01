@@ -15,7 +15,7 @@ excerpt: "Five things to read"
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Future JavaScript: what is still missing?](http://2ality.com/2019/01/future-js.html)**
   - Since ES6, released in 2015, ECMA has adopted a policy of yearly major releases for Javascript. To keep up with the whole package every year is hard and wearying, specially if you don't use the language often or deeply. Axel Rauschmayer has one of the [best blogs on Javascript](http://2ality.com/index.html), and has listed some features in the road of the Javascript language, from capacity of comparing values by value to proposals on [pipeline operators](http://2ality.com/2019/01/future-js.html#pipeline-operator).
@@ -28,4 +28,4 @@ excerpt: "Five things to read"
 - **[Can't U See](https://cantunsee.space/)**
   - I love finding small UI problems: Misalignments, inconsistencies in fonts and sizes, typos, etc. This "game" gives you two similar images and ask you to pick the _correct_ one. Real testing fun :D
 
-![Can't You See screenshot]({{ "assets/images/etc/cantusee.png" | absolute_url }})
+{% include figure image_path="/assets/images/etc/cantusee.png" alt="Can't You See screenshot" caption="" %}

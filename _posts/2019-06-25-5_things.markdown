@@ -13,7 +13,7 @@ excerpt: "Five links to read this week on evolution in frontend design, importan
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Micro Frontends - Cam Jackson](https://martinfowler.com/articles/micro-frontends.html)**
   - I've first heard of Micro-frontends in 2016, on [an Allegro.tech post](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html). The idea is to bring the same approach of micro-services to break the frontend monoliths. Cam Jackson does an overview of this on Martin Fowler's blog.

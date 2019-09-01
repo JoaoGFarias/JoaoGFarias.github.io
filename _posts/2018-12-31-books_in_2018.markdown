@@ -1,14 +1,15 @@
 ---
 title: "The 43 Books I've Read in 2018"
 date: 2018-12-31T20:15:00 -0300
-categories:
+tags:
   - reading
   - "2018"
-tags:
+categories:
+  - blog
 excerpt: "The list of 43 books I've read in 2018"
 ---
 
-![Reading]({{ "assets/images/read_all_the_books.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/read_all_the_books.jpg" alt="Read all the books!" caption="" %}
 
 - [The 50th Law -  50 Cent and Robert Greene](https://www.goodreads.com/book/show/6043946-the-50th-law)
 - [The Lord of the Rings](https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings)

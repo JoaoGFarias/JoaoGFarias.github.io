@@ -21,11 +21,11 @@ When you active the Developer Accessibility Tool, you gain information about the
 
 If shows a green check if the contrast is good:
 
-![Contrast OK]({{ "assets/images/firefox_a11y/contrast_ok.png" | absolute_url }})
+{% include figure image_path="/assets/images/firefox_a11y/contrast_ok.png" alt="Contrast OK" caption="Contrast OK" %}
 
 If shows a yellow alert if the contrast can be improved to provide better visualization:
 
-![Contrast Not OK]({{ "assets/images/firefox_a11y/contrast_not_ok.png" | absolute_url }})
+{% include figure image_path="/assets/images/firefox_a11y/contrast_not_ok.png" alt="Contrast not OK" caption="Contrast not OK" %}
 
 Checkout how to use the new feature on the Developer Accessibility Tools on Youtube:
 

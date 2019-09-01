@@ -15,7 +15,7 @@ excerpt: "Five links to read this week on coding interviews, Scrum and Testing, 
 
 # 5 Things to Read
 
-![Reading]({{ "assets/images/reading_time.jpg" | absolute_url }})
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Refactoring the Coding Interview](https://www.youtube.com/watch?v=cMYTwP21dEU)**
   - Awesome talk discussing how to identify developers that can really impact positively your team. Do "Cracking the Code Interview" type of programming challenges reveal problem solvers?
