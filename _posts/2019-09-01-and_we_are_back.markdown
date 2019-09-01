@@ -5,7 +5,10 @@ categories:
   - blog
 tags:
 excerpt: "After a little while, That's a Bug is back"
+teaser: /assets/images/refactoring/back.png
 ---
+
+{% include figure image_path="/assets/images/refactoring/back.png" alt="Yes, we are open" caption=""  %}
 
 Hi there!
 
