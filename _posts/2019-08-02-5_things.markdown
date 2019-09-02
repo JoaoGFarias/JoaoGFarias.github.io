@@ -1,0 +1,26 @@
+---
+title: "5 Things to Read This Week - 2nd Set 2019"
+date: 2019-08-02T20:15:00 -0300
+categories:
+  - blog
+tags:
+  - 5-things-to-read
+  - "2019-08-02"
+excerpt: "Five links to read this week on JavaScript, test cases, automation teams, quality, and goal focus"
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+
+- **[The Connection Between Burnout and Personality Types in Software Developers](https://arxiv.org/abs/1906.09463)**
+  - [Software Development is a social activity](https://glen-ford.blogspot.com/2009/04/software-development-is-social-activity.html), thus, it is fundamental to understand how **people** work and what can be done to improve the ways **people** work. **Code is secundary**.
+- **[Scrum by Example – How to Handle Production Support Issues in Scrum](https://agilepainrelief.com/notesfromatooluser/2019/06/scrum-production-support.html)**
+  - Scrum is a framework. And as software frameworks, it is meant to be expandable in order better fullfil the needs of the users (here, the team). Be by problems in the team workflow, or as natural consequences of the context, some projects will have high levels of unpredicted work. Mark Levison show us how to deal this within Scrum. 
+- **[How to Test Ember Components](https://emberigniter.com/test-ember-components-integration/)**
+  - comprehensive tutorial on how to test Ember Components in isolation. I've written a more high level tutorial on Ember testing general, talking about Application, Component, and Unit tests. Check it out [here](http://thatsabug.com//blog/testing_ember_application_first_steps/)
+- **[testRNN: Coverage-guided Testing on Recurrent Neural Networks](https://arxiv.org/abs/1906.08557)**
+  - Interesting usage of mutation-based testing to verify the robustness of Recurring Neural Networks. The usage of heuristics, rather than hard oracles, can be a good path for testing AI in general.
+- **[A LOOK AT NEW JAVA FEATURES IN TEST AUTOMATION](http://angiejones.tech/new-java-features-test-automation/)**
+  - Java is slowly becoming less unberable in terms of language construct, with the addition of many features inspired by Python, Ruby, Javascript and Groovy (JVM-based). Angie Jones will show us some of them and how to apply in the context of automation (in testing).
