@@ -1,0 +1,26 @@
+---
+title: "5 Things to Read This Week - 09th Set 2019"
+date: 2019-09-09T08:00:00 -0300
+categories:
+  - blog
+  - "2019-09-09"
+tags:
+  - 5-things-to-read
+excerpt: "Five links to read this week on hiring, project evalulation, agile testing, free and open source cellphones, and estimation."
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+
+- **[Hiring is Broken And Yours Is Too](https://software.rajivprab.com/2019/07/27/hiring-is-broken-and-yours-is-too/)**
+  - If you have being to at least three hiring processes, good chances are that you realized that at least in two the interwers had no idea how to connect the process with the real work. Hiring, apart from very small companies, is defined and influenced by a multidide of hands and minds. Some of them understand the daily work, some of them understand how people think, some of them have long-term bussiness needs in mind, etc - **and** all of them are trying (or at least should) to optimize their part so that people can get in as fast as possible. This optimization tends to result in the adoption of "best practices" of hiring - which may be too narrow or general for the needs of the company. Here Rajiv Prabhakar give us the pros and cons of many hiring strategies used in the industry nowadays.  
+- **[Need to Assess Project Value without Hard Metrics? Measure Customer Behaviors](https://spin.atomicobject.com/2019/08/30/assess-project-value/)**
+  - Story points, function points, features, etc... all of these metrics focus on project output: Things that team shipped to the outside world. But, should shipping things be the primary way to measure success? What if we start looking at the user behavior? What if we start looking at outcome?
+- **[Agile Testing Condensed](https://leanpub.com/agiletesting-condensed)**
+  - Janet Gregory and Lisa Crispin just released a new book! Agile Testing Condensed contain nuggets and shorter description of the topics from [Agile Testing](https://www.amazon.com/Agile-Testing-Practical-Guide-Testers/dp/0321534468) and [More Agile Testing](https://www.amazon.com/More-Agile-Testing-Addison-Wesley-Signature/dp/0321967054). I am half way through the book and it is gorgeous.
+- **[Librem 5 Shipping Announcement](https://puri.sm/posts/librem-5-shipping-announcement/ )**
+  - If you don't know, Librem 5 is a cellphone developed by [Purism](https://puri.sm). As the other products from the company, Librem 5 is 100% free software, with **zero** tracking and monitoring functionallities, no backdoors, nothing. After two years of development, the first cellphones are finally out. It can be a great step towards a freer mobile industry, where the user is not spied upon 24/7.
+- **[Estimates, the Platinum Rule, the danger of assumptions](https://www.youtube.com/watch?v=e9PxMoqH9SU)**
+  - This one-hour conversation with the late Jerry Weinberg on estimation and how to deal with pressure (and how not to pressure others) is priceless. Many ideas overlap with [Bob Martin talk on estimation](https://www.youtube.com/watch?v=eisuQefYw_o).

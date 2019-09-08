@@ -3,7 +3,7 @@ title: "5 Things to Read This Week - 2nd Set 2019"
 date: 2019-09-02T20:15:00 -0300
 categories:
   - blog
-  - "2019-08-02"
+  - "2019-09-02"
 tags:
   - 5-things-to-read
 excerpt: "Five links to read this week on burnout and personality, support issues in Scrum, Ember testing, testing AI and new Java features"
