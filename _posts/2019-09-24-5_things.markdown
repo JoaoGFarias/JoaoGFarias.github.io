@@ -1,0 +1,26 @@
+---
+title: "5 Things to Read This Week - 24th Set 2019"
+date: 2019-09-24T08:00:00 -0300
+categories:
+  - blog
+  - "2019-09-24"
+tags:
+  - 5-things-to-read
+excerpt: "Five links to read this week on code review, improving the Testing Pyramid, the Water Leak Approach, the importance of the Sprint Goal, and Risk Analysis for testing."
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+
+- **[Google - The Standard of Code Review](https://google.github.io/eng-practices/review/reviewer/standard.html)**
+  - Some of Google's instructions for a good code review. It talks how code review can be used for mentoring, that imperfect changes that improve overall quality should be accepted, and remind us that design is not always an objective factor.
+- **[James Bach - Introducing the Round Earth Test Strategy Heuristic](https://youtu.be/gy93j7LE6sA)**
+  - Short webinar from James Bach explaning some flaws he sees on the Testing Pyramid and how to expand it with aspects such as risk, unkowns unknows, and human evaluation. 
+- **[Fixing the Water Leak](https://docs.sonarqube.org/latest/user-guide/fixing-the-water-leak/)**
+  - If you try to setup static analysis of a legacy project for the first time, you inevitably end up with thousands of errors and warnings. It usually leads to a demotion of the value of static analysis: "We will never fix all of this, it will always be red". On this article, Sonar tell us that you are right, and sugest and approach on how incorporte static analysis on legacy projects.  
+- **[The Sprint Goal & the Scrum Time Paradox](https://medium.com/@daviddenham07/the-sprint-goal-the-scrum-time-paradox-d6e69c5947fa)**
+  - A sprint in Scrum is not a mini-waterfall project, we can be flexible and pivot inside a sprint. If it may seem contradictory with the concept of Sprint Backlog, David Denham will explain this confusion and how to make sense of all of this.
+- **[Michael Bolton. Risk Analysis.](https://www.youtube.com/watch?v=g97mMeC9EIE)**
+  - "Risk Analysis: Impact x Probability", right? Can be, but not always. Here Michael Bolton deep dives on the concepts of risk and analysis, and the complexities of these activities on testing. (Note: No complicated math, more concept discussion).
