@@ -1,0 +1,29 @@
+---
+title: "5 Things to Read This Week - 22th Oct 2019"
+date: 2019-10-22T08:00:00 -0300
+categories:
+  - blog
+  - "2019-10-22"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on great talks - no reading, just watching :D"
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+
+- **[Agile Greece Summit](https://www.youtube.com/channel/UCFvLK0QGV6-yC8B0PG2fQBA/playlists)**
+  - [Last week I've recommended](http://thatsabug.com/blog/2019-10-14/5_things/) a great talk on Exploratory Testing given by Maaret Pyhäjärvi on the Agile Greece Summit. If you are interested in other talks from this even, you can go to its Youtube channel: [here](https://www.youtube.com/channel/UCFvLK0QGV6-yC8B0PG2fQBA/playlists)
+- **[Continuous Delivery and the Theory of Constraints by Steve Smith](https://www.youtube.com/watch?v=j2eHkXaUwho)**
+  - Again from the Agile Greece Summit, Steve Smith talks how the Theory of COnstraints is essential to understand the practices of Continuos Delivery.
+- **[Beth Skurrie - Microservices. Test smarter, not harder](https://www.youtube.com/watch?v=mFnKHcqSJ3I)**
+  - Have you heard of Consumer-Driven Contracts tests? Although not completely novel, this technique is getting only traction in the last couple of years, a bit after the establishment of microservices. In this talk,Beth Skurrie gives us a introduction to [Pact](pact.io), surely one of the best tools to create and manager contract between services. 
+- **[Trisha Gee: Reading Code Is Harder Than Writing It](https://www.youtube.com/watch?v=zV079g7Irks)**
+  - One day I will make a (long) text on everything I think is wrong on how programming and software engineering is taught (things are getting better nonetheless). One of them is how people **do not read code** when **learning how to code**. I mean... do not read **good** code. Some small refactoring, a bit of polymorphism, and ban, semester project written with more 2 colleagues in 2 all-night-long programming sessions. Not the best way to develop craftsmanship... Trisha here talks about how important is this skill for anyone dealing with coding.
+- **I will talk on Automation Guild!**
+  - Yep... I will be one of the speakers of the [Automation Guild 2020](https://guildconferences.com/). Next February more than 12 session will be held **100% online** to talk everything automation (in testing). My talk is called "Grow your Automation Toolkit: Because when all you have is a hammer…" - there I will rapidly present a few tools that you can incorporate on your testing strategy, either to enhance your checking process or enable you to perform checks that you didn't know how to do. I hope to see you all there!
+
+  
+{% include figure image_path="/assets/images/misc/joao_automation_guild.png" alt="automation guild" %}
