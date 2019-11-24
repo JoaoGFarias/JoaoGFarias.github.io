@@ -1,0 +1,26 @@
+---
+title: "5 Things to Read This Week - 25nd Nov 2019"
+date: 2019-11-25T08:00:00 -0100
+categories:
+  - blog
+  - "2019-11-25"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on Waterfall, risk analysis, conventions, exploratory testing, and effective daily scrums"
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+
+- **[Martin Fowler - Waterfall](https://martinfowler.com/bliki/WaterfallProcess.html#footnote-iteration)**
+  - If you think people misunderstand what is Agile, even with the primary source of the Agile Manifesto, the idea of Waterfall development will reach new levels of confusion for you. Here Martin Fowler brings both a conceptional and historical view of Waterfall - and the **main** why the Agile movement differs from it. 
+- **[Michael Bolton. Risk Analysis. QA Fest 2018](https://www.youtube.com/watch?v=g97mMeC9EIE)**
+  - Risk Analysis seems to an out-of-this-world full of formulas and math process. And some people really make it this way... In this talk Michael Bolton explains it is not necessary, and risk analysis can be done in a more human way.
+- **[Karma Runner - Git Commit Msg convention](https://karma-runner.github.io/1.0/dev/git-commit-msg.html)**
+  - Karma is a Javascript test (very interesting) runner. Its documentation describe a very interesting convention for commit messages. As someone who uses change history to investigate risks that need to be investigated, good commit messages help me to understand things almost instantly, creating a logical **history** of changes. Karma's convention seems very promising for this goal.
+- **[All testing is exploratory: change my mind](https://therockertester.wordpress.com/2019/10/16/all-testing-is-exploratory-change-my-mind/)**
+  - Definitions, definitions... slight differences in wording can change the underlying meaning. Here Lee Hawkins discusses the different definitions of Exploratory Testing and what message each one brings between the lines.
+- **[Ten Tips for More Effective Daily Scrums](https://www.mountaingoatsoftware.com/blog/ten-tips-for-more-effective-daily-scrums)**
+  - Mike Cohn shares some ideas on how teams can avoid the traps daily scrums usually fall into...
