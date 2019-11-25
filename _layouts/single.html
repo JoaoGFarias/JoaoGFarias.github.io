@@ -35,7 +35,7 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {% if page.share %}{% include hacker-news-share.html %}{% endif %}
-
+        <p class="page__date"><i class="fa fa-rss-square" aria-hidden="true"></i> Subscribe to our RSS </i><a href="http://thatsabug.com/feed.xml">here.</a></p>
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
@@ -46,6 +46,7 @@ layout: default
         {% endif %}
 
         {{ content }}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
@@ -59,6 +60,7 @@ layout: default
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
+        <p class="page__date"><i class="fa fa-rss-square" aria-hidden="true"></i> Subscribe to our RSS </i><a href="http://thatsabug.com/feed.xml">here.</a></p>
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
