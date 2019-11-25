@@ -122,7 +122,7 @@ In this tutorial series, we will focus more on how to create usable and extensiv
 
 Our series will follow talking about:
 
-- [Variables](http://thatsabug.com/2019/06/21/jmeter_2.html)
-- Tests
-- Authentication OAuth
+- [Variables](http://thatsabug.com/blog/jmeter_2/)
+- [Tests](http://thatsabug.com/blog/jmeter_3/)
+- Google Drive and OAuth
 - Running JMeter on Jenkins
