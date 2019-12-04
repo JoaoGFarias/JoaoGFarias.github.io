@@ -31,13 +31,13 @@ In this post we will see how to save files on Google Drive, using OAuth to authe
 
 Access keys are cryptographic strings that allow computers to communicate securely.
 
-To have access Google Drive functions we have to acquire a token from it. We do it by selecting the token scope on the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground).
+To have access to Google Drive functions, we have to acquire a token from it. We do it by selecting the token scope on the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground).
 
 If we head out to there we can select a Google Drive API we want to use:
 
 {% include figure image_path="/assets/jmeter/post4/selecting_playground_scope.png" alt="Selecting Playground scope" %}
 
-Afterwards we can exchange our Authorization Code (permanent) for an Access Token (temporary) that we can use for a period to access Google Drive functions:
+Afterward, we can exchange our Authorization Code (permanent) for an Access Token (temporary) that we can use for a period to access Google Drive functions:
 
 {% include figure image_path="/assets/jmeter/post4/saving_token.png" alt="Saving token" %}
 
