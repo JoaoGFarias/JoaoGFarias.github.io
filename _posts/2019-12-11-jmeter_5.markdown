@@ -117,5 +117,6 @@ You can configure many triggers for the Jenkins job, such as a new commit on Git
 
 Also you can configure the JMeter plan itself, for instance, by passing [arguments on the non-GUI command](https://dzone.com/articles/using-commandline-parameters-in-jmeter).
 
+## Conclusion
 
 This ends the 5-part series to introduce JMeter, from the basics concepts to continous execution. You can check out the whole series [here](http://thatsabug.com/tags/#jmeter-series).
