@@ -1,5 +1,5 @@
 ---
-title: "JMeter Basics Part 0 of 4 - Fetching Bitcoin orders data"
+title: "Fetching Bitcoin orders data - JMeter Basics Part 0 of 4"
 date: 2019-06-06T20:15:00 -0300
 categories:
   - blog

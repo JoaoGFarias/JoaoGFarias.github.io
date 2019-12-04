@@ -1,5 +1,5 @@
 ---
-title: "JMeter Basics Part 2 of 4 - Assertions"
+title: "Assertions - JMeter Basics Part 2 of 4"
 date: 2019-06-28T20:15:00 -0300
 categories:
   - blog

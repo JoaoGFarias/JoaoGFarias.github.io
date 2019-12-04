@@ -1,5 +1,5 @@
 ---
-title: "JMeter Basics Part 1 of 4 - Variables"
+title: "Variables - JMeter Basics Part 1 of 4 "
 date: 2019-06-21T20:15:00 -0300
 categories:
   - blog
