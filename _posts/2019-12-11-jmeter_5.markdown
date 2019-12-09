@@ -1,6 +1,6 @@
 ---
 title: "JMeter and Jenkins - JMeter Basics Part 4 of 4"
-date: 2019-12-11T08:00:00 -0100
+date: 2019-12-02T08:00:00 -0100
 categories:
   - blog
 tags:
@@ -23,8 +23,8 @@ Jenkins is installed locally in many ways depending on your OS.
 
 On Mac, you can use _brew_:
 
-```bash 
-brew install jenkins 
+```bash
+brew install jenkins
 ```
 
 On Debian, you can use _apt_:
@@ -44,11 +44,11 @@ In the end, you can simply run ```bash jenkins``` and the service will be up and
 
 The command will give the initial administrator password. The next screens will guide you through Jenkins configuration. For our purposes you can simply use the default options.
 
-(Image of setup)
+{% include figure image_path="/assets/jmeter/post5/setup.png" alt="Jenkins setup" %}
 
 Afterwards Jenkins will be ready to go!
 
-(Image of Jenkins)
+{% include figure image_path="/assets/jmeter/post5/ready.png" alt="Jenkins ready" %}
 
 ## Running JMeter from the command line
 
@@ -73,41 +73,41 @@ For starters, we will add the [Performance plugin](https://plugins.jenkins.io/pe
 
 To add it, go to _Manage Jenkins_ and _Manage Plugins_.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/manage_jenkins.png" alt="Jenkins management screen" %}
 
 Then Select _Performance_ form the _Available_ tab.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/add_performance.png" alt="Adding Performance plugin" %}
 
 No restart is necessary.
 
 Back on Jenkins initial screen, you can click on _create new jobs_ and then create a _Freestyle project_.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/job_naming.png" alt="Jenkins job naming" %}
 
-Clicking on _Configure_ will allow us to add the building steps.
-
-(TODO)
+Clicking on _Configure_ allows us to add the building steps.
 
 Firstly we will add a Build step execute the exact command we use before to run JMeter in NON-GUI mode.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/execute_shell.png" alt="Build step - Execute Shell" %}
 
 Secondly, we will add a Post-build step. The type will be _Publishing Performance test result report_, which is coupled to the Performance plugin.
 
+{% include figure image_path="/assets/jmeter/post5/publish_report.png" alt="Post=Build step - Execute Shell" %}
+
 Here we just need to add the path to our _.jtl_ file in the _Source data files_ field.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/post_build.png" alt="Post=Build step - File path" %}
 
 ## Information overview
 
 After a couple of executions, you can see that the Performance plugin shows a trend chart on the job home page.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/job_stats.png" alt="Job stats" %}
 
 Additionally, you can see more detailed data into each execution.
 
-(TODO)
+{% include figure image_path="/assets/jmeter/post5/execution_stats.png" alt="Execution stats" %}
 
 ## Possible improvements
 

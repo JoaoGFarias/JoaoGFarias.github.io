@@ -125,4 +125,3 @@ The example here, of course, is basic. For more reliable and constant usage of s
 Nonetheless, after the setup, our JMeter plans look very similar to what we were doing before, showing how JMeter's interface clearly separates concerns.
 
 In the next post, we will see how to setup [Jenkins](https://jenkins.io/) to run a JMeter plan.
-
