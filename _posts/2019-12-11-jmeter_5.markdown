@@ -67,7 +67,7 @@ The only new part is the cryptic _.jtl_ file. This is a XML or CSV format used b
 
 ## Creating a Jenkins job to execute the JMeter plan
 
-For this example, we will be using a JMeter plan that makes call to the Open Maps API. You can download the file [here](TODO).
+For this example, we will be using a JMeter plan that makes call to the Open Maps API.
 
 For starters, we will add the [Performance plugin](https://plugins.jenkins.io/performance), in order to have nice reports on JMeter screen.
 
