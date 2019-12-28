@@ -6,7 +6,7 @@ categories:
 tags:
   - jmeter
   - jmeter-series
-excerpt: "Cntinuous Performance Testing - The First Step"
+excerpt: "Continuous Performance Testing - The First Step"
 toc: true
 toc_icon: "cog"
 ---
