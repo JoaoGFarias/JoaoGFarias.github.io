@@ -1,0 +1,54 @@
+---
+title: "The 39 Books I've Read in 2019"
+date: 2010-12-28T08:00:00 -0100
+tags:
+  - reading
+  - "2019"
+categories:
+  - blog
+excerpt: "The list of 39 books I've read in 2019."
+---
+
+{% include figure image_path="/assets/images/read_all_the_books.jpg" alt="Read all the books!" caption="" %}
+
+- **[Clokie, Katrina - A Practical Guide to Testing in DevOps](https://leanpub.com/testingindevops)**
+- **[Coleridge, Samuel Taylor - The Rime of the Ancient Mariner](https://www.poetryfoundation.org/poems/43997/the-rime-of-the-ancient-mariner-text-of-1834)**
+- **[Deneen, Patrick J. - Why Liberalism Failed](https://www.amazon.com/Why-Liberalism-Failed-Politics-Culture/dp/0300223447)**
+- **[Dix, Rob - The Complete Guide to Property Investment: How to survive & thrive in the new world of buy-to-let](https://www.amazon.com/Complete-Guide-Property-Investment-buy/dp/0993497209)**
+- **[Decker, Kevin S. - Star Wars and Philosophy: More Powerful than You Can Possibly Imagine](https://www.amazon.com/Star-Wars-Philosophy-Powerful-Possibly/dp/0812695836)**
+- **[Gomes, Laurentino - 1808](https://www.amazon.com/1808-Emperor-British-Tricked-Napoleon/dp/0762787961/ref=sr_1_1?keywords=Gomes%2C+Laurentino+-+1808&qid=1577562585&s=books&sr=1-1)**
+- **[Greene, Robert -  The Art of Seduction](https://www.amazon.com/Art-Seduction-Indispensible-Primer-Ultimate/dp/B00X0TKYKE/ref=sr_1_1?keywords=The+Art+of+Seduction&qid=1577562608&sr=8-1)**
+- **[Greene, Robert (And 50 Cent) - The 50th Law](https://www.amazon.com/50th-Law-50-Cent/dp/006177460X)**
+- **[Greene, Robert  - The 33 Strategies of War]()**
+- **[Greene, Robert - The Laws of Human Nature](https://www.amazon.com/Strategies-War-Joost-Elffers-Books/dp/0143112783)**
+- **[Hendrickson, Elisabeth - Explore It!](https://www.amazon.com/Explore-Increase-Confidence-Exploratory-Testing/dp/1937785025)**
+- **[Hoppe, Hans-Hermann - A Short History of Man: Progress and Decline](https://mises.org/library/short-history-man-progress-and-decline)**
+- **[Hoppe, Hans-Hermann - From Aristocracy to Monarchy to Democracy: A Tale of Moral and Economic Folly and Decay](https://mises.org/library/aristocracy-monarchy-democracy)**
+- **[Kinsella, Stephan - Against Intellectual Property](https://mises.org/library/against-intellectual-property-0)**
+- **[Legutko, Ryszard - The Demon in Democracy: Totalitarian Temptations in Free Societies](https://www.amazon.com/Demon-Democracy-Totalitarian-Temptations-Societies/dp/1594038635)**
+- **[Longo, John M. - The Art of Investing: Lessons from History's Greatest Traders](https://www.amazon.com/Art-Investing-Lessons-Historys-Greatest/dp/B01MROSIA6)**
+- **[Kiyosaki, Robert T. -  Rich Dad, Poor Dad](https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/1543626610)**
+- **[Martin, Robert C. - Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)**
+- **[Martin, Robert C. - Clean Architecture](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)**
+- **[Mises, Ludwig von - Economic Calculation in the Socialist Commonwealth](https://mises.org/library/economic-calculation-socialist-commonwealth)**
+- **[Newport, Cal - Digital Minimalism: On Living Better with Less Technology](https://www.amazon.com/Digital-Minimalism-Living-Better-Technology/dp/0241341132)**
+- **[Nock, Albert Jay  - Our Enemy, the State](https://mises.org/library/our-enemy-state-2)**
+- **[Nozick, Robert - Anarchy, State, and Utopia](https://www.amazon.com/Anarchy-State-Utopia-Robert-Nozick/dp/0465051006)**
+- **[Puccio, Gerard - The Creative Thinker's Toolkit](https://www.amazon.com/Creative-Thinkers-Toolkit-Gerard-Puccio/dp/1629970255)**
+- **[Rabkin, Eric S. - Effective Writing](https://www.worldcat.org/title/effective-writing/oclc/33124318)**
+- **[Rothbard, Murray -  Anatomy of the State](Anatomy of the State)**
+- **[Rothbard, Murray - Education: Free & Compulsory](https://mises.org/library/education-free-and-compulsory-1)**
+- **[Rothbard, Murray - What Has Government Done to Our Money? and The Case for the 100 Percent Gold Dollar](https://www.amazon.com/What-Government-Money-Percent-Dollar/dp/0945466447)**
+- **[Rosenblatt, Helena - The Lost History of Liberalism: From Ancient Rome to the Twenty-First Century](https://www.amazon.com/Lost-History-Liberalism-Ancient-Twenty-First/dp/0691170703)**
+- **[Seneca - How to Die: An Ancient Guide to the End of Life](https://www.amazon.com/How-Die-Ancient-Wisdom-Readers/dp/0691175578/ref=sr_1_1?crid=22CHE1F4TGZYV&keywords=how+to+die+an+ancient+guide+to+the+end+of+life&qid=1577562906&s=books&sprefix=How+to+Die%3A+An+Ancient+Guide+to+the+End+of+Life%2Cstripbooks-intl-ship%2C231&sr=1-1)**
+- **[Schwartz, Barry - The Paradox of Choice: Why More Is Less](https://www.amazon.com/Paradox-Choice-Why-More-Less/dp/149151423X)**
+- **[Spencer, Herbert -  The Man Versus the State: With Six Essays on Government, Society, and Freedom](https://www.amazon.com/Man-Versus-State-Government-Society-ebook/dp/B0084H1UFU)**
+- **[Spooner, Lysander - Vices Are Not Crimes: A Vindication](https://mises.org/library/vices-are-not-crimes)**
+- **[Storr, Farrah - The Discomfort Zone](https://www.amazon.com/Discomfort-Zone-Difficult-Conversations-Breakthroughs/dp/162656065X)**
+- **[Taleb, Nassim Nicholas - Antifragile: Things That Gain from Disorder](https://www.amazon.com/Antifragile-Things-That-Gain-Disorder/dp/B00A2ZIZYQ/ref=sr_1_1?crid=F1CMCBT94LJ5&keywords=antifragile&qid=1577562967&s=books&sprefix=Antifragile%2Cstripbooks-intl-ship%2C234&sr=1-1)**
+- **[Tolkien -  The Two Towers](https://www.amazon.com/Two-Towers-Lord-Rings-Part/dp/0345339711)**
+- **[Tolkien - The Return of the King](https://www.amazon.com/Return-King-Being-Third-Rings/dp/054792819X/ref=sr_1_1?keywords=The+Return+of+the+King&qid=1577563010&s=books&sr=1-1)**
+- **[Tomassi, Rollo - The Rational Male - Positive Masculinity](https://www.amazon.com/Rational-Male-Positive-Masculinity/dp/B07KGJL5FW/ref=sr_1_1?keywords=The+Rational+Male+-+Positive+Masculinity&qid=1577563025&s=books&sr=1-1)**
+- **[Wood, John H. - A History of Central Banking in Great Britain and the United States](https://www.amazon.com/History-Central-Banking-Britain-Macroeconomic/dp/0521741319/ref=sr_1_1?keywords=A+History+of+Central+Banking+in+Great+Britain+and+the+United+States&qid=1577563037&s=audible&sr=8-1)**
+
+So, what have you read this year?
