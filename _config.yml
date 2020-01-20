@@ -18,9 +18,10 @@ locale: "en-US"
 title: That's a Bug
 title_separator: "|"
 
-name: "João Farias"
+name: "João Fariascc"
 #avatar: TODO
 #bio: TODO
+logo: "assets/images/logo/bug.png"
 email: joao@thatsabug.com
 description: >- # this means to ignore newlines until "baseurl:"
   That's A Bug
