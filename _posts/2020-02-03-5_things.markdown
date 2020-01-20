@@ -1,0 +1,25 @@
+---
+title: "5 Things to Read This Week - 2nd Feb 2020"
+date: 2020-02-03T08:00:00 -0100
+categories:
+  - blog
+  - "2020-02-03"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on nature of Testing, great software architects, trust, and Firefox VPN service"
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+- **[Jeff Nyman - What Makes Testing Complex?](http://testerstories.com/2020/01/what-makes-testing-complex/)**
+  - [Jeff](https://twitter.com/jeff_nyman) discusses the underlying reasons for the inherent complexity of testing ("good" I would add). Some of these reasons are because testing "enables a cumulative process of knowledge management" and because we use it when "we want to bridge the language of the code (implementation) with the language of the business domain (intent)". And these things are complex.
+- **[James Birnie - What does GREAT Architecture Look like?](https://www.youtube.com/watch?v=g97mMeC9EIE)**
+  - Software Architecture is not dead. Software Architects are not as well. [James](https://twitter.com/RunningChairJB) here will bring the main characteristics of highly effective software architects. It's all about [outcomes over ouputs](https://barryoreilly.com/your-mission-is-to-produce-outcomes-not-outputs/).
+- **[Firefox Private Network](https://fpn.firefox.com/vpn)**
+  - Firefox will release a VPN service, alternatives are always nice. And when talking about VPN services, alternatives an initiative from a company whose business model is not based on it. Good hopes here.
+- **[Esther Derby - Six Ways to Build Trust](https://www.estherderby.com/six-ways-to-build-trust/)**
+  - Trust in work environments is closer to magic and secret cults. "Corporate ladder trust" is as fragile as it gets - it seems and feels like a medieval court where you can be stabbed on the back at any time. On this article [Esther Derby](https://twitter.com/estherderby) shares some thoughts on how to build trust-based relations at work.
+- **[James Thomas - We Don't Know?](hhttps://qahiccupps.blogspot.com/2019/11/we-dont-know.html)**
+  - If have paid attention, maybe you've noticed that, in software development, many people have give different names for the same thing and use the same name for completely different things. Entire schools of thought use certain glossary, but fundamental concepts can be used (well) in different situations. Is it a problem? I would say no. In contrast to other sciences / industries, we are [at the dawn of software development](https://www.engineering.com/DesignerEdge/DesignerEdgeArticles/ArticleID/14451/Who-was-the-First-Engineer.aspx). In 200 years people will see the best of us not much as stone stackers, both on technical and social aspects. But at the same time, I hope, they will be grateful for us for having  built a solid foundation from where they now thrive and innovate. In this article, [James](https://twitter.com/qahiccupps) shows different points of view about Quality and Testing, discuss how they diverge and converge.
