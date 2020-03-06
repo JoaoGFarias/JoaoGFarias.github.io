@@ -1,0 +1,43 @@
+---
+title: "Look at this Bug #1"
+date: 2020-03-13T08:00:00 -0000
+categories:
+  - look-at-this-bug
+  - "2020-02-03"
+tags:
+  - look-at-this-bug
+excerpt: "First posts where we will see some nasty bugs that appeared on the news"
+---
+
+# Look at this Bug #1
+
+{% include figure image_path="/assets/images/bugs_everywhere.jpeg" alt="bugs everywhere" %}
+
+Hey, what about something new?
+
+In this series, we will look at some news describing very nasty bugs there appeared on the news.
+
+## Disclaimer:
+
+The goal here **is not to bash on the companies and people involved in the products**, but to raise awareness of all of us that:
+
+1 - We all may fail, and fail ugly;
+2 - We can learn firstly from others' mistakes.
+
+I firmly believe that openness for criticism and self-awareness of our mistakes are important practices for healthy and continuously better industry.
+
+# Bugs
+
+- [Burger King's franchise loses $8.3 million due to additional discounts in promotions](https://www.fool.com/investing/2019/11/15/software-error-costs-burger-king-franchisee-8m.aspx)
+
+- [Updates goes bad, potentially contaminated marijuana batches are label incorrectly and sold](https://denver.cbslocal.com/2019/11/22/software-glitch-technical-error-delay-recall-potentially-contaminated-marijuana-pot-cannabis-recreational-medical/)
+
+- [Problem on TBS systems delays wages and pensions payments](https://www.dailyrecord.co.uk/news/uk-world-news/tsb-faces-customer-backlash-after-20945186)
+
+- [Flight-plan generator crashes and airplanes pilots have to build their routes by hand](https://www.travelandleisure.com/airlines-airports/british-airways-delays-technical-flight-plan-generator-glitch)
+
+- [Bug on Android allow invaders to control the phone's camera](https://techbeacon.com/security/android-camera-app-bug-could-affect-hundreds-millions-phones)
+
+- [Whatsapp bug allows Remote Code Execution and Denial-of-Service attacks](https://nakedsecurity.sophos.com/2019/11/20/update-whatsapp-now-mp4-video-bug-exposes-your-messages/)
+
+- [General Motors recalls 650.000 trucks because of bug in the braking system](https://marketresearchfeed.com/2019/11/19/general-motors-recalls-650000-trucks-suvs-because-brakes-can-suddenly-engage-wpmt-fox-43/)
