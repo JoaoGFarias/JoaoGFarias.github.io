@@ -1,0 +1,25 @@
+---
+title: "5 Things to Read This Week - Mar 11nd 2020"
+date: 2020-03-09T08:00:00 -0000
+categories:
+  - blog
+  - "2020-03-09"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on thinking, poor documentation, job negotiation, gatekeeping, and understating your own testing"
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+- **[Linda Rising - Thinking Fast and Slow](https://www.youtube.com/watch?v=XjbTLIqnq-o)**
+  - [Thinking, Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) is surely one of the most impactful books of this century for people who are payed to think. The understanding of how our brain works (similarly to the last link of this list) is fundamental for self-improvement. Here Linda Rising makes a summary of the books, bringing her impressions and how its ideas can help tech people.
+- **[William Shawn - Four Tips for Dealing with Poorly Documented Libraries](https://spin.atomicobject.com/2019/11/27/poorly-documented-libraries/)**
+  - In the past few months I've been working with [Pact](pact.io) for service contract checking, particularly the JVM implementation. Although not the worst in world, Pact-JVM documentation is very confusing and incomplete. If you are dealing with a similar situation, these tips by William can help you to get unstuck.
+- **[Itamar Turner-Trauring - Job negotiation for programmers: the basic principles](https://codewithoutrules.com/2019/11/27/job-negotiation-for-programmers/)**
+  - "If we were people people, we would not be in this field", said Uncle Bob with different words. Partially true, of course. But when talking about negotiations, on the ultimate situations for interpersonal skills, we tech people usually suck (and pretty everyone suck too). In this post, Itamar brings some good points to prepare yourself to negotiations for programmers - and testers why not ;)
+- **[Karlo Smid - Testers Are Not Quality Gatekeepers](https://blog.tentamen.eu/testers-are-not-quality-gatekeepers/)**
+  - Karlo here discuss two posts, one by James Bach and another written Kristin Jackvony, regarding measuring quality and its relation to testing. Different views about this topic, simply a great read.
+- **[James Bach and Michael Bolton - Testopsies Dissecting Your Testing](https://www.youtube.com/watch?v=WQSQcg_gXi8&t=0s)**
+  - This webinar was the theme of a tester Watch & Discuss at FreeNow. In it, James Bach and Michael Bolton watch a record of real pair-testing session they did months before. What is the goal? **To understand how they tested**. It may seem weird, but, if you don't know, it's a common practice on professional sports to watch your own performances, in order to understand and improve. Doing the same of thinking workers can bring the same benefits, for yourself and others.
