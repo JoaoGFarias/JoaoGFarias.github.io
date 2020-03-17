@@ -1,11 +1,11 @@
 ---
 title: "Ouch! #1: Bugs in the Real World"
-date: 2020-03-13T08:00:00 -0000
+date: 2020-03-27T08:00:00 -0000
 categories:
-  - look-at-this-bug
-  - "2020-02-03"
+  - bugs-real-world
+  - "2020-02-27"
 tags:
-  - look-at-this-bug
+  - bugs-real-world
 excerpt: "First posts where we will see some nasty bugs that appeared on the news"
 ---
 
