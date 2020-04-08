@@ -33,7 +33,7 @@ My goals will be the following:
 
 3 - Create examples of [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)), [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882), and [Clean Architecture](hhttps://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=sr_1_1);
 
-4 - Hardcore [TDD](https://www.youtube.com/watch?v=qkblc5WRn-U) at every checking level, from hand-written stubbing unit checking, to databases with [TestContainer](https://www.testcontainers.org/), service contract with [Pact](pact.io), advanced test doubles with [Mockk](https://www.testcontainers.org/), etc.
+4 - Hardcore [TDD](https://www.youtube.com/watch?v=qkblc5WRn-U) at every checking level, from hand-written stubbing unit checking, to databases with [TestContainer](https://www.testcontainers.org/), service contract with [Pact](https://docs.pact.io/), advanced test doubles with [Mockk](https://www.testcontainers.org/), etc.
 
 And EVERYTHING ON *KOTLIN*!
 
