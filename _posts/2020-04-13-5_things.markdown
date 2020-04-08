@@ -1,0 +1,30 @@
+---
+title: "5 Things to Read This Week - Mar 09th 2020"
+date: 2020-04-13T08:00:00 -0000
+categories:
+  - blog
+  - "2020-04-13"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on "
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+- **[Rikard Edgren -Exploratory Testing Example: Spotify Offline](https://www.youtube.com/watch?v=o0MXE8Onkh4)**
+  - One type of content I think we need more on the internet, particurally in video format, is live exploratory testing sessions. In this ~20-min video, Rikard Edgren explores Spotify in offline mode. If you never saw exploratory testing live, you may be surprised by both the simplicity and depth of exploration that a short session can spawn. 
+
+
+- **[Sergio Prado - How is the Linux kernel tested?](https://embeddedbits.org/how-is-the-linux-kernel-tested/)**
+  - IMO, the Linux Kernel is one of most astonishing achievements of the last century. Not much by the product itself, which is fantastic, but because of its building process and history. How to test this complicated, [life critical](https://events.windriver.com/wrcd01/wrcm/2016/08/WP-future-proof-your-medical-device-designs-with-wind-river-linux.pdf), millions lines long, developed everyday by hundreds of people? This article explains a bit the tools involved in the *many levels of checking* the Linux community developed throughout the years. Particularly curious the [Linux Testing Project](https://github.com/linux-test-project/ltp); I will give it a try and tell you about it ;)
+
+- **[The AoM Guide to Staying at Home (Without Being Bored Out of Your Mind)](https://www.artofmanliness.com/articles/the-aom-guide-to-staying-at-home-without-being-bored-out-of-your-mind/)**
+  - Like everyone, I will basically trapped at home. The Art of Manliness site gave some suggestions to not only pass the time inside, but also strive in this hard time.
+
+- **[Open Source Respirators To Fight Coronavirus](https://opensourceforu.com/2020/03/open-source-respirators-to-fight-coronavirus/)**
+  - More on the news side, some people in Brescia, Italy, developed 3-D printable respirators, and released the project's code as open source. Kudos to them!
+
+- **[Refused Bequest](https://refactoring.guru/smells/refused-bequest)**
+  - I was watching [Bob Martin's video on the Liskov Substitution Principle](https://cleancoders.com/episode/clean-code-episode-11-p1), where he mentions the Refused Bequest issue, when classes inheritance result in the necessity of weird decisions, like empty / _not implemented_ methods. The link above explains with images and diagrams - if you prefer to see code, checkout [this link](https://www.c-sharpcorner.com/article/refused-bequest-a-code-smell/)
