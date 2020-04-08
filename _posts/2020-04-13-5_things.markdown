@@ -1,12 +1,12 @@
 ---
-title: "5 Things to Read This Week - Mar 09th 2020"
+title: "5 Things to Read This Week - Apr 13th 2020"
 date: 2020-04-13T08:00:00 -0000
 categories:
   - blog
   - "2020-04-13"
 tags:
   - 5-things-to-read
-excerpt: "Five links on "
+excerpt: "Five links on exploratory testing, testing the Linux Kernel, Refused Bequest code smell, Corona crisis and how open source is helping in the fight."
 ---
 
 # 5 Things to Read
