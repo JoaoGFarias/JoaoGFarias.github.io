@@ -1,5 +1,5 @@
 ---
-title: "3 Non-Technical Things to Boost You Career"
+title: "3 Non-Technical Things to Boost Your Career"
 date: 2019-03-14T20:15:00 -0300
 tags:
   - career
