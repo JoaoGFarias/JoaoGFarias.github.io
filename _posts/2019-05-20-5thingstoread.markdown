@@ -18,7 +18,7 @@ excerpt: "Five links to read this week on software architecture, presentations, 
 
 {% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
-- **[Making Architecture Matter](hhttps://www.youtube.com/watch?v=DngAZyWMGR0)**
+- **[Making Architecture Matter](https://www.youtube.com/watch?v=DngAZyWMGR0)**
   - This video from Martin Fowler is quite old (2014), but I ended always coming back to it. It talks about (software) architecture in ways that you probably haven't seen: Architecture is subjective and the goal is communication.  
 - **[Presentation 2.0: Five ways to engage your audience! with Koffi Alain Sessi](https://www.youtube.com/watch?v=6QyylxnV1xY)**
   - Communication is essential (it is what is happening right now when you reading these words!). Koffi Alain Sessi gives us great tips in how to improve our presentations. Even if you don't want to talk in stages, I think you can use these ways to improve communication even in the simplest situation.
