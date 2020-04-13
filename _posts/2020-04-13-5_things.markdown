@@ -1,5 +1,5 @@
 ---
-title: "5 Things to Read This Week - Apr 13th 2020"
+title: "5 Things to Read This Week - 13th Apr 2020"
 date: 2020-04-13T08:00:00 -0000
 categories:
   - blog
