@@ -7,7 +7,7 @@ tags:
   - mutation-testing
   - kotlin
   - pitest
-excerpt: ""
+excerpt: "Who tests the tests? Let's see how code coverage doesn't tell the whole story and talk about the other half of the coin in automated checking"
 toc: true
 toc_icon: "cog"
 ---
@@ -20,13 +20,13 @@ Note: This post's content makes part of my presentation [Automation Guild 2020 t
 
 # Our example
 
-Let's say calculator application.
+Let's say you want to build a calculator application.
 
 {% include figure image_path="/assets/images/gentle_intro_mutation/calculator.jpeg" alt="A Calculator" %}
 
 Amidst all UI and error handlingcode, sooner or later, you will write the heart of your application: The object that indeed does the calculations.
 
-This object will know what is currently being displayed on the screen and will offer to the user mathematical operations over this value, such sum, subtraction, etc.
+This object will know what is currently being displayed on the screen and will offer to the user mathematical operations over this value, such as sum, subtraction, etc.
 
 Naively the class for this object could be implemeted as below:
 
@@ -47,11 +47,11 @@ class Calculator(var displayedValue: Double = 0.0) {
         displayedValue = displayedValue.pow(x)
     }
 
-    // Offer to the client the current 
+    // Offers to the client the current value
     fun getResult() = displayedValue
 
     // This function serves to update the current value in the displayed itself. 
-    // It gives power to the client to allow the change or not. 
+    // The client can allow the change or not. 
     // The examplification purpose of this function will be clear in the rest of the post.
     fun tryToSetDisplay(x: Double, canChangeDisplay: Boolean): Boolean {
         return if (canChangeDisplay) {
@@ -137,13 +137,15 @@ By defining a failing check, the developer has an executable feedback about the 
 
 The second goal is regression validation. The unit checks allow the developer to know if the aforementioned changes end up breaking other behaviors already implemented on the application.
 
-Another way of saying it is: When a behavior change, *a unit check should fail*. If we change a behaior in the product code and all checks pass, it means the changed behavior of the application was not covered properly by the unit check suite.
+Another way of saying it is: When a behavior change, *a unit check should fail*. If we change a behavior in the product code and all checks pass, it means the changed behavior of the application was not covered properly by the unit check suite.
 
 ## Where Code Coverage fails
 
-To avoid having uncovered areas of the application, a common approach is, as we did, to measure the [Code Coverage](https://en.wikipedia.org/wiki/Code_coverage#Basic_coverage_criteria) (have the execution of the checks exercised this piece of code in a particular way?).
+To avoid having uncovered areas of the application, a common approach is, as we did, is to measure the [Code Coverage](https://en.wikipedia.org/wiki/Code_coverage#Basic_coverage_criteria) (it asks 'have the execution of the checks exercised this piece of code in a particular way?').
 
-Above, Code Coverage metrics indicated to us that we were missing a check. That's great and highly valuable!
+Above, Code Coverage metrics indicated to us that we were missing a check. 
+
+That's great and highly valuable!
 
 However, let's see what happens if we do the following behavior change:
 
@@ -161,39 +163,47 @@ return if (canChangeDisplay) {
 
 Re-executing our checks and measuring their coverage gives us: All passing and 100% coverage.
 
-This problem happens because "traditional" code coverage aims at answering "is the production well-covered by the suite of checks?". The problem above is an example of the question "does the suite of checks cover well changes in the production code?"..
+This problem happens because "traditional" code coverage aims at answering "is the production code well-covered by the suite of checks?". The problem above is an example of the question "does the suite of checks cover well changes in the production code?".
 
 This subtle difference is crucial, because the first question is concerned with the current state of the production code, whereas the second question talks about _possible future states of the production code_.
 
-In the rest of this post we will investigate how to answer this second question.
+In the rest of this post we will investigate how to answer the second question.
 
 # What is Mutation Testing?
 
-Mutation Testing is an abstract testing technique that aims at investigating how systems would behave when something change.
+Mutation Testing is an abstract testing technique that investigates how systems would behave when something change.
 
 It can be instantiated is many ways. E.g., A/B testing focus on investigating how _users_ would react when certain _feature_ changes somehow.
 
-However, Mutation Testing is most of times referenced as a supplement to code coverage. This interpretation is our concern in this post.
+However, Mutation Testing is, most of time, referenced as a supplement to code coverage. This interpretation is our concern in this post.
 
 Mutation Testing here is the process of spotting _"holes"_ in the unit check suite, which allow behavior changes in the production code go unchecked.
 
 Generally the Mutation Testing process is as follows:
 
-Input: The Original Program (OP) + A set of mutation heuristical operators (MHO)
+Input: The Original Program (OP) + A set of heuristical mutation operators (HMO)
 
-1 - For each MHO, apply it to the OP - resulting in a set of Mutated Programs (MP);
-2 - For each MP, run *all* Tests;
+1 - For each HMO, apply it to the OP - resulting in a set of Mutated Programs (MP);
+
+2 - For each MP, run **all** Tests;
+
 3 - Classify each MP as:
-    3.1 - _"Surviving mutant"_ if all tests pass in (2).
-    3.2 - _"Killed mutant"_ if at least one test failed in (2).
+
+3.1 - _"Surviving mutant"_ if all tests pass in (2).
+
+3.2 - _"Killed mutant"_ if at least one test failed in (2).
 
 {% include figure image_path="/assets/images/gentle_intro_mutation/mutation_testing_process.svg" alt="Mutation Testing Process" %}
 
+Let's explain the terms:
+
 _OP_ and _Test_ are self-explanatory.
 
-A Mutation Heuristical Operator is a standard way of changing behavior of code. As examples of MHO are changing boolean operators (replace _>=_ for _<_), invert negatives (replace _return i_ for _return -i_), or remove void method calls, as we did above.
+A Heuristical Mutation Operator is a standard way of changing behavior of code. As examples of HMO are changing boolean operators (replace _>=_ for _<_), invert negatives (replace _return i_ for _return -i_), or remove void method calls, as we did above.
 
-The heuristic characteristc of the MHO resides in the fact that they don't rely on the _context_ of a code statment. It doesn't know if the change will actually cause changes in the externally visible behavior. For instance, if we change how a boolean *unused* variable is calculated, we will not change the external results of a function. Also, in the expression _A OR B_, if A is always _true_ for our use cases, changing how B is calculated will not cause external visible changes. The idea of the heuristics is that they _usually_ cause valuable changes in the externally visible behavior.
+The heuristic characteristc of the HMO resides in the fact that they don't rely on the _context_ of a code statment. It doesn't know if the change will actually cause changes in the externally visible behavior. 
+
+For instance, if we change how a **unused** boolean variable is calculated, we will not change the external results of a function. Also, in the expression _A OR B_, if A is always _true_ for our use cases, changing how B is calculated will not cause external visible changes. The advantange of the heuristics is that they _usually_ cause valuable changes in the externally visible behavior, and they can be performed by a computer, because of their repetitive nature.
 
 The existence of Surviving Mutants expose which pieces of code demand changes *in the suite of checks* so that the "real" changes will not go unchecked in the future.
 
@@ -203,7 +213,9 @@ Additionally, we can generate a new metric:
 
 # PITest - Mutation Testing for the JVM
 
-If you are in the JVM world, the most widely used Mutation Testing tool is [PITest](https://pitest.org/). Due to its easy of use and out-of-box features that allow rapid integration of this technique in an automated manner in JVM projects, we will discussed it here. However, PITest is also very mature in terms of optimizing the mutation testing process, by finding redudant mutants, parallelizing the verification process, using previous executions of itself to infer results without processing, etc.
+If you are in the JVM world, the most widely used Mutation Testing tool is [PITest](https://pitest.org/). 
+
+Due to its easy of use and out-of-box features that allow rapid integration of this technique in an automated manner in JVM projects, we will discussed it here. Additionally, PITest is also very mature in terms of optimizing the mutation testing process, for it finds redudant mutants, parallelize the verification process, uses previous executions of itself to infer results without processing, etc.
 
 ## Installation
 
@@ -282,22 +294,30 @@ Also a list of Mutation Operators and which checks were involved in this class p
 
 The examination above already integrated the check for subtraction function that we added. If we exam the code without this check, we would see that PITest doesn't even try to mutate this line, because it already knows that no check will fail.
 
-{% include figure image_path="/assets/images/gentle_intro_mutation/html4.png" alt="PITest HTML 5" %}
+{% include figure image_path="/assets/images/gentle_intro_mutation/html5.png" alt="PITest HTML 5" %}
 
 It's a important optmization for run-time, but also means that PITest *can be integrated well in projects that don't have good code coverage*.
 
+You can download the code [here](https://github.com/Thats-a-Bug/pit_mutation_example).
+
 # Research on Mutation Testing
 
-TODO 
+Mutation Testing is still an area of great development. Every year new frameworks and approaches are created. Papadakis and others have assembled a great summary of recents advances in the area, check it out [here](https://orbilu.uni.lu/bitstream/10993/31612/1/survey.pdf).
+
+People are creating libraries based on [Recurrent Neural Networks](https://arxiv.org/abs/2002.04760), researching application in particular stacks, such as [Android](https://www.igi-global.com/article/mutation-testing-to-evaluate-android-applications/251193) and the [Google Query Language](https://link.springer.com/chapter/10.1007/978-981-15-3380-8_31), etc.
+
+If you want to stay up-to-date with news in the area, I would suggest [creating a Google Scholar alert](https://academicanswers.waldenu.edu/faq/134432) with Mutation Testing as keywords. 
+
 # Conclusion
 
 We saw how Code Coverage, although is important, is not sufficient for giving good feedback of the changes developers implement.
 
-Mutation Testing tackle this problem in a systematic way, by applying changes heuristically and checks the suite of check reaction to them.
+Mutation Testing tackle this problem in a systematic way, by applying changes heuristically and validating the suite of checks reaction to them.
 
-With PITest, Mutation Testing becomes powerful tool for better quality in monitoring of our suite of automated checks. With a few lines, we can plug it to our projects and get fast feedback.
+With PITest, Mutation Testing becomes a powerful tool for better quality in monitoring of our suite of automated checks. With a few lines, we can plug it to our projects and get fast feedback.
 
 Nonetheless, Mutation Testing is a broad field, with many tools and approaches. It's our job to understand our context and look for the best approach to support thoroughly development.
 
 Seems interesting? :)
+
 Tell me what you think of Mutation Testing.
