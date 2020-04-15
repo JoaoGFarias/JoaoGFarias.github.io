@@ -16,7 +16,7 @@ toc_icon: "cog"
 
 {% include figure image_path="/assets/images/gentle_intro_mutation/front.jpg" alt="DNA Mutation" %}
 
-Note: This post's content makes part of my presentation [Automation Guild 2020 talk](https://guildconferences.com/conferences/automation-2020/).
+Note: This post's content is part of my presentation [Automation Guild 2020 talk](https://guildconferences.com/conferences/automation-2020/).
 
 # Our example
 
