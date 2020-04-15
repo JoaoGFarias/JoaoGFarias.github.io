@@ -6,7 +6,7 @@ categories:
   - "2020-04-17"
 tags:
   - bugs-real-world
-excerpt: "First posts where we will see some nasty bugs that appeared on the news"
+excerpt: "First post where we will see some nasty bugs that appeared on the news."
 ---
 
 # Ouch! #1: Bugs in the Real World
