@@ -6,7 +6,7 @@ categories:
   - "2020-04-20"
 tags:
   - 5-things-to-read
-excerpt: "Five links on how StackOverflow made its dark theme, modifying requests with Charles Proxy, time saving software, and the difference between Performance and Load Testing."
+excerpt: "Five links on how Stack Overflow made its dark theme, building a testing strategy, modifying requests with Charles Proxy, time saving software, and the difference between Performance and Load Testing."
 ---
 
 # 5 Things to Read
@@ -15,17 +15,17 @@ excerpt: "Five links on how StackOverflow made its dark theme, modifying request
 
 - **[Aaron Shekey - Building dark mode on Stack Overflow](- **[Aaron Shekey - Building dark mode on Stack Overflow](https://www.youtube.com/watch?v=o0MXE8Onkh4)**
 )**
-  - .
+  - A couple of weeks ago Stack Overflow released its dark mode feature. Very nice job, although I personally haven't enabled it, because I use the [Dark Reader Chrome extension](https://chrome.google.com/webstore/detail/dark-reader-dark/kbbbldgkhcpkmmjbjelmkjkchibeklng) to create dark mode on every site. Anyway, this blog post is a walk on the development process that Stack Overflow passed. Interesting to see the different iteractions and analysis to reach the best work possible. Kudos to Stack Overflow frontend folks!
 
 
 - **[Charles Proxy Rewrite Tool](https://embeddedbits.org/how-is-the-linux-kernel-tested/)**
-  - 
+  - Charles Proxy serves to help with network analysis and recording. I prefer it over [Wireshark](https://www.wireshark.org/) for its ease of to use, slightly better IMO. If you use Charles, you may not know (as I didn't until a few days ago) about the Rewrite tool, which allows you to modify requests and responses as they pass through Charles. Very useful for mocking behavior.
 
 - **[MoT - What is the key element you include when building a test strategy?](https://club.ministryoftesting.com/t/what-is-the-key-element-you-include-when-building-a-test-strategy/35406)**
-  - .
+  - A thread of the [Ministry of Testing Club](https://club.ministryoftesting.com/) discussing testing strategy. Worth going through everything.
 
 - **[Ask HackerNews - Programs that saved you 100 hours?](https://news.ycombinator.com/item?id=22849208)**
-  - 
+  - Many people on Hacker News discussing about alternative software that helped them to be more productive.
 
-- **[Señor Performo & Joe Colantonio](https://www.youtube.com/watch?v=hkqnh8Tj5CI)**
-  - 
+- **[Señor Performo & Joe Colantonio - Why Performance Testing is NOT Load Testing](https://www.youtube.com/watch?v=hkqnh8Tj5CI)**
+  - Joe Colantonio started holding weekly online meet-ups about everything automation. The first encounter is with [Leandro Melendez (Señor Performo)](https://twitter.com/SrPerf), talking about what is Load and Performance Testing. The second half is a Q&A where Leandro discusses many other aspects of Performance Testing.
