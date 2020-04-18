@@ -1,0 +1,31 @@
+---
+title: "5 Things to Read This Week - 20th Apr 2020"
+date: 2020-04-20T08:00:00 -0000
+categories:
+  - blog
+  - "2020-04-20"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on how StackOverflow made its dark theme, modifying requests with Charles Proxy, time saving software, and the difference between Performance and Load Testing."
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+- **[Aaron Shekey - Building dark mode on Stack Overflow](- **[Aaron Shekey - Building dark mode on Stack Overflow](https://www.youtube.com/watch?v=o0MXE8Onkh4)**
+)**
+  - .
+
+
+- **[Charles Proxy Rewrite Tool](https://embeddedbits.org/how-is-the-linux-kernel-tested/)**
+  - 
+
+- **[MoT - What is the key element you include when building a test strategy?](https://club.ministryoftesting.com/t/what-is-the-key-element-you-include-when-building-a-test-strategy/35406)**
+  - .
+
+- **[Ask HackerNews - Programs that saved you 100 hours?](https://news.ycombinator.com/item?id=22849208)**
+  - 
+
+- **[Señor Performo & Joe Colantonio](https://www.youtube.com/watch?v=hkqnh8Tj5CI)**
+  - 
