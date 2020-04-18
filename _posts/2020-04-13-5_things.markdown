@@ -21,7 +21,7 @@ excerpt: "Five links on exploratory testing, testing the Linux Kernel, Refused B
   - IMO, the Linux Kernel is one of most astonishing achievements of the last century. Not much by the product itself, which is fantastic, but because of its building process and history. How to test this complicated, [life critical](https://events.windriver.com/wrcd01/wrcm/2016/08/WP-future-proof-your-medical-device-designs-with-wind-river-linux.pdf), millions lines long, developed everyday by hundreds of people? This article explains a bit the tools involved in the *many levels of checking* the Linux community developed throughout the years. Particularly curious the [Linux Testing Project](https://github.com/linux-test-project/ltp); I will give it a try and tell you about it ;)
 
 - **[The AoM Guide to Staying at Home (Without Being Bored Out of Your Mind)](https://www.artofmanliness.com/articles/the-aom-guide-to-staying-at-home-without-being-bored-out-of-your-mind/)**
-  - Like everyone, I will basically trapped at home. The Art of Manliness site gave some suggestions to not only pass the time inside, but also strive in this hard time.
+  - Like everyone, I am basically trapped at home. The Art of Manliness site gave some suggestions to not only pass the time inside, but also strive in this hard time.
 
 - **[Open Source Respirators To Fight Coronavirus](https://opensourceforu.com/2020/03/open-source-respirators-to-fight-coronavirus/)**
   - More on the news side, some people in Brescia, Italy, developed 3-D printable respirators, and released the project's code as open source. Kudos to them!
