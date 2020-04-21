@@ -118,32 +118,123 @@ The rest of this post will teach us how to expand your tests for cover also this
 
 # Visual Testing
 
-// TODO - Goal of Visual Testing
+Why did the checks pass? Because they are focused on _functionallity_, on _behavior_.
 
-// TODO - How VT happens
+"When something happens, verify something is like this".
+"When the Home Page button is clicked, the application goes to the Home page".
+
+The bug above is visual issue: The final rendering of the button displayed the text in _red_, when it shouldn't.
+
+If we try to put into words the process our brains pass to investigate visual problems, we could say the following:
+
+1 - Create a model of the expected visuals. Our brain will hold many _snapshots_ of the application areas. The model of the visual is the _baseline_ which we will compare against the final rendenring on the application;
+
+2 - Collect on the application _snapshots_ of the areas equivalent to the ones we have on the _baselline_;
+
+3 - Compare (mental oracle) the difference between our model and the real applications.
+
+Our mental oracle will raise issues that it consider relevant. To know more about testing oracles, checkout [James Bach's post on Blink Testing](https://www.satisfice.com/blog/archives/33).
+
+We can mimic this process somehow on a computer.
+
+The part (1) can be done from an application state known to be ok. Below we will consider the _master_ branch to be the source of truth, but this definition is somehow arbitrary and can be contextually defined.
+
+(2) can be done during our functional checks. In them, we walk through the application final rendenring in many states. If we take screenshots of these states, we will have the input to (3).
+
+(3) is the most tricky part. To mimic a mental oracle, specially for visual analysis, is basically impossible, due to the complexity of the human brain, implicit knowledge, etc. However, image diff tools are well developed and can detect differences at the pixel level, which is quite difficult for a person. Therefore, a good strategy for automated visual checking is to use the power of the computer to blindly find pixel level differences, but to forward to a human the judgment of the difference itself, in the context of the expected variations. 
 
 ## Percy
 
 // TODO - What is it?
 
+[Percy](https://percy.dev/) is a service for visual testing that implements the process described above. 
+
+{% include figure image_path="/assets/images/percy_intro/11-percy.png" alt="Percy" %}
+
+Let's see how it could have help us to avoid deploying that bug in production.
+
 ### Percy & Ember
 
-// TODO - Installing
+#### Installing
 
-// TODO - Extending our acceptance tests
+To install Percy in an Ember app is as simple as running:
 
-// TODO - Execution and logs
+```bash
+ember install ember-percy
+```
+
+It, as any Ember addon, will download the library and update the _package-lock.json_ for future use.
+
+##### Extending our acceptance tests
+
+In our Application Tests, we have to import the Percy's snapshot function
+
+```javascript
+import { percySnapshot } from 'ember-percy'
+```
+
+and extend our tests to take screenshots in specific execution points:
+
+```javascript
+test('should link to information about the company', async function(assert) {
+    await visit('/rentals');
+    await click(".button-to-about");
+    assert.equal(currentURL(), '/about', 'should navigate to about');
+    await percySnapshot("button to home about page", {scope: ".body"})
+  });
+
+  test('should link to home page', async function(assert) {
+    await visit('/about');
+    await click(".button-to-home");
+    assert.equal(currentURL(), '/rentals', 'should navigate to home');
+    await percySnapshot("button home page from about", {scope: ".body"})
+  });
+```
+
+The _percySnapshot_ function takes on the first argument the name / ID of the snapshot. It is use for comparision purporses. The image _button to home about page_ from the source of truth build will be compared against the current _button to home about page_ image. The second argument determines the DOM area of interest. For simplicity purpose _body_ is enough, but when you add more snapshots in a bigger test suite, it's good to focus on specific areas, in order to mitigate false negatives.
+
+Now when you run _ember test_, you will see that Percy will run alongside the tests and create process your snapshots on the Percy servers.
+
+{% include figure image_path="/assets/images/percy_intro/12-percy_running.png" alt="Percy running" %}
+{% include figure image_path="/assets/images/percy_intro/13-percy_running.png" alt="Percy running" %}
 
 ### Percy builds
 
-// TODO - First build => Auto-approve bc master
+If we head to the Percy page, we will see that our build was automatically approved. This is because Percy by default auto-approves builds on the _master_ branch. Of course, this is configurable.
+
+{% include figure image_path="/assets/images/percy_intro/14-percy_build1.png" alt="Percy build 1" %}
 
 // TODO - Second build => Adding changes + Changes to approve
 
-// TODO - Third build => Fix + Auto-approve
+If change to a different branch and we re-apply the change that caused the bug, we will see that Percy warn us of two visual differences.
 
-// TODO - Fourth build => Merge to master + Auto-approve
+{% include figure image_path="/assets/images/percy_intro/15-percy_build2.png" alt="Percy build 2" %}
 
-# Conclusions
+We can see that the first diff is something we expected. So we can approve it.
 
-// TODO - Percy extends functional tests very easily and powerfully, as does mutation testing
+{% include figure image_path="/assets/images/percy_intro/15-percy_build2-diff1.png" alt="Percy build 2 - diff 1" %}
+
+The second change is the bug! We will click on _Request changes_ in order to mark this build as incomplete.
+
+{% include figure image_path="/assets/images/percy_intro/15-percy_build2-diff2.png" alt="Percy build 2 - diff 2" %}
+
+To fix the issue, we have to change the color of the specific button. For that, we just have to change the CSS class we are targeting:
+
+```css
+.button-to-home {
+  color: red;
+}
+```
+
+If we run our tests again, we see that Percy will show only the expected change, which we can approve.
+
+{% include figure image_path="/assets/images/percy_intro/16-percy_build3.png" alt="Percy build 3" %}
+
+Now we can merge our changes to _master_ and Percy will auto-approve the build.
+
+{% include figure image_path="/assets/images/percy_intro/17-percy_build4.png" alt="Percy build 4" %}
+
+TO PRODUCTION!
+
+So, do you want to extend your functional tests capabilities with Visual Testing? ;)
+Tell me on the comments your thoughts.
