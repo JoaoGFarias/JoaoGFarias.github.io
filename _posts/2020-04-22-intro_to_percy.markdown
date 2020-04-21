@@ -22,7 +22,6 @@ Note: This post's content is part of my presentation on the [Automation Guild 20
 
 # Our example
 
-// TODO - Explain Super Rental
 We were hired by the Ember development team to implement some changes on the guideline application [Super Rentals](https://github.com/ember-learn/super-rentals), a toy-project used to learn the basics of Ember.
 
 Super Rentals allows us to inspect different properties we may want to rent.
@@ -145,8 +144,6 @@ The part (1) can be done from an application state known to be ok. Below we will
 
 ## Percy
 
-// TODO - What is it?
-
 [Percy](https://percy.dev/) is a service for visual testing that implements the process described above. 
 
 {% include figure image_path="/assets/images/percy_intro/11-percy.png" alt="Percy" %}
@@ -203,8 +200,6 @@ Now when you run _ember test_, you will see that Percy will run alongside the te
 If we head to the Percy page, we will see that our build was automatically approved. This is because Percy by default auto-approves builds on the _master_ branch. Of course, this is configurable.
 
 {% include figure image_path="/assets/images/percy_intro/14-percy_build1.png" alt="Percy build 1" %}
-
-// TODO - Second build => Adding changes + Changes to approve
 
 If change to a different branch and we re-apply the change that caused the bug, we will see that Percy warn us of two visual differences.
 
