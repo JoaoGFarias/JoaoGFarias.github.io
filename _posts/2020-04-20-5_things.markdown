@@ -13,8 +13,7 @@ excerpt: "Five links on how Stack Overflow made its dark theme, building a testi
 
 {% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
-- **[Aaron Shekey - Building dark mode on Stack Overflow](- **[Aaron Shekey - Building dark mode on Stack Overflow](https://www.youtube.com/watch?v=o0MXE8Onkh4)**
-)**
+- **[Aaron Shekey - Building dark mode on Stack Overflow](https://www.youtube.com/watch?v=o0MXE8Onkh4)**
   - A couple of weeks ago Stack Overflow released its dark mode feature. Very nice job, although I personally haven't enabled it, because I use the [Dark Reader Chrome extension](https://chrome.google.com/webstore/detail/dark-reader-dark/kbbbldgkhcpkmmjbjelmkjkchibeklng) to create dark mode on every site. Anyway, this blog post is a walk on the development process that Stack Overflow passed. Interesting to see the different iteractions and analysis to reach the best work possible. Kudos to Stack Overflow frontend folks!
 
 
