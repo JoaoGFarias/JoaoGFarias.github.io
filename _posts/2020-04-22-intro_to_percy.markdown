@@ -1,6 +1,6 @@
 ---
 title: "Intro to Visual Testing with Percy & Ember"
-date: 2020-04-21T08:00:00 -0000
+date: 2020-04-22T08:00:00 -0000
 categories:
   - blog
 tags:
