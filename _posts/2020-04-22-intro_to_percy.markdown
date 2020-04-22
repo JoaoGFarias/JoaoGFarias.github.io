@@ -1,6 +1,6 @@
 ---
 title: "Intro to Visual Testing with Percy & Ember"
-date: 2020-04-22T08:00:00 -0000
+date: 2020-04-21T08:00:00 -0000
 categories:
   - blog
 tags:
@@ -28,12 +28,11 @@ Super Rentals allows us to inspect different properties we may want to rent.
 
 {% include figure image_path="/assets/images/percy_intro/1-super_rentals.png" alt="Super Rentals" %}
 
-
 On the Home page you can find a button that take us to the About page:
 
 {% include figure image_path="/assets/images/percy_intro/2-home.png" alt="Home page" %}
 
-And on the About page we have a button to go back to the home page:
+And on the About page we have a button to go back to the Home page:
 
 {% include figure image_path="/assets/images/percy_intro/3-about.png" alt="About page" %}
 
@@ -47,16 +46,22 @@ Particurally, we will use Ember's Application Tests, where we boot up the whole 
 The behavior of these buttons can be exercised like this:
 
 ```javascript
-test('should link to information about the company', async function(assert) {
+test('should link to information about the company', 
+  async function(assert) {
   await visit('/rentals');
   await click(".button-to-about");
-  assert.equal(currentURL(), '/about', 'should navigate to about');
+  assert.equal(
+      currentURL(), '/about', 
+      'should navigate to about');
 });
   
-test('should link to home page', async function(assert) {
+test('should link to home page', 
+  async function(assert) {
   await visit('/about');
   await click(".button-to-home");
-  assert.equal(currentURL(), '/rentals', 'should navigate to home');
+  assert.equal(
+    currentURL(), '/rentals', 
+    'should navigate to home');
 });
 ```
 
@@ -67,11 +72,13 @@ Now let's start our work on the app.
 
 ## "Do this simple color change"
 
-The Ember team asked us to change the color of the About button text color to **red**, to highlight its presence. Does it make sense? I don't know, you tell me ;) 
+The Ember team asked us to change the color of the About button text color to **red**, to highlight its presence. 
+
+Does it make sense? I don't know, you tell me ;) 
 
 {% include figure image_path="/assets/images/percy_intro/4-no_idea.jpeg" alt="I have no idea" %}
 
-### Implementing a change
+### Implementing the change
 
 To implement the new color, we can make a CSS change on the _app.css_.
 
@@ -82,6 +89,7 @@ To implement the new color, we can make a CSS change on the _app.css_.
 ```
 
 It will change the default color of buttons to _red_.
+
 You take a look at the button on About page and it seems ok.
 
 {% include figure image_path="/assets/images/percy_intro/5-new_color.png" alt="New color on about page" %}
@@ -111,7 +119,9 @@ Yes, you have introduced a bug in the system.
 
 {% include figure image_path="/assets/images/percy_intro/10-shame.jpeg" alt="Shame meme" %}
 
-You may want to want to blame your automated checks for these error, but they did exactly want they were programmed to do: Validate the page navigation upon button clicking. The bug we saw is **out-of-scope** for them.
+You may want to blame your automated checks for these error, but they did exactly want they were programmed to do: Validate the page navigation upon button clicking. 
+
+The bug we saw is **out-of-scope** for them.
 
 The rest of this post will teach us how to expand your tests for cover also this type of change.
 
@@ -120,6 +130,7 @@ The rest of this post will teach us how to expand your tests for cover also this
 Why did the checks pass? Because they are focused on _functionallity_, on _behavior_.
 
 "When something happens, verify something is like this".
+
 "When the Home Page button is clicked, the application goes to the Home page".
 
 The bug above is visual issue: The final rendering of the button displayed the text in _red_, when it shouldn't.
@@ -162,7 +173,7 @@ ember install ember-percy
 
 It, as any Ember addon, will download the library and update the _package-lock.json_ for future use.
 
-##### Extending our acceptance tests
+##### Extending our Application Tests
 
 In our Application Tests, we have to import the Percy's snapshot function
 
@@ -188,7 +199,7 @@ test('should link to information about the company', async function(assert) {
   });
 ```
 
-The _percySnapshot_ function takes on the first argument the name / ID of the snapshot. It is use for comparision purporses. The image _button to home about page_ from the source of truth build will be compared against the current _button to home about page_ image. The second argument determines the DOM area of interest. For simplicity purpose _body_ is enough, but when you add more snapshots in a bigger test suite, it's good to focus on specific areas, in order to mitigate false negatives.
+The _percySnapshot_ function takes on the first argument the name / ID of the snapshot. It is used for comparision purporses. The image "_button to home about page_" from the source of truth build will be compared against the current "_button to home about page_" image. The second argument determines the DOM area of interest. For simplicity purpose _body_ is enough, but when you add more snapshots in a bigger test suite, it's good to focus on specific areas, in order to mitigate false negatives.
 
 Now when you run _ember test_, you will see that Percy will run alongside the tests and create process your snapshots on the Percy servers.
 
@@ -207,11 +218,11 @@ If change to a different branch and we re-apply the change that caused the bug, 
 
 We can see that the first diff is something we expected. So we can approve it.
 
-{% include figure image_path="/assets/images/percy_intro/15-percy_build2-diff1.png" alt="Percy build 2 - diff 1" %}
+{% include figure image_path="/assets/images/percy_intro/16-percy_build2-diff1.png" alt="Percy build 2 - diff 1" %}
 
 The second change is the bug! We will click on _Request changes_ in order to mark this build as incomplete.
 
-{% include figure image_path="/assets/images/percy_intro/15-percy_build2-diff2.png" alt="Percy build 2 - diff 2" %}
+{% include figure image_path="/assets/images/percy_intro/16-percy_build2-diff2.png" alt="Percy build 2 - diff 2" %}
 
 To fix the issue, we have to change the color of the specific button. For that, we just have to change the CSS class we are targeting:
 
@@ -223,11 +234,11 @@ To fix the issue, we have to change the color of the specific button. For that, 
 
 If we run our tests again, we see that Percy will show only the expected change, which we can approve.
 
-{% include figure image_path="/assets/images/percy_intro/16-percy_build3.png" alt="Percy build 3" %}
+{% include figure image_path="/assets/images/percy_intro/17-percy_build3.png" alt="Percy build 3" %}
 
 Now we can merge our changes to _master_ and Percy will auto-approve the build.
 
-{% include figure image_path="/assets/images/percy_intro/17-percy_build4.png" alt="Percy build 4" %}
+{% include figure image_path="/assets/images/percy_intro/18-percy_build4.png" alt="Percy build 4" %}
 
 TO PRODUCTION!
 
