@@ -1,0 +1,29 @@
+---
+title: "5 Things to Read This Week - 27th Apr 2020"
+date: 2020-04-27T08:00:00 -0000
+categories:
+  - blog
+  - "2020-04-27"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on automation tips, hiring in IT, contract testing with Javascript, software engineering state in 2020, and testing teams after COVID-19."
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+- **[Ministry of Testing - Automation Daily - Post Your Questions](https://club.ministryoftesting.com/t/automation-daily-post-your-questions/36557/2)**
+  - [Richard Bradshaw](thefriendlytester.co.uk) opened a thread on the Ministry of Testing where people asked questions regarding automation in testing. Long thread, but some good stuff to read there.
+
+- **[Neil Sainsbury - The software industry's greatest sin: hiring](https://www.neilwithdata.com/developer-hiring)**
+  - A great team is made of great people working together towards a valuable goal. And to gather this people together is necessary to be effective in identifying them and onboarding them in a company. Unfortunately this task is hard and very often not well done in your industry nowadays. In this post Neil Sainsbury raises the main points to improve during hiring in IT. 
+
+- **[Marie Drake - Contract Testing with Pact.js and Jest](https://club.ministryoftesting.com/t/what-is-the-key-element-you-include-when-building-a-test-strategy/35406)**
+  - Contract testing is spreading towards the main tech stacks. This posts from Marie Drake gives the instructions on how to setup contract testing in the Javascript world.
+
+- **[QuanticDev - State of Software Engineering in 2020](https://quanticdev.com/articles/software-engineering-in-2020/)**
+  - QuanticDev discusses some statistics of growth in the programming world.
+
+- **[Michael Fritzius - Adapt Your QA Team for The New Normal](https://blog.testproject.io/2020/04/05/adapt-your-qa-team-for-the-new-normal/)**
+  - The impact of COVID-19 in our lives are unpredictable. Nobody knows how the economy, personal interactions, remote versus in-local work, etc. In this post Michael Fritzius raises some points that testing teams may need to face in the short, medium, long term. #StaySafe
