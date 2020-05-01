@@ -14,7 +14,7 @@ toc_icon: "cog"
 
 # Contract Testing with Pact & Kotlin: Introduction
 
-{% include figure image_path="/assets/images/contract_testing/intro/front.jpg" alt="Contrac" %}
+{% include figure image_path="/assets/images/contract_testing/front.jpg" alt="Contract" %}
 
 Note: This post's content is part of my presentation on the [Automation Guild 2020 talk](https://guildconferences.com/conferences/automation-2020/) named _"Grow Your Automation Toolkit: Because when all you have is a hammer..."_.
 
