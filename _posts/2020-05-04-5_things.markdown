@@ -1,0 +1,29 @@
+---
+title: "5 Things to Read This Week - 04th May 2020"
+date: 2020-05-04T08:00:00 -0000
+categories:
+  - blog
+  - "2020-05-04"
+tags:
+  - 5-things-to-read
+excerpt: "Five links on new IntelliJ features, how the beginner may master the master, the true power of automation in testing, patterns of branching, and how Integrated Tests Are A Scam."
+---
+
+# 5 Things to Read
+
+{% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
+
+- **[IDEA - What's New for Java Developers in IntelliJ IDEA 2020.1](https://www.youtube.com/watch?v=LtOH7snHBCA)**
+  - IntelliJ 2020.1 brings a lot of new features, even if you won't be taking advantage of the support to Java 14. IDEA created this short video with the new tricks you can use on IntelliJ.
+
+- **[Thomas Cagley - The Beginner's Mind Revisited](https://tcagley.wordpress.com/2020/04/21/the-beginners-mind-revisited/)**
+  - Mastering is a life's goal. Moving from [Shu to Ha to Ri](https://en.wikipedia.org/wiki/Shuhari) is what makes each person and society as a whole more prosperous and fullfiled. However, there is a paradox in learning and discovery: The more you learn, more difficult it is for you to absorb ideas that somehow contradict your current notions. And it is in this clash of ideas that you grow. Thomas Cagley here talks about the importance of having a Beginner's Mind during your eternal path towards mastery.
+
+- **[James Bach - Examples of Tool-Supported Testing](https://www.youtube.com/watch?v=LtOH7snHBCA)**
+  - Does your automation basically acts "as a human" and checks facts on the screen? Maybe you are not leveraging all the power that computers have. Here James Bach talks about how moving from the idea of trying to replicate human actions with software may help you as a teter.
+
+- **[Martin Fowler - Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)**
+  - Another of those Martin Fowler book chapter long blog posts. Here he talks extensively about
+
+- **[J.B. Rainsberger - Integrated Tests Are A Scam](https://blog.thecodewhisperer.com/series#integrated-tests-are-a-scam)**
+  - While I was researching for a future post, I revisited the Rainsberger's classic post [Integration Tests Are A Scam](https://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam), and there I noted he was actually a series of posts of the topic! Click on the link above and check out the 20-ish posts on this.
