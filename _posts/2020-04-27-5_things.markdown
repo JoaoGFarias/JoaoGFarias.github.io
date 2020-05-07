@@ -14,7 +14,7 @@ excerpt: "Five links on automation tips, hiring in IT, contract testing with Jav
 {% include figure image_path="/assets/images/reading_time.jpg" alt="it's reading time" %}
 
 - **[Ministry of Testing - Automation Daily - Post Your Questions](https://club.ministryoftesting.com/t/automation-daily-post-your-questions/36557/2)**
-  - [Richard Bradshaw](thefriendlytester.co.uk) opened a thread on the Ministry of Testing where people asked questions regarding automation in testing. Long thread, but some good stuff to read there.
+  - [Richard Bradshaw](https://thefriendlytester.co.uk) opened a thread on the Ministry of Testing where people asked questions regarding automation in testing. Long thread, but some good stuff to read there.
 
 - **[Neil Sainsbury - The software industry's greatest sin: hiring](https://www.neilwithdata.com/developer-hiring)**
   - A great team is made of great people working together towards a valuable goal. And to gather this people together is necessary to be effective in identifying them and onboarding them in a company. Unfortunately this task is hard and very often not well done in your industry nowadays. In this post Neil Sainsbury raises the main points to improve during hiring in IT. 
