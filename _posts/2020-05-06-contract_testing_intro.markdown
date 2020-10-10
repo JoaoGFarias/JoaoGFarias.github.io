@@ -14,14 +14,14 @@ toc_icon: "cog"
 
 # Contract Testing with Pact & Kotlin: Introduction
 
-{% include figure image_path="/assets/images/contract_testing/intro/front.jpg" alt="Contrac" %}
+{% include figure image_path="/assets/images/contract_testing/intro/front.jpg" alt="Contract" %}
 
 Note: This post's content is part of my presentation on the [Automation Guild 2020 talk](https://guildconferences.com/conferences/automation-2020/) named _"Grow Your Automation Toolkit: Because when all you have is a hammer..."_.
 
 # The integration problem
 
 -------------
-Let's say you are responsible for the development of the Product service your ecommerce company. The Product Service handles information about all aspects of a product, from including is storage
+Let's say you are responsible for the development of the Product service your e-commerce company. The Product Service handles information about all aspects of a product, from including is storage
 -----------
 Say you are building a mobile app that will communicate with Google Pay for payment features. 
 
@@ -65,35 +65,35 @@ Let's say _PersonalMe_ request changes in the fields of the group _(1)_ (or _Pro
 
 How would you validate that _PersonalMe_ will work with the changes?
 
-"Simple. You boot up _PersonalMe_ and verfies if the data (new and old) flows well end-to-end."
+"Simple. You boot up _PersonalMe_ and verifies if the data (new and old) flows well end-to-end."
 
 Seems fair.
 
 Now let's say _PersonalMe_ requested a change on the fields of the group (3).
 
-If you perform the same tests, you still will be able to validate _PersonalMe_ sucessfully.However, in the moment you replace your _UserService_ in production, you will break _ProfessionalMe_, because the fields it uses were changed.
+If you perform the same tests, you still will be able to validate _PersonalMe_ successfully.However, in the moment you replace your _UserService_ in production, you will break _ProfessionalMe_, because the fields it uses were changed.
 
-This is a sympton of the fragility of the social network apps towards the backend service: They depend on it, not the other way around. Changes in the backend service can break the social network apps.
+This is a symptom of the fragility of the social network apps towards the backend service: They depend on it, not the other way around. Changes in the backend service can break the social network apps.
 
-It doesn't mean that the team developing _UserService_ shouldn't care about this fragility, after all "the client is always right". _UserService_ must be **useful** for its clients, it should move in a way that doesn't disturbe the client expectations.
+It doesn't mean that the team developing _UserService_ shouldn't care about this fragility, after all "the client is always right". _UserService_ must be **useful** for its clients, it should move in a way that doesn't disturbed the client expectations.
 
 So, as an _UserService_ developer, how can you test if changes in the fields on group (3) will break one of the clients?
 
 "We can build each client and validate it against the latest version of the _UserService_".
 
-We would work, but is it feasable? 
+We would work, but is it feasible? 
 
 // TODO - REDO
 In this case, we will have 2 tests, because we have two clients (_clientNum_) and one provider (_providerNum_).
 
-How does it work on scale? If we have _clientNum_ clients and _providerNum_ providers and _changesNum_ being the number of change requests, we potencially will have ```_clientNum_ * _providerNum_ * _changesNum_``` combinations to test (not even talking about the effort in each test itself). Exponential growth ==> Not feasable.
+How does it work on scale? If we have _clientNum_ clients and _providerNum_ providers and _changesNum_ being the number of change requests, we potentially will have ```_clientNum_ * _providerNum_ * _changesNum_``` combinations to test (not even talking about the effort in each test itself). Exponential growth ==> Not feasible.
 //
 
 Another problem arises with the question: "How can we know if a fields is the group (1)/(2) or (3)?". Client codebases run asynchronously to provider codebases. Since providers return all fields in a response, nothing in the provider can control the consumer so that it would not start using a particular existent field. 
 
-In this series we will see how clients and providers can syncronize themselves in order to minimize the effort of validating its interface changes, by avoid building many components through definition of contracts.
+In this series we will see how clients and providers can synchronize themselves in order to minimize the effort of validating its interface changes, by avoid building many components through definition of contracts.
 
-# Validating integtration with Consumer-Driven Contract Testing
+# Validating integration with Consumer-Driven Contract Testing
 
 ## How does it differs from functional testing?
 TODO - Lego analogy
