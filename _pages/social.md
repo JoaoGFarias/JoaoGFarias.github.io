@@ -3,7 +3,7 @@ permalink: /social/
 title: "Social"
 ---
 
-Email: joao@thatsabug.com
+Email: <a href="mailto:joao@thatsabug.com">joao@thatsabug.com</a>
 
 Twitter: [@JFThatsABug](https://twitter.com/jfthatsabug)
 
