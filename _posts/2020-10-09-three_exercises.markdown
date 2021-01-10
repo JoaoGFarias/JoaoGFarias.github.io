@@ -1,5 +1,5 @@
 ---
-title: "Three Coding Katas for Automation in Web Testing - UI Edition"
+title: "3 Coding Katas for Automation in Web Testing - UI Edition"
 date: 2020-10-10T08:00:00 -0000
 categories:
   - blog
@@ -33,11 +33,11 @@ TODO - Add note about running The Internet locally
 
 The [Internet's Login Page](https://the-internet.herokuapp.com/login) displays a typical... login page, with a title, a subtitle text. At its core are the user credentials fields and a big **_Login_** button. In this Kata we will exercise your skill in writing Page Objects, incrementally creating abstractions and new tests — enabling us to have maintainable and extendable code.
 
-## The Step Zero
+## Step Zero
 
 The first step will take is to perform the login itself.
 
-The Kata consist of writing a test that will:
+The Kata consists of writing a test that will:
 
 1 — Go to the [Internet's Login Page](https://the-internet.herokuapp.com/login);
 2 — Enter the correct username ("tomsmith") and password ("SuperSecretPassword!");
@@ -105,3 +105,118 @@ TODO — You can find my solution here
 2 — Wrong login: Try to use wrong credentials to login and check that a red banner appears with the text _"Your username is invalid!_. Which combinations can we validate?
 
 TODO — Add table with Combinations
+
+# 2 — Dynamic Controls
+
+The [Internet's Dynamic Controls Page](https://the-internet.herokuapp.com/dynamic_controls) displays two forms with dynamic content, controlled by a button. In this Kata we will focus on the checkbox form, leaving the Enable/Disable text field as an exercise. This exercise builds on the previous one, demanding the skill of page object creation, but now we will have to learn how deal with elements that appear and disappear.
+
+## Step Zero
+
+For starters, we will create a simple test to validate the checking / unchecking behavior.
+
+The first part of The Kata consistss of writing a test that will:
+
+1 - Go to the [Internet's Dynamic Controls Page](https://the-internet.herokuapp.com/dynamic_controls);
+2 - Verify the checkbox is unchecked as default and its text;
+3 - Check the checkbox;
+4 - Verify the checkbox is checked and its text;
+
+TODO — You can find my solution here
+
+## Step One
+
+In this step we can already refactor our code into page objects.
+You can create an object called _CheckboxField_, which will hold box the checkbox and the associated text,
+then we can change our test code to simply create this object and call its functions.
+
+TODO — You can find my solution here
+
+## Step Two
+
+Now we can create another test that will deal with the Remove / Add button.
+
+This second test will do the follow:
+
+1 - Go to the [Internet's Dynamic Controls Page](https://the-internet.herokuapp.com/dynamic_controls);
+2 - Verify the checkbox is present;
+3 - Click on the _Remove_ button;
+4 - Wait until the checkbox is gone;
+5 - Click on the _Add_ button;
+6 - Wait until the checkbox is back;
+
+TODO — You can find my solution here
+
+## Step Three
+
+Now we can refactor the second test so all the behavior will go into page objects.
+
+TODO — You can find my solution here
+
+## Step Four
+
+The last step is to create a third test where we will mix the checking and Remove / Add button;
+
+1 - Go to the [Internet's Dynamic Controls Page](https://the-internet.herokuapp.com/dynamic_controls);
+2 - Verify the checkbox is unchecked as default and its text;
+3 - Check the checkbox;
+4 - Verify it's checked;
+5 - Wait until the checkbox is gone;
+6 - Click on the _Add_ button;
+7 - Wait until the checkbox is back;
+8 - Verify the checkbox is unchecked as default and its text;
+9 - Check the newly created checkbox;
+10 - Check it is checked;
+
+
+TODO — You can find my solution here
+
+Remember to use ETYD also in your page objects. Look at the DOM and screen and find opportunities to create
+components representing high-level areas and sub-components representing the parts of these areas.
+
+The Enable / Disable form can be used as a Kata in a similar form, aiming at hiding from your test all the
+details of how you wait to elements to change and its components / sub-components.
+
+# 3 — Challenging DOM
+
+The [Internet's Challenging DOM Page](https://the-internet.herokuapp.com/challenging_dom) displays three components with elements that are not so easy to deal with, due to lack of unique IDs and organization of the HTML. In this Kata we explore how we can write clean tests that abstract this complicated DOM into simple objects and functions. We will focus on the table, but you can use the other two elements as exercise as well.
+
+## Step Zero
+
+The first step will validate the first row of the table. We will want to know if the text of each element is _"Iuvaret0"_, _"Apeirian0"_, _"Adipisci0"_, _"Definiebas0"_, _"Consequuntur0"_, _"Phaedrum0"_, followed by the _edit_ and _delete_ links. Again, we will not worry now about writing a clean version of the solution.
+
+1 - Go to the [Internet's Challenging DOM Page](https://the-internet.herokuapp.com/challenging_dom);
+2 - Verify the first 6 columns of the first row contain  _"Iuvaret0"_, _"Apeirian0"_, _"Adipisci0"_, _"Definiebas0"_, _"Consequuntur0"_, _"Phaedrum0".
+3 - Verify the last column of the first row is composed by the _edit_ and _delete_ links
+
+TODO — You can find my solution here
+
+## Step One
+
+Refactor solution into page objects. Note that we are not dealing with the table as a whole yet, so we should create a _Row_ object, which will handle only
+the elements our test needs.
+
+TODO — You can find my solution here
+
+## Step Two
+
+We can create new test that will validate the whole table, as follows:
+
+1 - Go to the [Internet's Challenging DOM Page](https://the-internet.herokuapp.com/challenging_dom);
+2 - For each i-th row in the table, verify that
+2.1 - The first 6 columns of the row contain  _"Iuvaret(i-1)"_, _"Apeirian(i-1)"_, _"Adipisci(i-1)"_, _"Definiebas(i-1)"_, _"Consequuntur(i-1)"_, _"Phaedrum(i-1)"_.
+2.2 - the last column of the first row is composed by the _edit_ and _delete_ links.
+
+TODO — You can find my solution here
+
+## Step Three
+
+Refactor the second test into page objects. To make the test even more clean, try to avoid any loops in the test function, keep them only inside the _Table_ and _Row_ objects.
+
+TODO — You can find my solution here
+
+
+# Conclusion
+
+If you are new in automation for web testing, the exercises above may prove a bit challenging at the beginning. However, by repeating them your "mind muscles" will get use to them and the thought patterns necessary to fulfil them. At this point you will be able to think about how you are performing and realize which "movements" you may need to train more specifically.
+
+If you are experienced in automation for web testing, the exercises above may seem too simple, but the isolation and focus on the "movements" from the exercise may uncover some skills you are rusty at the moment. Additionally, if you are using a new programming language, technology, or coding style, the Katas may be helpful to incorporate the new details in your automatic responses to specific problems, like creating and breaking down page objects.
