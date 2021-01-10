@@ -1,0 +1,1 @@
+{"rule":"A_INFINITIVE","sentence":"^\\QIn this Kata we will focus on the checkbox form, leaving the Enable/Disable text field as an exercise.\\E$"}
