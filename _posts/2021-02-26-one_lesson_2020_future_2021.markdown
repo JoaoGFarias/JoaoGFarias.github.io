@@ -1,4 +1,4 @@
----
+chapter-long---
 title: "One lesson from 2020 and plans for 2021"
 date: 2021-02-26T08:00:00 -0000
 categories:
@@ -15,14 +15,13 @@ excerpt: "That's A Bug is back! Here let's talk about one important thing I lear
 ## One lesson from 2020
 
 Hi there! It's been a long time, right?
-Last post here was on May the 4th of 2020 (No Star Ward pun intended).
+Last post here was on May the 4th of 2020 (No Star Wars pun intended).
 
 As it probably was for you, last year was a crazy ride for me.
 
 Throughout these months I experienced many changes in my work at Free Now.
 One of the directions I went (and I am still going) is to work more closely
-to the developers, help them out to become better testers, with the intent of
-making them better developer as by product.
+to the developers, helping them to become better testers, making them better developers as by product.
 
 The [QA TechTalks](https://www.youtube.com/channel/UCICtGIYYw2E3NLSp4P-017w) channel
 invited me to talk for 5 minutes about this.
@@ -42,7 +41,8 @@ At the beginning of April the blog will return as usual:
 
 Additionally, probably starting from June/July, That's A Bug will expand itself
 to video format, with a **Youtube channel**, discussing the topics we have in the blog,
-so the visual folks will be more satisfied.
+so the visual folks will be more satisfied. If you want to subscribe right now, you can 
+[click here](https://www.youtube.com/channel/UCrWmy5BHoCluC3ELmINBJKA).
 
 Two final big changes coming as well are:
 
