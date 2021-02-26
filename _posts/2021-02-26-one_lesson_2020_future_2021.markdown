@@ -1,0 +1,54 @@
+---
+title: "One lesson from 2020 and plans for 2021"
+date: 2021-02-26T08:00:00 -0000
+categories:
+  - blog
+  - "2021-02-26"
+tags:
+  - video
+  - youtube
+excerpt: "That's A Bug is back! Here let's talk about one important thing I learned last year and what we will see in 2021."
+---
+
+# We are back!
+
+## One lesson from 2020
+
+Hi there! It's been a long time, right?
+Last post here was on May the 4th of 2020 (No Star Ward pun intended).
+
+As it probably was for you, last year was a crazy ride for me.
+
+Throughout these months I experienced many changes in my work at Free Now.
+One of the directions I went (and I am still going) is to work more closely
+to the developers, help them out to become better testers, with the intent of
+making them better developer as by product.
+
+The [QA TechTalks](https://www.youtube.com/channel/UCICtGIYYw2E3NLSp4P-017w) channel
+invited me to talk for 5 minutes about this.
+
+You can check the video here:
+
+{% include video id="lnSYkzfkIsc" provider="youtube" %}
+
+## A look into 2021
+
+At the beginning of April the blog will return as usual:
+
+- The weekly [_5 Things to Read_ series](http://thatsabug.com/tags/#5-things-to-read);
+- Coding and tools tutorials (Good stuff on TDD, Design Patterns, and Kotlin coming...);
+- Book reviews and commented reading;
+- Discussions about the nature of testing and software quality;
+
+Additionally, probably starting from June/July, That's A Bug will expand itself
+to video format, with a **Youtube channel**, discussing the topics we have in the blog,
+so the visual folks will be more satisfied.
+
+Two final big changes coming as well are:
+
+- A logo (we need a face to put on swag :D);
+- Moving the blog from Jekyll to Wordpress, so we can have a more powerful basis
+where to build interactions and richer content.
+
+If you want to follow everything as soon as it happens, you can subscribe
+the [blog's RSS feed](http://thatsabug.com/feed.xml) or [follow us on Twitter](http://twitter.com/jfthatsabug).
