@@ -20,7 +20,7 @@ Last post here was on May the 4th of 2020 (No Star Wars pun intended).
 As it probably was for you, last year was a crazy ride for me.
 
 Throughout these months I experienced many changes in my work at Free Now.
-One of the directions I went (and I am still going) is to work more closely
+One of the directions I went (and I am still going) was to work more closely
 to the developers, helping them to become better testers, making them better developers as by product.
 
 The [QA TechTalks](https://www.youtube.com/channel/UCICtGIYYw2E3NLSp4P-017w) channel
@@ -37,16 +37,15 @@ At the beginning of April the blog will return as usual:
 - The weekly [_5 Things to Read_ series](http://thatsabug.com/tags/#5-things-to-read);
 - Coding and tools tutorials (Good stuff on TDD, Design Patterns, and Kotlin coming...);
 - Book reviews and commented reading;
-- Discussions about the nature of testing and software quality;
+- Discussions about the nature of testing and software quality
 
 Additionally, probably starting from June/July, That's A Bug will expand itself
 to video format, with a **Youtube channel**, discussing the topics we have in the blog,
-so the visual folks will be more satisfied. If you want to subscribe right now, you can 
-[click here](https://www.youtube.com/channel/UCrWmy5BHoCluC3ELmINBJKA).
+so the visual folks will be more satisfied. If you want to subscribe right now, you can [click here](https://www.youtube.com/channel/UCrWmy5BHoCluC3ELmINBJKA).
 
 Two final big changes coming as well are:
 
-- A logo (we need a face to put on swag :D);
+- A proper logo (we need a face to put on swag :D);
 - Moving the blog from Jekyll to Wordpress, so we can have a more powerful basis
 where to build interactions and richer content.
 
