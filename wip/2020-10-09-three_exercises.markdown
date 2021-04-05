@@ -8,6 +8,8 @@ tags:
   - kata
   - web
 excerpt: "Practice makes it perfect. Time to apply the old saying to improve our skills in automation for testing website interfaces."
+toc: true
+toc_icon: "cog"
 ---
 
 # Coding Katas
