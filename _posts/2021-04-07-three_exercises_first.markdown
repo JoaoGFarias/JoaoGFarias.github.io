@@ -1,5 +1,5 @@
 ---
-title: "Coding Katas for Automation in Web Testing - Exercise 1 of 3"
+title: "Coding Katas for Automation in Web Testing - Exercise 2 of 3"
 date: 2021-04-04T08:00:00 -0000
 categories:
   - blog
