@@ -8,10 +8,10 @@ local_install_arch:
 	gem install jekyll bundler && bundle-2.7 install
 	
 build:
-	rm -rf ./_site/ && bundle-2.7 exec jekyll build
+	rm -rf ./_site/ && bundle exec jekyll build
 
 run:
-	bundle-2.7 exec jekyll serve --incremental --watch
+	bundle exec jekyll serve --incremental --watch
 
 checkBuild:
 	sh ./script/cibuild
