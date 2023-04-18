@@ -67,7 +67,7 @@ The first field allow us to pick the environment where the execution will happen
 An environment is a set of key-value pairs; That's the place where we have stored our initial variables values.
 You can use the environment setup to perform the same flow for different users (by changing the credentials) or different domains, such as QA, Dev or Prod (by changing the base URL of the API).
 
-The second field, _Interations_, tells Postman how the number of times that the flow should run.
+The second field, _Iterations_, tells Postman how the number of times that the flow should run.
 
 The third field, _Delay_, indicates the halting time between each request (not between iterations). This feature is generally used to simulate a bit more the way a human user would use an API. It can also serve to simulate the acceptance criteria of duplication of data across a data warehouse, although other tools, focused on performance, are more indicated than Postman.
 
