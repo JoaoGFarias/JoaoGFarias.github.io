@@ -13,5 +13,11 @@ build:
 run:
 	bundle exec jekyll serve --incremental --watch
 
+build_arch:
+	rm -rf ./_site/ && bundle-2.7 exec jekyll build
+
+run_arch:
+	bundle-2.7 exec jekyll serve --incremental --watch
+
 checkBuild:
 	sh ./script/cibuild
