@@ -1,0 +1,161 @@
+# Recipes for the That's a Bug Astro prototype.
+# `just` (https://github.com/casey/just) is required.
+# `just` with no args lists all recipes; see RECIPES.md for the rationale and gotchas.
+
+set shell := ["bash", "-uc"]
+set dotenv-load := false
+
+cf_account := "d1ece964fbec895acc3d26a8bfc40995"
+project    := "thatsabug"
+prod_url   := "https://thatsabug.com"
+
+# Default — list available recipes.
+default:
+    @just --list --unsorted
+
+# --- local dev -------------------------------------------------------------
+
+# Install dependencies.
+install:
+    npm install
+
+# Run the dev server (http://localhost:4321).
+dev:
+    ASTRO_TELEMETRY_DISABLED=1 npm run dev
+
+# Build the static site to dist/.
+build:
+    ASTRO_TELEMETRY_DISABLED=1 npm run build
+
+# Preview the production build locally.
+preview: build
+    ASTRO_TELEMETRY_DISABLED=1 npm run preview
+
+# Re-run the Jekyll → Astro migrator. Wipes and rewrites src/content/blog/.
+migrate:
+    npm run migrate
+
+# Strip dist/ and node_modules/ for a clean slate.
+clean:
+    rm -rf dist .astro node_modules
+
+# --- verification ----------------------------------------------------------
+
+# Diff the current build's URLs against the snapshot of production URLs.
+# Empty output = byte-identical. See RECIPES.md → "Verify permalink equality".
+verify-permalinks: build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    out="${TMPDIR:-/tmp}/built-urls.txt"
+    live="${TMPDIR:-/tmp}/live-urls.txt"
+    find dist -name "index.html" \
+      | sed 's|^dist||;s|/index.html$|/|' \
+      | grep -E "^/(blog|bugs-real-world)/" | sort > "$out"
+    sort scripts/live-urls.txt > "$live"
+    if diff -q "$live" "$out" > /dev/null; then
+      echo "✔ All production URLs reproduced byte-identically."
+    else
+      echo "✘ Diff detected:"
+      diff "$live" "$out"
+      exit 1
+    fi
+
+# Re-fetch the production sitemap and refresh scripts/live-urls.txt.
+refresh-live-urls:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    curl -s {{prod_url}}/sitemap.xml \
+      | grep -oE '<loc>[^<]+</loc>' \
+      | sed -E 's|</?loc>||g; s|^http://thatsabug.com||; s|^https://thatsabug.com||; s|^//|/|' \
+      | sort -u > scripts/live-urls.txt
+    echo "✔ Refreshed scripts/live-urls.txt ($(wc -l < scripts/live-urls.txt | tr -d ' ') URLs)"
+
+# --- Cloudflare Pages ------------------------------------------------------
+
+# One-time wrangler login (opens browser).
+cf-login:
+    npx wrangler login
+
+# Show the active wrangler account.
+cf-whoami:
+    npx wrangler whoami
+
+# Deploy the current build to a preview branch (alias URL stable per branch).
+# Usage: just deploy-preview my-branch-name
+deploy-preview branch: build
+    CLOUDFLARE_ACCOUNT_ID={{cf_account}} npx wrangler pages deploy dist \
+      --project-name={{project}} \
+      --branch={{branch}} \
+      --commit-dirty=true
+
+# Deploy to production. ONLY run after the preview looks correct AND DNS is
+# either already cut over or you intend to cut it over right after.
+deploy-prod: build
+    @echo "About to deploy to production branch (=master) of project {{project}}."
+    @echo "This serves https://{{project}}.pages.dev and (if DNS is attached) https://thatsabug.com."
+    @read -r -p "Continue? (y/N) " ok && [ "$ok" = "y" ]
+    CLOUDFLARE_ACCOUNT_ID={{cf_account}} npx wrangler pages deploy dist \
+      --project-name={{project}} \
+      --branch=master \
+      --commit-dirty=true
+
+# List recent deployments for the project.
+deployments:
+    CLOUDFLARE_ACCOUNT_ID={{cf_account}} npx wrangler pages deployment list \
+      --project-name={{project}}
+
+# --- post-cutover smoke checks ---------------------------------------------
+
+# Hit a handful of representative URLs on the production domain and report
+# their HTTP status. Run after DNS cutover.
+smoke-prod:
+    #!/usr/bin/env bash
+    set -uo pipefail
+    base={{prod_url}}
+    paths=(
+      "/"
+      "/posts/"
+      "/about/"
+      "/portfolio/"
+      "/career/"
+      "/rss.xml"
+      "/sitemap-index.xml"
+      "/blog/the-heuristic_testing_strategy_model_mindmap_/"
+      "/blog/firefox_color_contrast_testing/"
+      "/blog/2018-08-28/5_links_refactoring/"
+      "/bugs-real-world/2020-04-17/bugs/"
+      "/page2/"
+    )
+    fail=0
+    for p in "${paths[@]}"; do
+      code=$(curl -sIL -o /dev/null -w "%{http_code}" "$base$p")
+      if [ "$code" = "200" ]; then
+        printf "  ✔ %3s  %s\n" "$code" "$p"
+      else
+        printf "  ✘ %3s  %s\n" "$code" "$p"
+        fail=1
+      fi
+    done
+    [ "$fail" -eq 0 ] && echo "All smoke checks passed." || exit 1
+
+# Same smoke set, but against the Pages preview alias.
+smoke-preview alias="prototype-astro-migration":
+    #!/usr/bin/env bash
+    set -uo pipefail
+    base="https://{{alias}}.{{project}}.pages.dev"
+    paths=(
+      "/" "/posts/" "/about/" "/portfolio/" "/career/" "/rss.xml" "/sitemap-index.xml"
+      "/blog/the-heuristic_testing_strategy_model_mindmap_/"
+      "/blog/2018-08-28/5_links_refactoring/"
+    )
+    fail=0
+    for p in "${paths[@]}"; do
+      code=$(curl -sIL -o /dev/null -w "%{http_code}" "$base$p")
+      if [ "$code" = "200" ]; then
+        printf "  ✔ %3s  %s\n" "$code" "$p"
+      else
+        printf "  ✘ %3s  %s\n" "$code" "$p"
+        fail=1
+      fi
+    done
+    [ "$fail" -eq 0 ] && echo "All preview smoke checks passed." || exit 1

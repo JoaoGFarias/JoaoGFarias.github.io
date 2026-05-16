@@ -6,30 +6,29 @@ For repo-wide guidance (relationship with the Jekyll tree on `master`, what not 
 
 ## Run
 
-```bash
-ASTRO_TELEMETRY_DISABLED=1 npm install
-ASTRO_TELEMETRY_DISABLED=1 npm run dev      # localhost:4321
-ASTRO_TELEMETRY_DISABLED=1 npm run build    # dist/
-ASTRO_TELEMETRY_DISABLED=1 npm run preview  # serve dist/
+Use the `justfile` — `just` (no args) lists every recipe.
 
-npm run migrate                             # re-run Jekyll → Astro converter
+```
+just install
+just dev               # localhost:4321
+just build             # dist/
+just preview           # serve dist/
+just migrate           # re-run Jekyll → Astro converter
+just verify-permalinks # diff build URLs against snapshot of production
 ```
 
 ## Deploy
 
-Cloudflare Pages, project name `thatsabug`. Account ID is captured in `RECIPES.md`.
+Cloudflare Pages, project name `thatsabug`. Account ID is in the justfile.
 
-```bash
-ASTRO_TELEMETRY_DISABLED=1 npm run build
-CLOUDFLARE_ACCOUNT_ID=<id> npx wrangler pages deploy dist \
-  --project-name=thatsabug \
-  --branch=<branch-name> \
-  --commit-dirty=true
+```
+just deploy-preview <branch-name>     # preview build, alias URL
+just deploy-prod                      # prompts before pushing to production
+just smoke-prod                       # smoke-test production after DNS cutover
+just smoke-preview                    # same against the preview alias
 ```
 
-`--branch=master` (or whatever the default-branch name becomes) for production. Anything else is a preview branch with its own alias URL.
-
-See `RECIPES.md` for the full cutover procedure.
+See `RECIPES.md` for the full cutover procedure (DNS, rollback, gotchas).
 
 ## Architecture
 
