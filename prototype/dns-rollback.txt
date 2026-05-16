@@ -1,20 +1,56 @@
-DNS records for thatsabug.com BEFORE the Cloudflare Pages cutover.
+DNS records for thatsabug.com BEFORE the Cloudflare DNS+Pages cutover.
 Captured 2026-05-16 from `dig` against the GoDaddy nameservers
 (ns55.domaincontrol.com / ns56.domaincontrol.com).
 
-If you need to roll back from Cloudflare to GitHub Pages, restore these
-records exactly at GoDaddy DNS:
+If you need to roll back, restore these at the DNS host you fall back to.
+The full inventory below covers website hosting AND email.
 
-  A      thatsabug.com    185.199.108.153
-  A      thatsabug.com    185.199.109.153
-  A      thatsabug.com    185.199.110.153
-  A      thatsabug.com    185.199.111.153
-  CNAME  www              joaogfarias.github.io.
+================================================================================
+SITE (GitHub Pages)
+================================================================================
+A      thatsabug.com    185.199.108.153
+A      thatsabug.com    185.199.109.153
+A      thatsabug.com    185.199.110.153
+A      thatsabug.com    185.199.111.153
+CNAME  www              joaogfarias.github.io.
 
-Notes:
-- The four A records are GitHub Pages' standard apex IPs. They are the
-  same for every github.io site; not specific to this account.
-- The CNAME maps the www subdomain to the user's GitHub Pages site.
-- TTLs were not captured but are typically 1 hour by default at GoDaddy.
+================================================================================
+EMAIL (GoDaddy / secureserver.net) — joao@thatsabug.com
+================================================================================
+MX     thatsabug.com    0   smtp.secureserver.net.
+MX     thatsabug.com    10  mailstore1.secureserver.net.
+TXT    thatsabug.com    "v=spf1 include:secureserver.net -all"
+CNAME  email            email.secureserver.net.
 
-GoDaddy DNS UI: https://dcc.godaddy.com/control/portfolio/thatsabug.com/settings?tab=dns
+================================================================================
+OTHER
+================================================================================
+TXT    thatsabug.com    "brave-ledger-verification=453d91e7882f358ef948bd94860b726be7bc990de09e165810a4f1224b7b1bee"
+
+================================================================================
+NAMESERVERS (current — at registrar GoDaddy)
+================================================================================
+ns55.domaincontrol.com.
+ns56.domaincontrol.com.
+
+================================================================================
+ROLLBACK
+================================================================================
+Two layers can be rolled back independently:
+
+1. SITE only (DNS stays at Cloudflare, point Pages records back at GitHub).
+   Edit the A records for thatsabug.com in Cloudflare DNS to the four GitHub
+   Pages IPs above, and the CNAME for www to joaogfarias.github.io. — that's
+   all. No nameserver change needed. Fastest rollback.
+
+2. FULL (back to GoDaddy DNS).
+   At GoDaddy: Domains -> thatsabug.com -> Nameservers -> Change ->
+   restore ns55.domaincontrol.com / ns56.domaincontrol.com. Re-enter all the
+   records above in GoDaddy's DNS UI (the A records and CNAME for www are
+   GoDaddy's defaults if no overrides exist; MX records may also be defaults
+   for active GoDaddy email). Slower (24h propagation possible).
+
+For most issues, option 1 is sufficient.
+
+GoDaddy DNS UI:        https://dcc.godaddy.com/control/portfolio/thatsabug.com/settings?tab=dns
+Cloudflare DNS UI:     https://dash.cloudflare.com -> Websites -> thatsabug.com -> DNS -> Records
