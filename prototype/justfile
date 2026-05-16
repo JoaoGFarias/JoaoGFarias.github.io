@@ -197,6 +197,12 @@ check: typecheck verify-permalinks
 ci: migrate check
     @echo "✔ CI pipeline passed."
 
+# Verify every migrated post's prose appears in the rendered HTML on the
+# live site. Defaults to https://thatsabug.pages.dev; override with
+# `SITE_BASE=https://www.thatsabug.com just verify-content`.
+verify-content:
+    SITE_BASE="${SITE_BASE:-https://thatsabug.pages.dev}" node scripts/verify-content-equality.mjs
+
 # Re-fetch the production sitemap and refresh scripts/live-urls.txt.
 refresh-live-urls:
     #!/usr/bin/env bash
