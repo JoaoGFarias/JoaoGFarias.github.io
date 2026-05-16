@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://thatsabug.com',
+  site: 'https://www.thatsabug.com',
   integrations: [tailwind(), mdx(), sitemap()],
   markdown: {
     shikiConfig: {

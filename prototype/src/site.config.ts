@@ -4,7 +4,7 @@ export const site = {
     "Software testing, development craft, and notes from the trenches by João Farias.",
   author: 'João Farias',
   email: 'joao@thatsabug.com',
-  url: 'https://thatsabug.com',
+  url: 'https://www.thatsabug.com',
   postsPerPage: 8,
   social: {
     github: 'https://github.com/JoaoGFarias',
