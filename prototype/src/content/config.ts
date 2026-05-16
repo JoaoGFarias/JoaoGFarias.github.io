@@ -16,18 +16,18 @@ const blog = defineCollection({
   }),
 });
 
-const portfolio = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    role: z.string(),
-    company: z.string().optional(),
-    period: z.string(),
-    summary: z.string(),
-    stack: z.array(z.string()).default([]),
-    link: z.string().url().optional(),
-    order: z.number().default(0),
-  }),
+const roleSchema = z.object({
+  title: z.string(),
+  role: z.string(),
+  company: z.string().optional(),
+  period: z.string(),
+  summary: z.string(),
+  stack: z.array(z.string()).default([]),
+  link: z.string().url().optional(),
+  order: z.number().default(0),
 });
 
-export const collections = { blog, portfolio };
+const portfolio = defineCollection({ type: 'content', schema: roleSchema });
+const career = defineCollection({ type: 'content', schema: roleSchema });
+
+export const collections = { blog, portfolio, career };
