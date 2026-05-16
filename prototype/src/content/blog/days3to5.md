@@ -2,6 +2,7 @@
 title: "#30daysoftesting - Day 3 to 5"
 date: "2018-06-18T23:15:00.000Z"
 excerpt: "The accumulation of Days 3 to 5 of the 30 Days of Automation in Testing "
+urlPath: "/blog/days3to5/"
 categories:
   - "blog"
 tags:

@@ -2,6 +2,7 @@
 title: "The Scribe's Oath for Testers"
 date: "2018-08-16T23:15:00.000Z"
 excerpt: "Some thoughts on Bob Martin's ethics guides from a tester perspective"
+urlPath: "/blog/the-scribe-oath-for-testers/"
 categories:
   - "blog"
 tags:

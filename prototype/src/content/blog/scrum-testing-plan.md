@@ -2,6 +2,7 @@
 title: "A Testing Planning Ceremony for Scrum Teams"
 date: "2018-08-21T23:15:00.000Z"
 excerpt: "Mini-waterfall and separated/uncoordinated groups of developers and testers is a common problem. In this post, I will describe a simple planning ceremony to better integrate team members in testing activities."
+urlPath: "/blog/scrum-testing-plan/"
 categories:
   - "blog"
 tags:

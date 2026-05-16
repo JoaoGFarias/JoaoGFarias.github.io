@@ -2,6 +2,7 @@
 title: "The 39 Books I've Read in 2019"
 date: "2019-12-28T09:00:00.000Z"
 excerpt: "The list of 39 books I've read in 2019."
+urlPath: "/blog/books/"
 categories:
   - "blog"
 tags:

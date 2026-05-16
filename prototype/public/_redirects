@@ -1,7 +1,24 @@
 # Cloudflare Pages / Netlify redirects.
-# Old Jekyll URLs were /:category/:slug/ — most posts had category "blog".
-# New URLs are /blog/:slug/ which already covers the common case.
-# Add specific rewrites here for any post that lived at a different category path.
+#
+# All 66 post URLs in production are reproduced byte-identically by the
+# Astro build (verified via diff against thatsabug.com/sitemap.xml on
+# 2026-05-16), so no per-post redirects are needed.
+#
+# The only stale Jekyll surface not reproduced is /page2/ ... /page14/
+# pagination from the old listing — collapse them to the new archive:
+/page2/    /posts/    301
+/page3/    /posts/    301
+/page4/    /posts/    301
+/page5/    /posts/    301
+/page6/    /posts/    301
+/page7/    /posts/    301
+/page8/    /posts/    301
+/page9/    /posts/    301
+/page10/   /posts/    301
+/page11/   /posts/    301
+/page12/   /posts/    301
+/page13/   /posts/    301
+/page14/   /posts/    301
 
-# Example shape (uncomment when you have a real mismatch):
-# /old-category/old-slug/   /blog/new-slug/   301
+# Old draft never made it to a final URL — block it in case Google indexed it:
+/wip/2020-10-09-three_exercises/   /blog/three_exercises_first/   301

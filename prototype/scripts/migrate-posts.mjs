@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
-import { join, basename, dirname } from 'node:path';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
+import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 
@@ -9,64 +9,68 @@ const REPO_ROOT = join(__dirname, '..', '..');
 const SRC_POSTS = join(REPO_ROOT, '_posts');
 const OUT_DIR = join(__dirname, '..', 'src', 'content', 'blog');
 
-const DATE_CATEGORY_RE = /^\d{4}-\d{2}-\d{2}$/;
-
 function slugFromFilename(filename) {
-  // 2018-06-18-the-heuristic_testing_strategy_model_mindmap_.markdown
-  // -> the-heuristic-testing-strategy-model-mindmap
+  // Strip date prefix and extension. Keep the rest verbatim — Jekyll
+  // preserves underscores; we want byte-identical URLs.
+  // Trailing dashes/underscores are dropped to match Jekyll's URL
+  // (e.g. "scrum-testing-plan-" → "scrum-testing-plan").
   const stem = filename.replace(/\.markdown$|\.md$/, '');
   const withoutDate = stem.replace(/^\d{4}-\d{2}-\d{2}-/, '');
-  return withoutDate
-    .replace(/_/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '')
-    .toLowerCase();
+  return withoutDate.replace(/-+$/, '').toLowerCase();
 }
 
 function dateFromFilename(filename) {
-  const match = filename.match(/^(\d{4}-\d{2}-\d{2})/);
-  return match ? match[1] : null;
-}
-
-function convertLiquid(body) {
-  let out = body;
-
-  // {% include figure image_path="..." alt="..." caption="..." %}
-  out = out.replace(
-    /\{%\s*include\s+figure\s+([^%]+?)\s*%\}/g,
-    (_, attrs) => {
-      const path = (attrs.match(/image_path="([^"]*)"/) || [])[1] || '';
-      const alt = (attrs.match(/alt="([^"]*)"/) || [])[1] || '';
-      const caption = (attrs.match(/caption="([^"]*)"/) || [])[1] || '';
-      const normalized = path.startsWith('http') || path.startsWith('/')
-        ? path
-        : '/' + path;
-      const img = `![${alt}](${normalized})`;
-      return caption ? `${img}\n*${caption}*` : img;
-    },
-  );
-
-  // {% include video id="..." provider="youtube" %}
-  out = out.replace(
-    /\{%\s*include\s+video\s+([^%]+?)\s*%\}/g,
-    (_, attrs) => {
-      const id = (attrs.match(/id="([^"]*)"/) || [])[1] || '';
-      return `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
-    },
-  );
-
-  return out;
+  const m = filename.match(/^(\d{4}-\d{2}-\d{2})/);
+  return m ? m[1] : null;
 }
 
 function parseDate(raw, fallback) {
   if (raw instanceof Date && !isNaN(raw.valueOf())) return raw.toISOString();
   if (typeof raw === 'string') {
-    // Jekyll allows "2018-06-18T20:15:00 -0300" — Date can't parse that space.
     const cleaned = raw.replace(/\s+([+-]\d{2}:?\d{2})$/, '$1');
     const d = new Date(cleaned);
     if (!isNaN(d.valueOf())) return d.toISOString();
   }
   return new Date(fallback + 'T12:00:00Z').toISOString();
+}
+
+function convertLiquid(body) {
+  let out = body;
+  out = out.replace(/\{%\s*include\s+figure\s+([^%]+?)\s*%\}/g, (_, attrs) => {
+    const path = (attrs.match(/image_path="([^"]*)"/) || [])[1] || '';
+    const alt = (attrs.match(/alt="([^"]*)"/) || [])[1] || '';
+    const caption = (attrs.match(/caption="([^"]*)"/) || [])[1] || '';
+    const normalized = path.startsWith('http') || path.startsWith('/') ? path : '/' + path;
+    const img = `![${alt}](${normalized})`;
+    return caption ? `${img}\n*${caption}*` : img;
+  });
+  out = out.replace(/\{%\s*include\s+video\s+([^%]+?)\s*%\}/g, (_, attrs) => {
+    const id = (attrs.match(/id="([^"]*)"/) || [])[1] || '';
+    return `<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+  });
+  return out;
+}
+
+function rawCategories(fmCats) {
+  // Preserve categories EXACTLY as Jekyll saw them (including date strings).
+  // These reconstruct the original Jekyll URL: /:category1/:category2/:slug/
+  if (!fmCats) return [];
+  const arr = Array.isArray(fmCats) ? fmCats : [fmCats];
+  return arr.map((c) => String(c).trim()).filter(Boolean);
+}
+
+function displayCategories(rawCats) {
+  // The categories shown on the post page should not include date-string
+  // pseudo-categories that exist only to disambiguate URLs.
+  return rawCats.filter((c) => !/^\d{4}-\d{2}-\d{2}$/.test(c));
+}
+
+function buildUrlPath(rawCats, slug) {
+  // Jekyll's permalink: /:categories/:title/
+  // With no categories, becomes /:title/. Always trailing-slashed.
+  const segments = rawCats.map((c) => c.toLowerCase()).filter(Boolean);
+  segments.push(slug);
+  return '/' + segments.join('/') + '/';
 }
 
 function normalizeFrontmatter(fm, fallbackDate) {
@@ -75,14 +79,10 @@ function normalizeFrontmatter(fm, fallbackDate) {
   out.date = parseDate(fm.date, fallbackDate);
   if (fm.excerpt) out.excerpt = fm.excerpt;
 
-  const cats = Array.isArray(fm.categories)
-    ? fm.categories
-    : fm.categories
-    ? [fm.categories]
-    : [];
-  out.categories = cats
-    .map((c) => String(c).trim())
-    .filter((c) => c && !DATE_CATEGORY_RE.test(c));
+  const raw = rawCategories(fm.categories);
+  out.urlPath = buildUrlPath(raw, ''); // tail filled in by caller w/ slug
+  out.rawCategories = raw;
+  out.categories = displayCategories(raw);
 
   const tags = Array.isArray(fm.tags) ? fm.tags : fm.tags ? [fm.tags] : [];
   out.tags = tags.map((t) => String(t).trim()).filter(Boolean);
@@ -112,32 +112,43 @@ function toYaml(obj) {
   return lines.join('\n');
 }
 
+function makeUniqueSlug(base, seen) {
+  if (!seen.has(base)) {
+    seen.set(base, 1);
+    return base;
+  }
+  // Slug collisions (different categories, same filename slug) are
+  // disambiguated with a -2, -3 suffix. The original URL is preserved
+  // via the urlPath frontmatter field; only the file on disk is renamed.
+  let n = 2;
+  while (seen.has(`${base}-${n}`)) n++;
+  seen.set(`${base}-${n}`, 1);
+  return `${base}-${n}`;
+}
+
 function main() {
-  if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
+  if (existsSync(OUT_DIR)) rmSync(OUT_DIR, { recursive: true, force: true });
+  mkdirSync(OUT_DIR, { recursive: true });
 
   const files = readdirSync(SRC_POSTS).filter(
     (f) => f.endsWith('.markdown') || f.endsWith('.md'),
   );
 
+  const seen = new Map();
   let written = 0;
-  const slugSeen = new Map();
 
   for (const file of files) {
     const raw = readFileSync(join(SRC_POSTS, file), 'utf8');
     const parsed = matter(raw);
+    const fileSlug = slugFromFilename(file);
     const fm = normalizeFrontmatter(parsed.data, dateFromFilename(file));
-    let slug = slugFromFilename(file);
 
-    // Disambiguate duplicate slugs (e.g. multiple "5_things" titled posts)
-    if (slugSeen.has(slug)) {
-      const date = dateFromFilename(file);
-      slug = `${date}-${slug}`;
-    }
-    slugSeen.set(slug, true);
+    fm.urlPath = buildUrlPath(fm.rawCategories, fileSlug);
+    delete fm.rawCategories;
 
+    const fileBaseSlug = makeUniqueSlug(fileSlug, seen);
     const body = convertLiquid(parsed.content).trimStart();
-    const outPath = join(OUT_DIR, `${slug}.md`);
-    writeFileSync(outPath, toYaml(fm) + body + '\n');
+    writeFileSync(join(OUT_DIR, `${fileBaseSlug}.md`), toYaml(fm) + body + '\n');
     written++;
   }
 

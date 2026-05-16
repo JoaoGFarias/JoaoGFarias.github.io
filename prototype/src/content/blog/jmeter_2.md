@@ -1,0 +1,102 @@
+---
+title: "Variables - JMeter Basics Part 1 of 4 "
+date: "2019-06-21T23:15:00.000Z"
+excerpt: "After extending our suite, we ended up with a lot of duplicated code and now we have a lot of work to make any change. Let's fix this problem."
+urlPath: "/blog/jmeter_2/"
+categories:
+  - "blog"
+tags:
+  - "jmeter"
+  - "jmeter-series"
+---
+# JMeter Variables
+
+![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
+
+## Where are we?
+
+[On the last post](http://thatsabug.com/2019/06/06/jmeter_1-jmeter_basics.html) we created the foundation for investigating the performance of the orderbook service of [Mercado Bitcoin](https://www.mercadobitcoin.com.br), a Brazilian cryptocurrency exchange.
+
+You can download the JMeter suite [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post1/jmeter_basics.jmx).
+
+For this post we will start from a more developed suite.
+
+![New suite]({{ "assets/jmeter/post2/updated_suite.png" | absolute_url }})
+
+In a summary we have:
+
+* Two Thread Groups: One for the cryptocurrency Litecoin (LTC) and one for Bitcoin (BTC);
+
+* For each Thread Group we will hit two endpoints:
+  * _Orderbook_: the list of _asks_ and the list of _bids_
+  * _Trades_: A list of all completed trades, with information such as price, amount, and date.
+
+You can download the updated suite [here](https://raw.githubusercontent.com/JoaoGFarias/JoaoGFarias.github.io/master/assets/jmeter/post2/jmeter_variable1.jmx).
+
+# What is the problem?
+
+If you exam closely the new suite we will see that many strings are duplicated in each HTTP Request and Thead Group:
+
+* The Thread Group configuration values
+
+![Thread Group LTC]({{ "assets/jmeter/post2/duplicated_1.png" | absolute_url }})
+
+![Thread Group BTC]({{ "assets/jmeter/post2/duplicated_2.png" | absolute_url }})
+
+* The server name and the HTTP protocol
+
+![Server name]({{ "assets/jmeter/post2/duplicated_3.png" | absolute_url }})
+
+![Server name]({{ "assets/jmeter/post2/duplicated_4.png" | absolute_url }})
+
+* The cryptocurrency name
+
+![LTC]({{ "assets/jmeter/post2/duplicated_5.png" | absolute_url }})
+
+![LTC]({{ "assets/jmeter/post2/duplicated_6.png" | absolute_url }})
+
+* The path (endpoint) we want to hit
+
+![Path]({{ "assets/jmeter/post2/duplicated_7.png" | absolute_url }})
+
+![Path]({{ "assets/jmeter/post2/duplicated_8.png" | absolute_url }})
+
+As with any software, duplication is always a code smell: It leads to more effort to implement changes, increases the chance of error, and makes things harder to understand.
+
+Let's solve this using **JMeter Variables!**
+
+# Variables
+
+JMeter allows creation of variables at the Test Plan level.
+
+In the Test Plan tab we can see an area for the definition of variables
+
+![Variables]({{ "assets/jmeter/post2/variables.png" | absolute_url }})
+
+After the definition we can use the variables through the _${**variable_name**}_ notation.
+
+On the Thread Groups:
+
+![Variables Usage]({{ "assets/jmeter/post2/variables_usage.png" | absolute_url }})
+
+![Variables Usage 2]({{ "assets/jmeter/post2/variables_usage2.png" | absolute_url }})
+
+And on the HTTP requests:
+
+![Variables Usage]({{ "assets/jmeter/post2/variables_usage3.png" | absolute_url }})
+
+![Variables Usage 2]({{ "assets/jmeter/post2/variables_usage4.png" | absolute_url }})
+
+![Variables Usage]({{ "assets/jmeter/post2/variables_usage5.png" | absolute_url }})
+
+![Variables Usage 2]({{ "assets/jmeter/post2/variables_usage6.png" | absolute_url }})
+
+And on run-time, JMeter will translate the placeholder notation with the proper value:
+
+![Variables Usage 2]({{ "assets/jmeter/post2/variables_usage7.png" | absolute_url }})
+
+There you have it!
+The basic configuration values are defined only once, making our suite easy to understand and change.
+
+You can see all posts of this JMeter series [here](http://thatsabug.com/tag/jmeter-series.html)
+

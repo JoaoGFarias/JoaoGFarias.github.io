@@ -2,6 +2,7 @@
 title: "5 Things to Read This Week - 05th Nov 2018"
 date: "2018-11-05T23:15:00.000Z"
 excerpt: "Five links to read this week "
+urlPath: "/blog/2018-11-05/5thingstoread/"
 categories:
   - "blog"
 tags:

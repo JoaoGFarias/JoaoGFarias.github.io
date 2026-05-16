@@ -2,6 +2,7 @@
 title: "Ouch! #1: Bugs in the Real World"
 date: "2020-04-17T08:00:00.000Z"
 excerpt: "First post where we will see some nasty bugs that appeared on the news."
+urlPath: "/bugs-real-world/2020-04-17/bugs/"
 categories:
   - "bugs-real-world"
 tags:

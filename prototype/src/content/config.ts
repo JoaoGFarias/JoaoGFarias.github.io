@@ -10,6 +10,9 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     cover: z.string().optional(),
     draft: z.boolean().default(false),
+    // Original Jekyll URL (e.g. "/blog/2018-08-28/5_links_refactoring/")
+    // Used to keep production URLs byte-identical post-migration.
+    urlPath: z.string(),
   }),
 });
 

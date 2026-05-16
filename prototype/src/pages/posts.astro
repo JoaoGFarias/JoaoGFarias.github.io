@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FormattedDate from '~/components/FormattedDate.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const byYear = new Map<number, typeof posts>();
+for (const p of posts) {
+  const y = p.data.date.getFullYear();
+  if (!byYear.has(y)) byYear.set(y, []);
+  byYear.get(y)!.push(p);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+
+<BaseLayout title="Archive" description="All posts on That's a Bug.">
+  <section class="container-prose py-12">
+    <h1 class="text-3xl font-bold tracking-tight mb-8">Archive</h1>
+    {years.map((y) => (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold mb-3 text-accent">{y}</h2>
+        <ul class="space-y-2">
+          {byYear.get(y)!.map((post) => (
+            <li class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <FormattedDate date={post.data.date} />
+              <a href={post.data.urlPath} class="hover:text-accent">{post.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+</BaseLayout>
