@@ -1,0 +1,29 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { site } from '~/site.config';
+---
+
+<BaseLayout title="About" description={`About ${site.author}`}>
+  <section class="container-prose py-12">
+    <h1 class="text-4xl font-bold tracking-tight">About</h1>
+    <div class="prose dark:prose-invert mt-6">
+      <p>
+        I'm <strong>{site.author}</strong> — a software engineer focused on testing,
+        software quality, and the craft of building systems that survive contact with reality.
+      </p>
+      <p>
+        That's a Bug started in 2018 as a place to write down what I was learning.
+        It's still that, but the focus is widening: testing strategy, dev practices,
+        and (soon) courses and digital resources for engineers who want to take
+        software quality seriously.
+      </p>
+      <h2>Find me</h2>
+      <ul>
+        <li><a href={site.social.github}>GitHub</a></li>
+        <li><a href={site.social.linkedin}>LinkedIn</a></li>
+        <li><a href={site.social.twitter}>Twitter</a></li>
+        <li><a href={`mailto:${site.email}`}>Email</a></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import PostCard from '~/components/PostCard.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const cats = new Map<string, typeof posts>();
+  for (const p of posts) {
+    for (const c of p.data.categories) {
+      if (!cats.has(c)) cats.set(c, []);
+      cats.get(c)!.push(p);
+    }
+  }
+  return [...cats.entries()].map(([category, items]) => ({
+    params: { category },
+    props: {
+      category,
+      posts: items.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+
+<BaseLayout title={`Category: ${category}`}>
+  <section class="container-prose py-12">
+    <h1 class="text-3xl font-bold tracking-tight mb-1">#{category}</h1>
+    <p class="text-ink-500 dark:text-ink-400 mb-6">{posts.length} posts</p>
+    {posts.map((p) => <PostCard post={p} />)}
+  </section>
+</BaseLayout>

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink-800 antialiased;
+  }
+
+  .dark body {
+    @apply bg-ink-950 text-ink-100;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply mx-auto w-full max-w-3xl px-5;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-5xl px-5;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-ink-600 hover:text-accent transition-colors;
+  }
+
+  .dark .nav-link {
+    @apply text-ink-300 hover:text-accent;
+  }
+}

@@ -1,0 +1,30 @@
+---
+import { site } from '~/site.config';
+const g = site.giscus;
+---
+
+<section class="mt-16 pt-8 border-t border-ink-100 dark:border-ink-800">
+  <h2 class="text-xl font-bold mb-4">Comments</h2>
+  <p class="text-sm text-ink-500 dark:text-ink-400 mb-4">
+    Comments are powered by Giscus and use GitHub Discussions. Sign in with GitHub to leave a comment.
+  </p>
+  <div id="giscus-container"></div>
+</section>
+
+<script
+  is:inline
+  src="https://giscus.app/client.js"
+  data-repo={g.repo}
+  data-repo-id={g.repoId}
+  data-category={g.category}
+  data-category-id={g.categoryId}
+  data-mapping={g.mapping}
+  data-strict="0"
+  data-reactions-enabled={g.reactionsEnabled}
+  data-emit-metadata={g.emitMetadata}
+  data-input-position={g.inputPosition}
+  data-theme={g.theme}
+  data-lang={g.lang}
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async></script>

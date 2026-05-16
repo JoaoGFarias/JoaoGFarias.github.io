@@ -1,0 +1,125 @@
+---
+title: "Uploading to Google Drive with OAuth - JMeter Basics Part 3 of 4"
+date: "2019-11-27T19:00:00.000Z"
+excerpt: "We will look how to get access to Google Drive and upload some text as a file"
+categories:
+  - "blog"
+tags:
+  - "jmeter"
+  - "jmeter-series"
+---
+# JMeter, Google Drive, and OAuth
+
+![JMeter]({{ "https://jmeter.apache.org/images/jmeter.png" | absolute_url }})
+
+## Where are we?
+
+This is the forth post in our introduction to JMeter series.
+
+On the [first post](http://thatsabug.com//blog/jmeter_1-jmeter_basics/) we learned the building blocks of a JMeter plan by creating a series of requests to fetch Bitcoin trading data.
+
+The [second post](http://thatsabug.com//blog/jmeter_2/) served to improve what we've built by removing duplication using variables.
+
+Finally in the [third post](http://thatsabug.com//blog/jmeter_3/) we learned how to add more validations, such as [response metadata](http://thatsabug.com//blog/jmeter_3/#response-assertion), [response duration](http://thatsabug.com//blog/jmeter_3/#duration-assertion), and [JSON content](http://thatsabug.com//blog/jmeter_3/#json-assertion).
+
+In this post we will see how to save files on Google Drive, using OAuth to authenticate our requests.
+
+## Fetching an access key to Google Drive
+
+Access keys are cryptographic strings that allow computers to communicate securely.
+
+To have access to Google Drive functions, we have to acquire a token from it. We do it by selecting the token scope on the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground).
+
+If we head out to there we can select a Google Drive API we want to use:
+
+![Selecting Playground scope](/assets/jmeter/post4/selecting_playground_scope.png)
+
+Afterward, we can exchange our Authorization Code (permanent) for an Access Token (temporary) that we can use for a period to access Google Drive functions:
+
+![Saving token](/assets/jmeter/post4/saving_token.png)
+
+We will use this token in our JMeter Plan.
+
+## Preparing JMeter plan
+
+Our JMeter plan will be similar to the ones we've built, consisting of one Thread Group, one Simple Controller, one HTTP Request and some Listeners.
+
+![Plan Overview](/assets/jmeter/post4/plan_overview.png)
+
+In the Test Plan, we will define our global variables.
+
+![Test Plan](/assets/jmeter/post4/test_plan.png)
+
+We define that we want to send requests to the Google APIs server, using POST HTTPs requests. Additionally, we place here the access token we created before.
+
+The Thread Group defines we will send 10 requests.
+
+![Thread Group](/assets/jmeter/post4/thread_group.png)
+
+The HTTP Request component contains the core of our plan.
+
+![HTTP Request](/assets/jmeter/post4/http_request.png)
+
+Here we indicate we want to use the HTTP protocol, server, and method from the Test Plan.
+
+In _Path_ we define the endpoint we want to hit: _/upload/drive/v3/files_. Additionally, we inform we will pass the information in multiple parts: _uploadType=multipart_
+
+The final point is the Body Data, where we will hardcode the text we want to save as a file. Here we will create a text file with the text _Hi there. I am Joao_.
+
+The final piece we need to configure is the HTTP Headers component:
+
+![HTTP Headers](/assets/jmeter/post4/headers.png)
+
+Here we concatenate our Authorization key with _Bearer_, which is the format OAuth applications understand. Additionally, we pass the _Content-Type_ as multipart so the Google Drive application can understand the format of our data.
+
+# Results
+
+
+If we add a [View Results listener](http://thatsabug.com/blog/jmeter_1-jmeter_basics/#listeners-reporting-results) and execute our plan, we will see that all requests are successful.
+
+![Successful Requests](/assets/jmeter/post4/results_1.png)
+
+Additionally, we can see the details of our request:
+
+![Request details](/assets/jmeter/post4/results_2.png)
+
+And also the details of the response:
+
+![Response details](/assets/jmeter/post4/results_3.png)
+
+## What happens if we have more users?
+
+An interesting behavior happens if we try to stress the Google Drive endpoint by sending more requests.
+
+For instance, if we try to send 200 requests during a period of 5 seconds:
+
+![Preparing plan for errors](/assets/jmeter/post4/errors_1.png)
+
+We see the most requests will fail:
+
+![Failing requests](/assets/jmeter/post4/errors_2.png)
+
+But not because of a performance inability of the Google Drive. The problem is that each user has a quota
+limit for upload:
+
+![Details of error](/assets/jmeter/post4/errors_3.png)
+
+You may find strange that our first requests failed due to the quota problem, but some of following ones passed.
+
+The fact is that the [View Results listener](http://thatsabug.com/blog/jmeter_1-jmeter_basics/#listeners-reporting-results) will show the requests in order of response **arrival**. Probably is the case that the quota error takes a bit more time to be processed than the passing requests.
+
+You can see that our first requests actually passed by checking the timestamp of each request:
+
+![Failing request timestamp](/assets/jmeter/post4/errors_4.png)
+![Passing request timestamp](/assets/jmeter/post4/errors_5.png)
+
+# Conclusion
+
+We saw that secure connections require some more preparation of our JMeter plans, with the setup of access tokens.
+
+The example here, of course, is basic. For more reliable and constant usage of secure connections, we would have to manage token refresh and request load frequency, which are application-specific aspects.
+
+Nonetheless, after the setup, our JMeter plans look very similar to what we were doing before, showing how JMeter's interface clearly separates concerns.
+
+In the next post, we will see how to setup [Jenkins](https://jenkins.io/) to run a JMeter plan.
+

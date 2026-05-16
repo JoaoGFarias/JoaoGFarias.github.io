@@ -1,0 +1,7 @@
+# Cloudflare Pages / Netlify redirects.
+# Old Jekyll URLs were /:category/:slug/ — most posts had category "blog".
+# New URLs are /blog/:slug/ which already covers the common case.
+# Add specific rewrites here for any post that lived at a different category path.
+
+# Example shape (uncomment when you have a real mismatch):
+# /old-category/old-slug/   /blog/new-slug/   301

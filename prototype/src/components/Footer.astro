@@ -1,0 +1,18 @@
+---
+import { site } from '~/site.config';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-ink-100 dark:border-ink-800 mt-20">
+  <div class="container-wide py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <p class="text-sm text-ink-500 dark:text-ink-400">
+      &copy; {year} {site.author}. Built with Astro.
+    </p>
+    <div class="flex gap-5 text-sm">
+      <a href={site.social.github} class="nav-link">GitHub</a>
+      <a href={site.social.linkedin} class="nav-link">LinkedIn</a>
+      <a href={site.social.twitter} class="nav-link">Twitter</a>
+      <a href={`mailto:${site.email}`} class="nav-link">Email</a>
+    </div>
+  </div>
+</footer>

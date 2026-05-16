@@ -1,0 +1,23 @@
+---
+import { site } from '~/site.config';
+
+const links = [
+  { href: '/', label: 'Blog' },
+  { href: '/portfolio/', label: 'Portfolio' },
+  { href: '/about/', label: 'About' },
+];
+---
+
+<header class="border-b border-ink-100 dark:border-ink-800">
+  <div class="container-wide flex items-center justify-between py-5">
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="text-xl font-bold tracking-tight group-hover:text-accent transition-colors">
+        {site.title}
+      </span>
+    </a>
+    <nav class="flex items-center gap-6">
+      {links.map((l) => <a href={l.href} class="nav-link">{l.label}</a>)}
+      <a href="/rss.xml" class="nav-link" aria-label="RSS feed">RSS</a>
+    </nav>
+  </div>
+</header>

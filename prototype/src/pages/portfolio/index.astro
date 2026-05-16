@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+const entries = (await getCollection('portfolio'))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Portfolio" description="Selected work and projects.">
+  <section class="container-wide py-12">
+    <header class="max-w-2xl mb-12">
+      <h1 class="text-4xl font-bold tracking-tight">Portfolio</h1>
+      <p class="mt-4 text-ink-600 dark:text-ink-300">
+        Selected work, focused on testing, quality engineering, and the systems
+        I've helped ship.
+      </p>
+    </header>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {entries.map((entry) => (
+        <a
+          href={`/portfolio/${entry.slug}/`}
+          class="group block p-6 rounded-lg border border-ink-200 dark:border-ink-800 hover:border-accent transition-colors">
+          <h2 class="text-xl font-bold tracking-tight group-hover:text-accent transition-colors">
+            {entry.data.title}
+          </h2>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">
+            {entry.data.role}{entry.data.company && ` · ${entry.data.company}`} · {entry.data.period}
+          </p>
+          <p class="mt-3 text-ink-600 dark:text-ink-300 leading-relaxed">
+            {entry.data.summary}
+          </p>
+          {entry.data.stack.length > 0 && (
+            <div class="mt-4 flex flex-wrap gap-2">
+              {entry.data.stack.map((s) => (
+                <span class="rounded bg-ink-100 dark:bg-ink-800 px-2 py-0.5 text-xs">{s}</span>
+              ))}
+            </div>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
