@@ -17,7 +17,7 @@ stack:
   - "GitHub Actions"
   - "Docker"
 link: "https://github.com/Joao-Farias-Portfolio/automation-testing-ecommerce-app"
-order: 1
+order: 0
 ---
 
 ## What it is
