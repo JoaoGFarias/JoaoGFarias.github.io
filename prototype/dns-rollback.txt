@@ -1,0 +1,20 @@
+DNS records for thatsabug.com BEFORE the Cloudflare Pages cutover.
+Captured 2026-05-16 from `dig` against the GoDaddy nameservers
+(ns55.domaincontrol.com / ns56.domaincontrol.com).
+
+If you need to roll back from Cloudflare to GitHub Pages, restore these
+records exactly at GoDaddy DNS:
+
+  A      thatsabug.com    185.199.108.153
+  A      thatsabug.com    185.199.109.153
+  A      thatsabug.com    185.199.110.153
+  A      thatsabug.com    185.199.111.153
+  CNAME  www              joaogfarias.github.io.
+
+Notes:
+- The four A records are GitHub Pages' standard apex IPs. They are the
+  same for every github.io site; not specific to this account.
+- The CNAME maps the www subdomain to the user's GitHub Pages site.
+- TTLs were not captured but are typically 1 hour by default at GoDaddy.
+
+GoDaddy DNS UI: https://dcc.godaddy.com/control/portfolio/thatsabug.com/settings?tab=dns
