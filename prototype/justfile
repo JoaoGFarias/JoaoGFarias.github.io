@@ -191,6 +191,12 @@ typecheck:
 check: typecheck verify-permalinks
     @echo "✔ All quality checks passed."
 
+# Full CI pipeline: re-run the migrator, then everything `check` does.
+# Used by .github/workflows/deploy-prototype.yml. Locally redundant unless
+# you've edited `_posts/` directly and want to validate the full chain.
+ci: migrate check
+    @echo "✔ CI pipeline passed."
+
 # Re-fetch the production sitemap and refresh scripts/live-urls.txt.
 refresh-live-urls:
     #!/usr/bin/env bash

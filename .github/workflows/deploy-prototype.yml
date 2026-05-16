@@ -1,0 +1,77 @@
+name: Build and deploy Astro prototype
+
+on:
+  push:
+    branches:
+      - master
+      - prototype/astro-migration
+    paths:
+      - prototype/**
+      - _posts/**
+      - .github/workflows/deploy-prototype.yml
+  pull_request:
+    paths:
+      - prototype/**
+      - _posts/**
+      - .github/workflows/deploy-prototype.yml
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
+    env:
+      ASTRO_TELEMETRY_DISABLED: "1"
+      CLOUDFLARE_ACCOUNT_ID: d1ece964fbec895acc3d26a8bfc40995
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+
+      - name: Install just
+        uses: extractions/setup-just@v2
+        with:
+          just-version: "1.50"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # `just ci` does: migrate (Jekyll → Astro)
+      #               → astro check (typecheck + content schema)
+      #               → build → verify-permalinks (diff vs scripts/live-urls.txt)
+      # Same pipeline developers can run locally.
+      - name: Quality gate (migrate + typecheck + build + permalink verification)
+        run: just ci
+
+      # Deploy only on push events. PRs from forks can't access secrets,
+      # and PRs from the same repo would double-deploy alongside the push.
+      - name: Deploy to Cloudflare Pages
+        if: github.event_name == 'push'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: prototype
+          # github.ref_name is "master" for prod, branch name for previews.
+          # Cloudflare flattens slashes (e.g. "prototype/astro-migration" → "prototype-astro-migration").
+          command: >-
+            pages deploy dist
+            --project-name=thatsabug
+            --branch=${{ github.ref_name }}
+            --commit-hash=${{ github.sha }}
