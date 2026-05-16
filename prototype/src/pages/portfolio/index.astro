@@ -16,7 +16,7 @@ const entries = (await getCollection('portfolio'))
       </p>
     </header>
 
-    <div class="grid sm:grid-cols-2 gap-6">
+    <div class={entries.length > 1 ? 'grid sm:grid-cols-2 gap-6' : 'grid grid-cols-1 gap-6 max-w-3xl'}>
       {entries.map((entry) => (
         <a
           href={`/portfolio/${entry.slug}/`}
