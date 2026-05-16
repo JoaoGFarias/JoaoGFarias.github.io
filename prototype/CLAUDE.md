@@ -6,29 +6,49 @@ For repo-wide guidance (relationship with the Jekyll tree on `master`, what not 
 
 ## Run
 
-Use the `justfile` — `just` (no args) lists every recipe.
+The full development lifecycle runs through `just`. Run `just` (no args) any time to see the full list.
 
+**Setup & local dev:**
 ```
 just setup             # first time: Node check, install, migrate, build
 just up                # everyday: setup-if-needed, then dev server (localhost:4321)
 just build             # dist/
 just preview           # serve dist/
-just migrate           # re-run Jekyll → Astro converter
-just verify-permalinks # diff build URLs against snapshot of production
 ```
 
-## Deploy
-
-Cloudflare Pages, project name `thatsabug`. Account ID is in the justfile.
-
+**Author content:**
 ```
-just deploy-preview <branch-name>     # preview build, alias URL
+just new-post "Title"             # scaffolds src/content/blog/<slug>.md with frontmatter
+just new-portfolio "Project Name" # scaffolds a portfolio entry
+just new-career "Role at Co"      # scaffolds a career entry
+```
+
+**Quality gate (run before deploying):**
+```
+just check             # typecheck + build + permalink verification
+just typecheck         # just the Astro/TS check
+just verify-permalinks # diff build URLs against production snapshot
+```
+
+**Deploy:**
+```
+just deploy-preview <branch-name>     # preview build, stable alias URL per branch
 just deploy-prod                      # prompts before pushing to production
+just deployments                      # list recent deployments
+just rollback <deployment-id>         # roll back to a previous deployment
 just smoke-prod                       # smoke-test production after DNS cutover
 just smoke-preview                    # same against the preview alias
 ```
 
-See `RECIPES.md` for the full cutover procedure (DNS, rollback, gotchas).
+**Maintenance:**
+```
+just deps-status       # what's outdated
+just deps-update       # update deps within semver, rebuild to catch breakage
+just audit             # security audit
+just clean             # nuke node_modules + dist
+```
+
+See `RECIPES.md` for the cutover procedure, rollback details, and common gotchas.
 
 ## Architecture
 

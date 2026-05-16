@@ -2,7 +2,7 @@
 
 Operational reference for the Astro prototype — the *why* and *when* behind the commands.
 
-The runnable versions live in `justfile`. From `prototype/`, `just` lists everything. This doc explains the rationale; the justfile owns the truth on what's actually run.
+The runnable versions live in `justfile`. From `prototype/`, `just` lists everything (24 recipes covering the full dev lifecycle: setup → authoring → quality checks → deploy → smoke → maintenance → rollback). This doc explains the rationale; the justfile owns the truth on what's actually run.
 
 ## Cloudflare Pages identity
 

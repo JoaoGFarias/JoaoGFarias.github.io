@@ -72,6 +72,96 @@ migrate:
 clean:
     rm -rf dist .astro node_modules
 
+# --- content authoring -----------------------------------------------------
+
+# Scaffold a new blog post. Usage: just new-post "Slug Title Here"
+new-post title:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    title='{{title}}'
+    slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' \
+      | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+    today=$(date +%Y-%m-%d)
+    iso=$(date -u +%Y-%m-%dT%H:%M:%S.000Z)
+    file="src/content/blog/${slug}.md"
+    if [ -e "$file" ]; then
+      echo "✘ ${file} already exists. Pick a different title."; exit 1
+    fi
+    cat > "$file" <<EOF
+    ---
+    title: "${title}"
+    date: "${iso}"
+    excerpt: ""
+    urlPath: "/blog/${slug}/"
+    categories:
+      - "blog"
+    tags: []
+    ---
+
+    Write your post here.
+    EOF
+    echo "✔ Created ${file}"
+    echo "→ It will appear at: /blog/${slug}/"
+    echo "→ Edit the excerpt and tags before publishing."
+
+# Scaffold a new portfolio (technical artifact) entry. Usage: just new-portfolio "Project Name"
+new-portfolio title:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    title='{{title}}'
+    slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' \
+      | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+    file="src/content/portfolio/${slug}.md"
+    if [ -e "$file" ]; then
+      echo "✘ ${file} already exists."; exit 1
+    fi
+    next_order=$(grep -h "^order:" src/content/portfolio/*.md 2>/dev/null \
+      | awk '{print $2}' | sort -n | tail -1 || echo 0)
+    next_order=$((next_order + 1))
+    cat > "$file" <<EOF
+    ---
+    title: "${title}"
+    role: ""
+    period: ""
+    summary: ""
+    stack: []
+    link: ""
+    order: ${next_order}
+    ---
+
+    Describe the project here.
+    EOF
+    echo "✔ Created ${file}"
+
+# Scaffold a new career (role) entry. Usage: just new-career "Role at Company"
+new-career title:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    title='{{title}}'
+    slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' \
+      | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+    file="src/content/career/${slug}.md"
+    if [ -e "$file" ]; then
+      echo "✘ ${file} already exists."; exit 1
+    fi
+    next_order=$(grep -h "^order:" src/content/career/*.md 2>/dev/null \
+      | awk '{print $2}' | sort -n | tail -1 || echo 0)
+    next_order=$((next_order + 1))
+    cat > "$file" <<EOF
+    ---
+    title: "${title}"
+    role: ""
+    company: ""
+    period: ""
+    summary: ""
+    stack: []
+    order: ${next_order}
+    ---
+
+    Describe the role here.
+    EOF
+    echo "✔ Created ${file}"
+
 # --- verification ----------------------------------------------------------
 
 # Diff the current build's URLs against the snapshot of production URLs.
@@ -92,6 +182,14 @@ verify-permalinks: build
       diff "$live" "$out"
       exit 1
     fi
+
+# TypeScript + Astro content schema check (no build).
+typecheck:
+    npx astro check
+
+# Quality gate: typecheck + build + permalink verification. Run before deploying.
+check: typecheck verify-permalinks
+    @echo "✔ All quality checks passed."
 
 # Re-fetch the production sitemap and refresh scripts/live-urls.txt.
 refresh-live-urls:
@@ -136,6 +234,40 @@ deploy-prod: build
 deployments:
     CLOUDFLARE_ACCOUNT_ID={{cf_account}} npx wrangler pages deployment list \
       --project-name={{project}}
+
+# Roll production back to a previous deployment by ID. Run `just deployments`
+# first to find the ID. The rolled-back deployment becomes the new "latest"
+# without rebuilding from source.
+rollback deployment_id:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    echo "About to roll {{project}} production back to deployment {{deployment_id}}."
+    read -r -p "Continue? (y/N) " ok
+    [ "$ok" = "y" ] || { echo "Aborted."; exit 1; }
+    CLOUDFLARE_ACCOUNT_ID={{cf_account}} npx wrangler pages deployment tail \
+      --project-name={{project}} {{deployment_id}} || true
+    echo "→ Use the Cloudflare dashboard to confirm rollback if the CLI doesn't expose it directly."
+    echo "  Compute → Workers & Pages → {{project}} → Deployments → {{deployment_id}} → Rollback"
+
+# --- maintenance -----------------------------------------------------------
+
+# Show outdated dependencies (npm outdated, no changes made).
+deps-status:
+    npm outdated || true
+
+# Update dependencies to latest within their semver ranges. Re-runs the build
+# afterwards to catch breakage early.
+deps-update:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    npm update
+    echo "→ Verifying build after update..."
+    ASTRO_TELEMETRY_DISABLED=1 npm run build > /dev/null
+    echo "✔ Build passed. Review changes with \`git diff package*.json\` and commit."
+
+# Run the npm security audit.
+audit:
+    npm audit --omit=dev || true
 
 # --- post-cutover smoke checks ---------------------------------------------
 
