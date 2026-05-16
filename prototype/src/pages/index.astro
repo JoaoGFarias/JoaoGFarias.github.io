@@ -8,7 +8,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const recent = posts.slice(0, site.postsPerPage);
-const total = posts.length;
 ---
 
 <BaseLayout>
@@ -19,7 +18,7 @@ const total = posts.length;
       </h1>
       <p class="mt-5 text-lg text-ink-600 dark:text-ink-300 leading-relaxed">
         I'm <strong>João Farias</strong>. I write about software quality, testing strategy,
-        and the messy reality of building software. {total} posts and counting.
+        and the messy reality of building software.
       </p>
       <div class="mt-6 flex gap-4">
         <a href="/portfolio/" class="text-sm font-medium text-accent hover:underline">View portfolio →</a>
