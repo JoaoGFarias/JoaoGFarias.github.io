@@ -9,8 +9,8 @@ For repo-wide guidance (relationship with the Jekyll tree on `master`, what not 
 Use the `justfile` — `just` (no args) lists every recipe.
 
 ```
-just install
-just dev               # localhost:4321
+just setup             # first time: Node check, install, migrate, build
+just up                # everyday: setup-if-needed, then dev server (localhost:4321)
 just build             # dist/
 just preview           # serve dist/
 just migrate           # re-run Jekyll → Astro converter

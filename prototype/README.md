@@ -5,12 +5,11 @@ Astro 5 + Tailwind static site. Sibling to the legacy Jekyll tree at the repo ro
 ## Quick start
 
 ```bash
-npm install
-ASTRO_TELEMETRY_DISABLED=1 npm run dev      # http://localhost:4321
-ASTRO_TELEMETRY_DISABLED=1 npm run build    # dist/
+just setup    # first time
+just up       # everyday — boots dev server at http://localhost:4321
 ```
 
-`ASTRO_TELEMETRY_DISABLED=1` is needed only under sandboxed environments. On a normal shell, drop it.
+`just` (no args) lists every recipe.
 
 ## Where to look
 
